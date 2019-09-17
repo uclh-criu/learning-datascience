@@ -1,0 +1,499 @@
+---
+title: "Introduction to R."
+
+output: 
+  powerpoint_presentation:
+    reference_doc: Images/template.pptx
+
+---
+
+## Disclaimer
+
+- Much of the following material can be sourced from open access resources
+    - Software Carpentry
+    - Stack Overflow
+
+- Initially collated by members of the DataSciBC (www.datascibc.org)
+
+
+## Content
+
+- Motivation for R: what and why?
+- R studio: a tour
+- R building blocks
+- Using/Writing functions 
+
+## What is R?
+
+- Free software for statistical computing and plotting
+- Works with variety of platforms
+    - UNIX
+    - MacOS
+    - Windows
+- Built around handling data. 'Understands' data.
+    - Particularly well suited to data science / statistics
+
+## Why use R?
+
+- Why not?
+    - Need to learn a new language
+    - Does not use 'point and click'
+    - Need to describe to the computer the steps you want it to take
+- Why?
+    - You can do *anything*
+    - Not limited to the pre-designed command process of an app.
+    - You record everything you do, so you can do it again.
+
+## Really, why R?
+
+- Save time
+    - Small upfront investment for long term gain
+    - New data? - Easy
+    - Repeat analysis? - Easy
+    - Found an error? - Easy
+- Reproducible Science
+    - Code makes your analysis explicit
+    - Writing code = writing lab-book = good reproducible science
+
+## The Reproducible Science Pipeline
+
+![](Images/Pipeline.png)
+
+## Working with RStudio 
+
+- RStudio is an Integrated Development Environment.
+- Easier to work with than R on it's own, since it it a bit more 'point and clicky'
+- Allows
+    - Code editing
+    - Syntax highlighting
+    - Plotting tools
+    - Workspace management 
+
+## This is what R on it's own looks like
+
+![](Images/RConsole.png)
+
+## This is what RStudio looks like - much easier to work with
+
+![](Images/RStudio.png)
+
+::: notes
+Ask learners to open RStudio, but don't get them to type anything in yet.
+:::
+
+## RStudio is made up of windows
+
+![](Images/RStudioHighlightWindows.png)
+
+::: notes
+Explain each window.
+
+- Console - this is where R is run. Commands executed but not saved.
+- Source - text files that contain commands.
+- Environment - tells you which R objects you are working with.
+- Files - actually a helper window. Gives you files, help, plots. Warn people not to delete files from their computer.
+:::
+
+## Adjusting your view of RStudio.
+
+![](Images/RStudioButtonsHighlighted.png)
+
+::: notes
+Explain what each button does.
+:::
+
+## Using the Console window
+
+![](Images/RStudioConsole.png)
+
+## Using the console
+
+- Bottom left window.
+- This is R!
+- This is your prompt to type  `>`.
+- Type `2 + 2` then hit `Enter`.
+
+## Console output
+
+You should see:
+
+```{r}
+2 + 2
+```
+
+-  `>` is the command prompt
+-  `2 + 2` is the command
+-  `4` is the output from R.
+-  `[1]` is telling you that 4 is the first value in a sequence returned by R.
+
+::: notes
+Say that the ## sign is just printed on the slide as an indicator that we are seeing output rather than code entered. They shouldn't see the symbol on their consoles.
+
+## Using the Source
+
+![](Images/RStudioSource.png)
+
+## Using the Source
+
+- Type `2 + 2`, then `Enter`.
+- What happens?
+- To ask R to run code
+
+- Highlight the code and:
+    - MacOS: `Cmd + Enter`
+    - Windows: `Ctrl + Enter`
+
+- Notice the output in the console.
+
+## Saving your work
+
+- Click the `save` icon 
+    - Save the file under a meaningful name. 
+    - Save it somewhere you can find it again.
+    - .R is the file extension for R scripts.
+- Close the Source window
+- Close R Studio
+- Restart R Studio and click the `open` icon
+- Find your file and open
+- Your code still there
+- You can run it again.
+
+::: notes
+Get them to do this.
+:::
+
+## R building blocks
+
+- Names
+- Data
+    - Vectors
+    - Data Frames
+- Functions
+    - Stored in packages
+
+## 3 Main Building Blocks
+
+- Names
+    - Everything needs a name in R: tables, plots, data files
+- Data
+    - Data comes in different forms: Real Numbers/Counting Numbers/Characters etc.
+    - Data is stored in vectors
+    - Vectors are stored in data frames
+- Functions
+    - Little factories
+    - Take an input (raw material) use function (factory) get an output (product)
+    - Functions are collated into packages
+
+## Names
+
+- You assign names to objects in R.
+- This is the assignment operator `<-`
+- Shortcut:
+    - Mac OSX: `Option + - `
+    - Windows: `Alt + - `
+- Return the stored value by typing the name.
+
+```{r}
+practice <- 2 + 2 + 6
+practice
+```
+
+::: notes
+Get them to do this.
+:::
+
+## Names
+
+- You can store any object under a name.
+- This example stores a string. You need to use quote marks to assign it.
+
+```{r}
+say_hello <- "hello" 
+say_hello
+```
+
+- Note that R does not like spaces in names.
+```{r, error = TRUE}
+say hello <- "hello"
+```
+
+## Data
+- R is a statistical computing language
+- It is built around an understanding of data
+- Statistics uses:
+    - Vectors
+    - Data frames
+
+## Vectors
+
+- A vector contains elements of the same datatype.
+    - A vector of integers - an example would be age
+    ```{r, echo = FALSE}
+c(50, 25, 32, 67, 46, 19, 48)
+```
+    - A vector of real numbers - an example would be temperature.
+    ```{r, echo = FALSE}
+c(37.5, 37.1, 37.3, 38.3, 37.4, 38.9)
+```
+    - A vector of characters - an example would be name.
+    ```{r, echo = FALSE}
+c("Adam", "Sally", "Eve", "John", "James")
+```
+    - A vector of logicals - an example would be 'are the blood results avaiblable?'
+    ```{r, echo = FALSE}
+c(TRUE, FALSE, FALSE, TRUE, TRUE)
+```
+    
+## Naming vectors.
+
+The `c()` function combines individual values into a single vector.
+```{r}
+# Storing several ages in one vector.
+age <- c(50, 25, 32, 67, 46, 19)
+age
+# Storing several names in one vector. 
+name <- c("Adam", "Sally", "Eve", "John", "James", "Jennifer")
+name
+```
+
+## Recalling elements of a vector
+
+- R creates an index for each element of the vector.
+- It allocates a number to each element within the vector from left to right, starting with `1`.
+
+```{r}
+# The age of the second person.
+age[2] 
+# The age of the fourth person.
+age[4]
+# The name of the fifth person.
+name[5]
+```
+
+## Data Frames.
+- You are already familiar with data frames
+
+```{r, echo = FALSE}
+gender <- c("male", "female", "female", "male", "male", "female")
+data.frame(name, age, gender)
+```
+
+- A data frame is a series of vectors aligned to form a table
+- Each vector becomes a column in the table
+- A properly formatted excel spreadsheet is essentially a data frame
+
+## Creating a data frame - excercise
+
+- Create and name vectors containing information about these 6 patients.
+    - `Name: "Adam", "Sally", "Eve", "John", "James", "Jennifer"`
+    - `Age: 50, 25, 32, 67, 46, 19`
+    - `Gender: "male", "female", "female", "male", "male", "female"`
+- Quotation marks are not needed for names in R, but are when your data is a string e.g. "male", "female"
+- As a rule:
+    - Characters on the left side of the assignment operator. No quote marks.
+    - Characters on the right side of the assignment operator. Use quote marks if storing letters.
+
+## Creating a data frame - exercise
+- Combine these vectors into a data frame using `data.frame()`
+    - Hint, the vector names need to go inside the `()`
+- Save the data frame under the name `patients`
+- Print the data frame called `patients` to your console
+
+## Creating a data frame - solution
+
+
+```{r}
+# Creating individual vectors.
+
+name <- c("Adam", "Sally", "Eve", "John", "James", "Jennifer")
+age <- c(50, 25, 32, 67, 46, 19)
+gender <- c("male", "female", "female", "male", "male", "female")
+
+
+# Combining into a data frame.
+
+patients <- data.frame(name, age, gender)
+```
+
+## This is the data frame.
+```{r}
+patients
+```
+
+- R arranges the vectors as columns in the data frame
+- R names the columns of the data frame after the names of the vectors
+- R numbers each row of the data frame
+
+## Recalling a vector in a data frame
+- Data frame colums are vectors.
+- `$` can be used to extract a vector from a data frame.
+- We can get the `age` column from the data frame `group`
+```{r}
+patients$age
+```
+
+## Vectors - other properties
+- Add a value of TRUE to a vector of integers
+- Give it a name
+- Recall the vector
+- Use `str()` to examine the structure of the vector.
+- What has happened?
+
+## Vectors - other properties
+
+```{r}
+test <- c(1,2,3,4,TRUE)
+test
+str(test)
+```
+
+- The value of `TRUE` has been changed to 1.
+- The vector is still a numeric vector
+
+## Vectors - other properties
+- Add a string to a vector of integers
+- Recall the vector
+- What has happened?
+
+## Vectors - other properties
+
+```{r}
+test2 <- c(1, 2, 3, 4, "hi")
+test2
+str(test2)
+```
+
+
+- The string has been added on to the end of the vector.
+- The vector is now a string vector.
+
+## Functions as factories
+![](Images/Function1.png)
+
+## Functions as factories
+![](Images/Function2.png)
+
+## Functions as factories
+![](Images/Function3.png)
+
+
+## Functions
+- Sometimes taught as a "black box"
+- You can think of them as a factory
+- Usually labelled as a verb (they are "doing" something)
+- Many come built into R
+    - `Sys.time()`
+    - `mean(1:100)`
+- You can also install 'packages' containing bundles of functions
+
+- View each function as a separate separate factory in a production line
+
+## Functions in a line
+![](Images/Function4.png)
+
+## Functions
+- You have been using functions already!
+- `data.frame()` is a function.
+- `age, gender, weight` are arguments.
+
+```{r}
+data.frame(name, age, gender)
+```
+
+- The data frame is the output
+
+## Try these functions yourself. What do they do?
+- Use the `group` data frame as the argument.
+
+- `head()`
+- `tail()`
+- `summary()`
+- `mean()`
+
+## Try these functions yourself.
+- `head()` Gives you the first 6 rows
+- `tail()` Gives you the last 6 rows
+- `summary()` Gives an overview of the object
+- `mean()` Gives the mean of a numeric vector
+
+## Warning note
+- Functions are carrying out pre-written instructions
+- They will fail if they are supplied with the wrong kind of data - they will return an error message instead
+- Try `mean(group$gender)`
+- There are other constraints
+- Dependent on the function itself
+- HINT: some functions will not work with missing values
+- You will then need to specify the argument to remove these missing values
+
+## Help with functions
+- How do you find out how to use a particular function?
+- Three ways:
+    - Select the `help` tab in bottom right of RStudio, then type the function name into the search box, and read the help page.
+    - Type `?function_name` into the console.
+    - If you can’t remember the exact function name try typing `??whatever_you_want_to_do` into the console. It searches the whole database for matching terms.
+
+::: notes
+Get them to look up the help page for mean
+:::
+
+## This is what a help page looks like.
+![](Images/HelpPage.png)
+
+## Reading the help page
+
+- It's quite complicated.
+- But the information is usually displayed in a standard format:
+    - Brief description
+    - An example of use
+    - The argument(s) that can be passed to the function - along with any default value it takes if there is no value provided.
+    - Breakdown of these arguments. Gives you more information about what you need to put in.
+    - Tells you how the function works and what to expect to see in the output. 
+    - A reproducible example of use, that you can normally use verbatim.
+    
+## Explore functions yourself
+
+- Look up the function `ls`
+- What are the arguments you can give the function?
+
+    - How do you specify the argument for 'pattern'? Try it
+    - When might this be useful?
+
+    - How do you specify the argument for 'sorted'? Try it
+    - When might this be useful?
+
+::: notes
+Work through this with them.
+:::
+
+## Packages - collections of functions
+
+- There are bunch of functions that come with R. They are 'base R' functions.
+
+- Thousands of open access functions in other packages
+- To access these: install the packages, then load them.
+
+- Let's install and load the 'tidyverse' package
+```{r, eval=FALSE}
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+- You can now use all of the functions that come with 'tidyverse'.
+- You need to load the package using `library` each time you open R. But you will not need to install it again.
+
+::: notes
+Get them to load tidyverse. Emphasise that this is a process we will keep repeating throughout the course. 
+:::
+
+## Other useful packages
+
+These are some packages we will be user later in the course.
+
+- `ggplot2` - plots graphs in R
+- `readr` - imports data into R
+- `stringr` - helps you manipulate strings
+- `lubridate` - helps you manipulate dates
+
+::: notes
+Maybe mention that a few of these packages are loaded with tidyverse.
+:::
