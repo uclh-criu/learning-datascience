@@ -128,6 +128,8 @@ You should see:
 
 ::: notes
 Say that the ## sign is just printed on the slide as an indicator that we are seeing output rather than code entered. They shouldn't see the symbol on their consoles.
+:::
+
 
 ## Using the Source
 
@@ -160,6 +162,12 @@ Say that the ## sign is just printed on the slide as an indicator that we are se
 
 ::: notes
 Get them to do this.
+?Use this to introduce the labbook idea?
+Every scientist is expected to maintain a labbook and this should be no different for a data scientist; so each time you sit down to work create a new file; I do this by creating a directory in each project called labbooks and then files named according as `CCYY-MM-DD.R`
+See 
+- https://www.training.nih.gov/assets/Lab_Notebook_508_(new).pdf
+- http://www3.imperial.ac.uk/pls/portallive/docs/1/7289716.PDF
+- https://en.wikipedia.org/wiki/Lab_notebook
 :::
 
 ## R building blocks
@@ -449,6 +457,13 @@ Get them to look up the help page for mean
     - Breakdown of these arguments. Gives you more information about what you need to put in.
     - Tells you how the function works and what to expect to see in the output. 
     - A reproducible example of use, that you can normally use verbatim.
+    
+::: notes
+reference this back to the factory idea
+argument = names of the inputs
+function = machine/factory
+value = output
+:::
     
 ## Explore functions yourself
 
