@@ -1,0 +1,353 @@
+---
+title: "Importing Data into R"
+
+output: 
+  powerpoint_presentation:
+    reference_doc: Images/template.pptx
+
+---
+
+```{r, include=FALSE}
+library(readr)
+library(googlesheets)
+cchic <- read_csv("clean_CCHIC.csv")
+```
+
+##
+
+![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+
+## What will this workshop teach you?
+
+1.  Getting `csv` files into R  
+2.  Initial exploration of your data set  
+\newparagraph
+
+The handout also includes some tips on using Google Sheets
+
+## Introduction
+- You have now learnt to input data into R manually  
+- But what happens if you are given an Excel spreadsheet and told to analyse it?  
+  - How can you look at and work with that data in R?
+  
+## What is a CSV file?
+::::::::::::{.columns}
+:::{.column}
+- *Comma separated values* file  
+- You still have columns and rows       
+- But data values on a single row are separated by commas instead of walls of a cell  
+- Excel spreadsheets are easily converted into this format
+:::
+:::{.column}
+![](Images/UnformattedCSV.png)
+:::
+:::::::::::: 
+
+
+## Time Out
+::::::::::::{.columns}
+:::{.column}
+- Take a moment to downlaod the practise data set
+- Available in `csv` format   
+
+  - `clean_CCHIC` from the slack channel  
+  
+  - Open and `Save As` a `.csv` file
+
+:::
+:::{.column}
+![](Images/SaveAsCSV.png)
+:::
+:::::::::::: 
+
+## Files, Directories and File Paths
+- R can not read your data if it does not know where it is stored  
+- Your computer has a system for storing files within directories 
+- Directories are also known as folders  
+- The language used to instruct on the location of the file in known as the `file path` 
+
+## File Paths
+::::::::::::{.columns}
+:::{.column}
+- Starts with a `Root Directory` and then `Branches` are specified
+- You can find out the file path name by right clicking on any file:
+  - `Properties` in Windows
+  - `Get Info` in Mac  
+- Folders within directories are specified with:
+  - `/` in Mac  
+  - `\\` in Windows
+- However, the correct notation in R for both is `/`
+:::
+:::{.column}
+![](Images/FileProperties.png)
+:::
+::::::::::::
+
+## Finding and setting your Working Directory
+::::::::::::{.columns}
+:::{.column}
+- R would have chosen a working directory for you  
+
+```{r, eval=FALSE}
+getwd()
+```
+
+- Will display your working directory in your console  
+- You can then reset it to your desired working directory using 
+
+```{r, eval=FALSE}
+setwd()
+```
+:::
+:::{.column}
+![Remember. You need quotation marks (`""`) around your file path name](images/Setwd.png)
+:::
+::::::::::::
+
+::: notes
+Candidates don't necessarily need to do this at the moment.
+:::
+
+## Getting your work into R  
+There are 3 main methods
+
+1.  Point and click  
+
+      - Less fiddly as no need to write code   
+      
+      - But not reproducible  
+
+2.  Using commands  
+
+      - Better for reproducibility
+      
+      - Someone else would just have to replace the source code to run the code on their own computer  
+      
+3.  Connecting to an online database or google spreadsheet 
+      - This will only be mentioned in the handout
+
+## Method 1: Point and click
+::::::::::::{.columns}
+:::{.column}
+Click `Import Dataset` tab in the `Environment` pane  
+
+:::
+:::{.column}
+![](Images/Point and click.png)
+:::
+::::::::::::
+
+##  
+::::::::::::{.columns}
+:::{.column}
+- Choose `From text (readr)`
+:::
+:::{.column}
+![](Images/ImportDataset1.png)
+:::
+::::::::::::
+
+## Browse Files
+::::::::::::{.columns}
+:::{.column}
+- Now browse for your file  
+- Click on the file you wish to select  
+- Then select `Import`  
+- IF you try this you will notice there is no text in the source pane. This method is not reproducible.  
+:::
+:::{.column}
+![](Images/ImportDataset2.png)
+:::
+::::::::::::
+
+## How can I make this reproducible? 
+::::::::::::{.columns}
+:::{.column}
+- Look for the code in the `Code Preview`
+- You can copy and paste this code into your source pane to make this step reproducible 
+:::
+:::{.column}
+![](Images/ImportingDataset3.png)
+:::
+::::::::::::
+
+## Method 2: Commands
+- `readr` is a package containing functions to help R *read* your external files  
+- It is automatically installed with `tidyverse`  
+- Install and load the package as follows  
+
+```{r, eval=FALSE}
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+## Read your file
+
+- You can then tell R to read a CSV file by writing the full file path name. This is an example file path, but what you need to type depends on where you stored the data on your computer. 
+
+```{r, eval=FALSE}
+# You are saving your data in an object called "cchic"
+cchic <- read_csv("C:/Users/mayas/Desktop/Work/DataSciFellowship/clean_CCHIC.csv")
+```
+
+Display the contents of the data frame `cchic`.
+
+```{r, eval = FALSE}
+cchic
+```
+
+::: notes
+Get them to do this
+:::
+
+## Tibble
+
+![A `tibble` is a specially formatted data frame. Your data has been imported in this format.](Images/Tibble.png)
+
+## Viewing Your Data in R
+::::::::::::{.columns}
+:::{.column}
+- You have imported your data into R.
+- You need a neat way of looking at it. 
+
+```{r, eval=FALSE}
+View(cchic)
+```
+
+- The data is displayed in a familiar spreadsheet format. 
+  - This is a more human-legible table  
+  - You can also view the data via the environment pane
+:::
+:::{.column}
+![](Images/View(cchic).png)
+:::
+::::::::::::
+
+## Shortcuts
+
+- There are notations to shorten the code for the file path  
+- Use single dot for a file within current working directory
+```{r, eval=FALSE}
+read_csv("./clean_CCHIC.csv")
+```
+
+- Use double dot ".." for a file in the directory above the current working directory
+
+## Reviewing your data in R
+
+Spreadsheets in R are called data frames 
+You can use these functions to investigate your data frame: 
+
+- `head(cchic)`  
+- `tail(cchic)`  
+- `names(cchic)`  
+- `str(cchic)`  
+      
+## head()
+
+```{r, eval = FALSE}
+head(cchic)
+```
+
+Prints the first 6 rows of the data frame.
+
+## tail()
+
+```{r, eval = FALSE}
+tail(cchic)
+```
+
+Prints the last 6 rows of the data frame.
+
+## names()
+
+```{r, eval = FALSE}
+names(cchic)
+```
+
+Prints the names of the variables. 
+
+## str()
+
+```{r, eval = FALSE}
+str(cchic)
+```
+
+Prints the data type of each variable.
+
+## Look at specific items.
+
+You can look at specific data points.
+
+```{r}
+cchic[21, 5]
+```
+
+This displays the the piece of data in the 21st row and 5th column.
+
+## Selecting variables using $ sign.
+
+- You can also use the `$` function
+- Enter `data_frame_name$variable_name`
+
+```{r, eval=FALSE}
+cchic$weight
+```
+
+- This will list all of the data in the weight column
+
+## Other tools to review data
+
+- Specific functions from special packages help you describe the whole data set
+- The function will look at each variable and will give you basic measures about the data, for example range and mean.
+- The data will also be described in a number of plots.
+  - `Desc()` from `DescTools` package
+  - `Describe()` from `Hmisc` package  
+- To use these you have to install the appropriate packages
+
+::: notes
+Let them explore these if you have time.
+:::
+
+## Exercise
+1. What types of variables do you have in `cchic`?
+2. Display the `discharge` vector from in `cchic`.
+3. How many men and women are in the database?
+4. How many survived and how many died?
+5. a) What does the function `ls()` do? 
+   b) Use it to see how many vectors contain information about "temp"
+  
+## Answer 1.
+What types of variables do you have in `cchic`?
+
+```{r, eval=FALSE}
+str(cchic)
+```
+
+## Answer 2
+Display the `discharge` vector in `cchic`.
+```{r, eval = FALSE}
+cchic$discharge
+```
+
+## Answer 3
+How many men and women are in the database?
+```{r}
+table(cchic$sex)
+```
+
+## Answer 4
+How many survived and how many died?
+```{r}
+table(cchic$vital_status)
+```
+
+## Answer 5
+What does the function `ls()` do?
+```{r}
+ls(cchic, pattern = "temp")
+```
+
+This lists all of the variables containing the word "temp".
+
+# Time for lunch!

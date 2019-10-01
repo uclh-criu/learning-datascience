@@ -1,0 +1,104 @@
+---
+title: "Welcome to Clinician Coders"
+
+output: 
+  powerpoint_presentation:
+    reference_doc: Images/template.pptx
+
+---
+
+##
+
+![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+
+## Hello!
+
+- Pre-requisites
+- Course schedule
+- What to expect from the workshops
+    - Data
+    - Layout
+
+::: notes
+Say that this is a quick intro to the course. And that this is what we cover during this intro.
+:::
+
+## Pre-requisites
+
+- Charging facilities – where’s your nearest?
+- Access Wi-fi
+- Download R Studio
+- Have a spreadsheet program on your laptop
+- Sign user agreement for CCHIC 
+- Join the slack channel
+
+
+::: notes
+Go through each item on list, make sure each person has completed all items. You can spend some time on this slide.
+:::
+
+## Course schedule
+
+- 2 days of intensive learning
+- Coffee and lunch provided
+
+## Schedule - Day 1
+
+- 09:00 - 09:30: Start and Welcome
+
+- 09:30 - 10:30: Workshop 1: Introduction to R
+
+- 10:30 - 11:00: Coffee Break
+
+- 11:00 - 11:45: Workshop 2: Cleaning your Dataset
+
+- 11:45 - 13:00: Workshop 3: Getting your Data into R
+
+- 13:00 - 14:00: Lunch
+
+- 14:00 - 16:30: Workshop 4: Data Wrangling
+ 
+## Schedule - Day 2
+
+- 09:30 - 11:20: Workshop 5: Data Visualisation
+
+- 11:20 - 11:40: Coffee Break
+
+- 11:40 - 13:30: Workshop 6: Basic Satistics
+
+- 13:30 - 14:15: Lunch
+
+- 14:15 - 16:00: Workshop 7: Using your own Data
+
+## The Data
+
+- We use the Critical Care Health Informatics Collaborative dataset.
+
+- Multicentre Adult ITU database
+    - 11 adult ICUs
+    - 5 UK teaching hospitals
+    - Privacy ensured through “highest standards of data security”
+    - 18, 074 unique patients
+    - Each with median 1030 time varying measurements (rows)
+- Extract of single admission time point for 1011 patients for Clinician Coders
+
+
+## Workshop layout
+
+- 7 workshops.
+- 5 of these include a presentation and chances for you to follow along on your laptops.
+- You work your way through a worksheet during Workshop 2. 
+- You try to answer a question of your own using data during Workshop 7. 
+
+- A pdf file will be uploaded to the Slack channel after this presentation. It contains all of the content from the course workshops for future reference. 
+
+## Final note - tips on writing code
+
+- Save your work where prompted by facilitator
+- It takes a while to get the hang of writing code. 
+- There may be code glitches (erroneous `()` or `,`) 
+- But that is part of coding.
+- Be mindful as you type them out
+- Tell us if you spot any we’ve made!
+
+# Thank you. We hope you enjoy the course. 

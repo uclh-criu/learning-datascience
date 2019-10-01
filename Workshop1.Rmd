@@ -7,6 +7,10 @@ output:
 
 ---
 
+##
+
+![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+
 ## Disclaimer
 
 - Much of the following material can be sourced from open access resources
@@ -208,7 +212,7 @@ Get them to do this.
 - This example stores a string. You need to use quote marks to assign it.
 
 ```{r}
-say_hello <- "hello" 
+say_hello <- "hello"
 say_hello
 ```
 
@@ -251,7 +255,7 @@ The `c()` function combines individual values into a single vector.
 # Storing several ages in one vector.
 age <- c(50, 25, 32, 67, 46, 19)
 age
-# Storing several names in one vector. 
+# Storing several names in one vector.
 name <- c("Adam", "Sally", "Eve", "John", "James", "Jennifer")
 name
 ```
@@ -263,7 +267,7 @@ name
 
 ```{r}
 # The age of the second person.
-age[2] 
+age[2]
 # The age of the fourth person.
 age[4]
 # The name of the fifth person.
@@ -342,7 +346,7 @@ patients$age
 ## Vectors - other properties
 
 ```{r}
-test <- c(1,2,3,4,TRUE)
+test <- c(1, 2, 3, 4, TRUE)
 test
 str(test)
 ```

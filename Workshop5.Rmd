@@ -6,6 +6,10 @@ output:
     reference_doc: Images/template.pptx
 ---
 
+##
+
+![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+
 ## Content
 
 - General data visualisation tips
@@ -126,13 +130,11 @@ Say that though you can't see this images properly, this image is in the handout
 
 ## Visualising data in R
 
+![This book is helpful](Images/R4DS.png)
+
 ::: notes
 We now get to draw graphs!
 :::
-
-## This book gives good instructions
-
-![](Images/R4DS.png)
 
 ## There are many ways to plot graphs in R
 
@@ -168,12 +170,15 @@ You can use the same structure for many types of graphs.
 
 ```{r, eval = FALSE}
 ggplot(data = date_frame_name) +
-        style_of_plot(mapping = aes(x = vector_name1, y = vector_name2)) +
-  other arguments e.g. size of markers +
-	further amendments e.g. splitting out into more than one plot based on group
+  style_of_plot(mapping = aes(x = vector_name1, y = vector_name2)) +
+  other_arguments
 ```
 
-## What is a 'geom'??
+::: notes
+Explain a couple of things you can add on using the + sign.
+:::
+
+## What is a 'geom'?
 
 A `geom` is a visual aspect of a graph.
 
@@ -181,7 +186,7 @@ A `geom` is a visual aspect of a graph.
 - lines
 - bars
 
-Look at the ggplot2 cheatsheet for more options.
+Look at the `ggplot2` cheatsheet for more options.
 
 ## Create a dot plot
 
@@ -198,8 +203,8 @@ There are a lot of commands in the file. Help them load up the file, get the dat
 ## Let's create a line graph together
 
 ```{r, eval = FALSE}
-ggplot(data=  cchic) +
-  geom_smooth(mapping = aes(x = sao2_abg, 	y = pao2_abg))
+ggplot(data = cchic) +
+  geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg))
 ```
 
 ::: notes
@@ -211,9 +216,8 @@ Get them to type this code in and draw the graph. The graph they should get is o
 ## Adding a linetype
 
 ```{r, eval = FALSE}
-ggplot (data = cchic) +
+ggplot(data = cchic) +
   geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg, linetype = sex))
-
 ```
 
 ![](Images/LineGraph2.png)
@@ -221,7 +225,7 @@ ggplot (data = cchic) +
 ## Adding colour 
 
 ```{r, eval = FALSE}
-ggplot (data = cchic) +
+ggplot(data = cchic) +
   geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg, colour = sex))
 ```
 
@@ -230,7 +234,7 @@ ggplot (data = cchic) +
 ## Combining multiple geoms
 
 ```{r, eval = FALSE}
-ggplot (data = cchic) +
+ggplot(data = cchic) +
   geom_point(mapping = aes(x = sao2_abg, y = pao2_abg, colour = sex)) +
   geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg))
 ```
@@ -247,11 +251,11 @@ ggplot (data = cchic) +
 
 ```{r, eval = FALSE}
 ggplot(data = cchic) +
-geom_bar(mapping = aes(x = care_level))
+  geom_bar(mapping = aes(x = care_level))
 
 
 ggplot(data = cchic) +
-stat_count(mapping = aes(x = care_level))
+  stat_count(mapping = aes(x = care_level))
 ```
 
 ![](Images/BarGraph1.png)
@@ -260,7 +264,7 @@ stat_count(mapping = aes(x = care_level))
 
 ```{r, eval = FALSE}
 ggplot(data = cchic) +
-geom_bar(mapping = aes(x=care_level, y = ..prop.., group = 1))
+  geom_bar(mapping = aes(x = care_level, y = ..prop.., group = 1))
 ```
 
 ![](Images/BarGraph2.png)
@@ -269,7 +273,7 @@ geom_bar(mapping = aes(x=care_level, y = ..prop.., group = 1))
 
 ```{r, eval = FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x=care_level, fill = sex))
+  geom_bar(mapping = aes(x = care_level, fill = sex))
 ```
 
 ![](Images/BarGraph3.png)
@@ -277,8 +281,8 @@ ggplot(data = cchic) +
 ## Standardising proportions
 
 ```{r, eval = FALSE}
-ggplot(data= cchic) +
-  geom_bar(mapping = aes(x=care_level, fill =sex), position = "fill")
+ggplot(data = cchic) +
+  geom_bar(mapping = aes(x = care_level, fill = sex), position = "fill")
 ```
 
 ![](Images/BarGraph4.png)
@@ -286,7 +290,7 @@ ggplot(data= cchic) +
 ## Changing position of bars
 
 ```{r, eval = FALSE}
-ggplot(data= cchic) +
+ggplot(data = cchic) +
   geom_bar(mapping = aes(x = care_level, fill = sex), position = "fill")
 ```
 

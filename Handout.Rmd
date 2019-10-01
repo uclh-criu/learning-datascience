@@ -1,17 +1,23 @@
 ---
-title: "Clinician Coders handout"
-output: pdf_document
+title: "Handout"
 
-toc: true
-toc_depth: 4
+header-includes:
+- \pretitle{\begin{center}\LARGE\includegraphics[width=12cm]{Images/Clinician Coders Branding_FINAL_CMYK_Colour.png}\\[\bigskipamount]}
+- \posttitle{\end{center}}
+
+output: pdf_document
 number_sections: true
 linkcolor: blue             
 urlcolor: blue
-citecolor: blue 
+citecolor: blue
 ---
 
+\newpage 
+
+\tableofcontents 
+
 ```{r, include = FALSE}
-# We will need this data later. 
+# We will need this data later.
 library(tidyverse)
 cchic <- read_csv("clean_CCHIC.csv")
 ```
@@ -121,7 +127,7 @@ say_hello
 ```
 
 
-### 2.	Data
+### 2. Data
 
 R is a statistical computing language; statistics uses vectors and matrices. 
 
@@ -242,7 +248,7 @@ Finally, functions.
 
 Think of functions as factories. Each factory is designed to have a certain output and needs a specific input. A function may conduct more than one step on the data you input e.g. `table()` counts values and presents them by the group parameter you set (we will use `table()` later).
 
-Functions will try and process most of the arguments you give it but there will be constraints. The help pages for the functions (accessed with either `?function.name` or `??function.name`) will detail these constraints. 
+Functions will try and process most of the arguments you give it but there will be constraints. The help pages for the functions (accessed with either `?function_name` or `??function_name`) will detail these constraints. 
 
 Examples of some functions which are useful for exploring your dataset are:
 
@@ -551,6 +557,320 @@ The following are a list of common mistakes to avoid. See if you can find exampl
 
 \newpage
 
+# Workshop 3 - Importing Data into R
+
+## Introduction
+
+### Reproducibility
+
+We strongly believe that the greatest strength you will gain from the work today is reproducibility. Learning coding is a pain, and for a 'one off' process there will nearly always be some tempting point-and-click alternative. However, learning to code, means being forced to write down what you did to get from your data to your result. You'll only have to reproduce something once to appreciate the value of having everything documented. Whether it is an error in your data, a new observation, or your supervisor or collaborator asking you to repeat an analysis with a twist, you will always be revisiting and revising your work. And the initial investment in writing (i.e. coding) your analysis means that these adjustments become simple. 
+
+#### What you will learn
+
+What are files and directories?  
+Importing spreadsheet data into R  
+Initial exploration of your data  
+Tips on using Google sheets with R
+
+## Files and Directories
+
+Directories are folders, they contain other folders and files. 
+
+Their relevance will become obvious once we need to instruct R, using code, where to find our stored databases. Therefore we will touch on this again later with greater detail. 
+
+\newpage
+
+## Importing Your Data into R
+
+There are three main methods for getting data into R:  
+
+1. Point and click  
+
+2. Using commands  
+
+      - Better for reproducibility
+      
+      - Someone else would just have to replace the source code to run the code on their own computer  
+      
+3. Connecting to an online database like google spreadsheet  
+    - But first you need to save your data in a format that can be understood by R. 
+
+#### Saving your data as a CSV file
+
+We need a 'common data language' that all spreadsheet languages can write to, and all statistical and programming languages can read. Arguably, one of the oldest and most ubiquitous is the 'comma separated values' (CSV) file. This is easily exportable from Microsoft Excel, Apple Numbers, Open Office, Google Sheets...etc.  
+
+It's a simple format. The top line are the column names, each separated by a comma. The following lines are the observations in those columns, again, separated by a comma.   
+
+Its strength is in its simplicity. It only has data, no formulas, no tricks and is very well recognised amongst software packages as it is very easily supported. R has excellent support for CSV files.
+
+<p>
+![](Images/UnformattedCSV.png)
+<p>
+
+\newpage
+Spreadsheet programs allow you to save your data in a .csv format.
+<p>
+![](Images/saveAscsv2.png)
+<p>
+
+\newpage
+
+### Point and Click
+
+You can either use   
+  1. `Import Dataset` tab in the `Environment` pane  
+OR
+  2. Navigate with the `Files` tab in the `Supporting Pane`  
+  
+**The point and click method is not reproducible**  
+
+<p>
+![Notice how there is no text in the source window to describe how you got to this data](Images/Point and click.png)
+<p>
+
+\newpage
+
+### Importing Data with Commands
+
+##### Finding and setting your working directory
+
+To use commands for importing data you need to instruct R where to find your database file (this is where directories come in).  
+- R would have chosen a working directory for you. You can check what it is using the `getwd()` command.
+
+```{r, eval=FALSE}
+getwd()
+```
+
+You can set your working directory to be the location of your file.
+
+```{r, eval=FALSE}
+setwd()
+```
+
+<p>
+![](images/Setwd.png)
+<p>
+
+\newpage
+
+Remember
+
+- You need quotation marks (`""`) around your file path name
+- Start with a root directory and then specify branches 
+- If you have a file in the directory you wish to use, you can find out the file path name by right clicking on the file:
+  - `Properties` in Windows
+  - `Get Info` in Mac
+<p>
+![](Images/FileProperties.png)
+<p>
+
+Note - Folders within directories are specified with:  
+  - `/` in Mac   
+  - `\\` in Windows  
+However, the correct notation in R for both is `/`
+
+\newpage
+
+##### The `readr` package
+
+- `readr` is a package containing functions to help R read your external files  
+- It is automatically installed with `tidyverse`  
+- Install and load the package as follows  
+```{r, eval=FALSE}
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+##### You are now ready to import the file.
+
+You can then tell R to read a CSV file by specifying the full file path name. You can see an example of this below, but the path will be unique to your computer. 
+
+```{r, eval=FALSE}
+cchic <- read_csv("clean_CCHIC.csv")
+```
+
+Now look for the `tibble` in your console.
+
+You have now imported the files into your R environment. How can you look at the contents of the dataset within R?
+
+```{r, eval=FALSE}
+# Looking at the file in R
+View(cchic)
+```
+
+This gives you a neater view, which is more human legible than the output printed in the console.
+
+<p>
+![](Images/view.png)
+<p>
+
+##### Shortcuts
+
+- There are notations to shorten the code for the file path.
+- Use a single dot for a file within the current working directory.
+
+```{r, eval=FALSE}
+read_csv("./clean_CCHIC.csv")
+```
+
+- Use a double dot `..` for a file  within the directory above the currnet working directory.
+
+\newpage
+
+## Reviewing Your Data in R
+
+Spreadsheets in R are called data frames.  
+You can get to know your data frame with the following functions:  
+
+  - `head(cchic)`  
+  - `tail(cchic)`  
+  - `names(cchic)`  
+  - `str(cchic)`  
+
+```{r}
+head(cchic)
+```
+
+- Gives you the first 6 rows and 12 columns as a tibble
+- Lists other column headings at the bottom
+- Useful to see if there are two column heading rows
+
+
+```{r}
+tail(cchic)
+```
+
+- Like `head()` but gives you the last 6 rows as a tibble
+- Useful to look for missing data at the end of the dataset
+
+\newpage
+
+```{r}
+names(cchic)
+```
+
+- Lists the names of all the variables
+- Useful if you want to check for the spelling of any variables
+
+```{r}
+str(cchic)
+```
+
+- Reports the format of each variable in R.
+- You can therefore check vectors before running functions. This would prevent you, for example, from trying to run a mean on a string vector
+
+#### Co-ordinates
+
+You can also use code in the form of coordinates to help you look at specific items within your `data frame`.  
+
+  - For example:
+```{r}
+cchic[25, 5]
+```
+
+This is the value of the 5th variable on row 25.
+
+#### $ to review column
+
+You can extract a specific variable using `$`.
+
+  - Enter the `data_frame_name$variable_name`
+  - For example
+  
+```{r}
+cchic$weight
+```
+
+This lists all of the data in the weight variable.
+
+### Description Functions
+
+Some packages contain functions that help describe the whole data frame. These normally describe the type of each variable, and may include summary statistics such as the mean, or the range of data values. 
+
+Examples include:
+  - `Desc()` from `DescTools` package.
+      - This function also outputs plots for each variable.
+  - `Describe()` from `Hmisc` package. 
+  
+To use these you have to install the appropriate packages
+
+\newpage
+
+## Exercises
+
+1. What are the variable formats in `cchic`?
+2. Display the `discharge` vector in `cchic`.
+3. How many men and women are in the database?
+4. How many survived and how many died?
+5. What does the function `ls()` do?
+    - Use it to see how many vectors contain information about "temp"
+    
+\newpage  
+
+### Solutions
+
+1. What types of variables do you have in the `cchic` data frame?
+```{r, eval = FALSE}
+str(cchic)
+```
+
+2. Display the `discharge` vector from `cchic`
+```{r}
+cchic$discharge
+```
+
+3. How many men and women are in the database?
+```{r}
+table(cchic$sex)
+```
+
+4. How many survived and how many died?
+```{r}
+table(cchic$vital_status)
+```
+
+5. What does the function `ls()` do?
+```{r}
+ls(cchic, pattern = "temp")
+```
+
+It lists all variable names with the word `temp` in them.
+    
+\newpage
+
+## Addendum: Importing from Google Sheets
+
+Googlesheets are spreadsheets which allow for collaboration and live-updating.
+
+It is possible to load and use the data in a googlesheet in R. For this you need the `googlesheets` package. 
+
+```{r, eval=FALSE}
+install.packages("googlesheets")
+library(googlesheets)
+```
+
+Then you can have a look at the files in your google sheets account with the function `gs_ls()`.  
+You will see a tibble of the list of files, here is an example of what that can look like:
+
+<p>
+![](Images/Googlesheetstibble.png)
+<p>
+
+- The first time you run this you will be asked to authenticate. 
+- A new browser will open and you will be asked to sing-in to your google account
+- A code will then be displayed, which you will have to input into your console.
+- Behind the scenes, R now saves a hidden file into your working directory.
+- The next time you run your script, as long as you haven't moved your code to a new directory, it won't need to ask for authentication again.
+
+Then, as before, use `read` commands in R to import your data as a tibble.
+
+```{r, eval=FALSE}
+file_name <- gs_title("googlesheet_title")
+data_frame_name <- gs_read("file_name")
+```
+
+\newpage
+
 # Workshop 4 - Data Wrangling.
 
 ## Introduction
@@ -613,14 +933,14 @@ This functions allows you to select rows based on the criteria you specify.
 <p>
 
 ```{r}
-cchic %>% 
+cchic %>%
   filter(age_years >= 65)
 ```
 
 You can then create a whole other data frame to work with a subset of data:
 
 ```{r}
-elder_cchic <- cchic %>% 
+elder_cchic <- cchic %>%
   filter(age_years >= 65)
 ```
 
@@ -635,7 +955,7 @@ This allows you to select only certain columns, that you can also use to create 
 <p>
 
 ```{r}
-cchic %>% 
+cchic %>%
   select(sex)
 ```
 
@@ -646,22 +966,22 @@ This gives you just the variable named `sex` for all patients.
 You can also use `filter()` and `select()` together but be careful about the order as you will not be able to `filter()` according to a variable if it has been inadvertently removed by a `select()` command.
 
 ```{r}
-cchic %>% 
-  filter(age_years >= 65) %>% 
+cchic %>%
+  filter(age_years >= 65) %>%
   select(sex)
 ```
 
 \newpage
 
-### Group by and Summarise
+### The `group by` and `summarise` functions.
 
 `group_by()` breaks down a dataset into specified groups of rows. When you then apply operations on the resulting object they’ll be automatically applied “by group”. Most importantly, all this is achieved by using the same exact syntax you’d use with an ungrouped object.
 
 You can use the `summarise()` function to apply a summary statistic to a vector. 
 
 ```{r}
-cchic %>% 
-  group_by(sex) %>% 
+cchic %>%
+  group_by(sex) %>%
   summarise(mean_urea = mean(urea, na.rm = TRUE))
 # Some summary statistic functions do not work with missing values, so you need to add the
 # `is.na` argument to remove these.
@@ -672,19 +992,19 @@ cchic %>%
 Piped data can be piped on to be used in almost any function in R, for example:
 
 ```{r}
-cchic %>% 
-  filter(is.na(age_years) == FALSE, age_years >= 65) %>% 
-  select(sex) %>% 
+cchic %>%
+  filter(is.na(age_years) == FALSE, age_years >= 65) %>%
+  select(sex) %>%
   head()
 ```
 
 Gives you the first 6 rows of the dataset of gender for patients older than 65. 
 
 ```{r}
-cchic %>% 
-  filter(age_years >= 65) %>% 
-  select(sex) %>% 
-  is.na() %>% 
+cchic %>%
+  filter(age_years >= 65) %>%
+  select(sex) %>%
+  is.na() %>%
   sum()
 ```
 
@@ -709,8 +1029,8 @@ You can do this with `rename()`.
 The variable called `na` is very confusing, because missing values are represented as `NA` in R.
 
 ```{r}
-cchic <- cchic %>% 
-           rename(sodium = na)
+cchic <- cchic %>%
+  rename(sodium = na)
 ```
 
 ### 2.	Creating new columns
@@ -719,13 +1039,13 @@ You can do this with the `mutate()` function.
 
 ```{r}
 cchic <- cchic %>%
- mutate(bmi=(weight/(height/100)^2))
+  mutate(bmi = (weight / (height / 100)^2))
 ```
 
 You have created the new variable `bmi`. You can also use the `mutate()` function to change the vector type of a column. 
 
 ```{r}
-cchic <- cchic %>% 
+cchic <- cchic %>%
   mutate(gender = as.factor(sex))
 ```
 
@@ -831,9 +1151,9 @@ There may be times when you are interested in computing the difference between t
 - Quicker way - Calculate difference, telling R that both components are dates.
 
 ```{r}
-cchic <- 
-  cchic %>% 
-  mutate(los=(dmy(discharge) - dmy(admission)))
+cchic <-
+  cchic %>%
+  mutate(los = (dmy(discharge) - dmy(admission)))
 # You have now added a new variable to your data frame and can recall it.
 head(cchic$los)
 ```
@@ -862,9 +1182,10 @@ This is how you convert the data.
 library(tidyr)
 
 cchic_long <- cchic %>%
-  gather("temp_point", "temperature",
-  temp_c:temp_nc)
-
+  gather(
+    "temp_point", "temperature",
+    temp_c:temp_nc
+  )
 ```
 
 Look at the what the new variables contain.
@@ -876,9 +1197,11 @@ Let's do a quick example - we will learn how to plot graphs later on.
 
 ```{r}
 library(ggplot2)
-cchic_long %>% 
-  ggplot(aes(x = temp_point, y =
-  as.numeric(temperature))) +
+cchic_long %>%
+  ggplot(aes(
+    x = temp_point, y =
+      as.numeric(temperature)
+  )) +
   geom_boxplot()
 ```
 
@@ -891,14 +1214,14 @@ You can use the `select()` function here too, but with a `-` before the column n
 The `lactate` variable is mostly empty. Let's remove it. 
 
 ```{r}
-cchic %>% 
+cchic %>%
   select(-lactate)
 ```
 
 Remember to tell R that you want to keep these changes to the dataframe.
 ```{r}
-cchic <- cchic %>% 
-  select(-lactate) 
+cchic <- cchic %>%
+  select(-lactate)
 ```
 
 \newpage
@@ -917,23 +1240,23 @@ cchic <- cchic %>%
 
 1. How many patients weigh more than 70kg?
 ```{r, eval = FALSE}
-cchic %>% 
-  filter(weight > 70) %>% 
+cchic %>%
+  filter(weight > 70) %>%
   summarise(number = n())
 ```
 
 
 2. Outcome of patients who were 60 years or older.
-```{r, eval = FALSE}
+```{r}
 # Mean length of stay
-cchic %>% 
-  filter(age_years >= 60) %>% 
+cchic %>%
+  filter(age_years >= 60) %>%
   summarise(los = mean(los))
 
 # Number of people alive at discharge
-cchic %>% 
-  filter(age_years >= 60) %>% 
-  select(vital_status) %>% 
+cchic %>%
+  filter(age_years >= 60) %>%
+  select(vital_status) %>%
   table()
 ```
 
@@ -961,7 +1284,7 @@ These graphs give you a good idea of how the data is distributed.
     - Can also be used to approximate distributions
 - Scatterplots can reveal outliers that may not be obvious from looking at the dataframe. 
 
-### 2.	Storytelling
+### 2. Storytelling
 
 -	Pie charts are not useful if you are demonstrating more than 2 categories. 
 -	3D generally has no advantage over 2D
@@ -999,17 +1322,16 @@ Just like you had to become familiar with the syntax for piping data with dplyr,
 A ggplot command generally looks like this.
 
 ```{r, eval = FALSE}
-ggplot (data = date_frame_name) +
-        style_of_plot(mapping = aes(x = vector_name1, y = vector_name2))
+ggplot(data = date_frame_name) +
+  style_of_plot(mapping = aes(x = vector_name1, y = vector_name2))
 ```
 
-You can also add arguments to the style of plot making the package very versatile for presenting data in lots of different ways. 
+You can also add arguments to the style of plot making the package very versatile for presenting data in lots of different ways. These include changing the size of features on the graph, or splitting the data into groups.
 
 ```{r, eval = FALSE}
 ggplot(data = date_frame_name) +
-        style_of_plot(mapping = aes(x = vector_name1, y = vector name2) +
-                        other arguments e.g. size of dots in a dot plot +
-                        further amendments e.g. splitting into more than one plot based on group)
+  style_of_plot(mapping = aes(x = vector_name1, y = vector_name2) +
+    other_arguments)
 ```
 	
 The syntax examples above are to help you grasp the arguments available for the `ggplot()` function. `ggplot()` also allows for flexibility in how to code for these arguments, as you will see below. You are still essentially telling R to do the same thing. Once you start to use `ggplot()` more you will develop your own personal preference on how you would like to code your `ggplot()` arguments. 
@@ -1025,7 +1347,7 @@ library(ggplot2)
 Load the `cchic` dataset and explore the variables you have. Ensure you have included the variable `los`, which you created in the last workshop.
 
 ```{r, fig.width= 5, fig.height=2}
-ggplot (data = cchic) +
+ggplot(data = cchic) +
   geom_point(mapping = aes(x = age_years, y = los))
 ```
 
@@ -1034,15 +1356,15 @@ ggplot (data = cchic) +
 We can use a different colour based on whether the patient survived. We can also use shape and size of the point in the same way.
 
 ```{r, fig.width=5,fig.height=2}
-ggplot (data = cchic) +
+ggplot(data = cchic) +
   geom_point(mapping = aes(x = age_years, y = los, color = vital_status))
 ```
 
 You can also combine different aesthetics
 
 ```{r, fig.width=5, fig.height =2}
-ggplot (data= cchic) +
-  geom_point(mapping = aes(x = age_years, y = los, size = vital_status, shape = sex))  
+ggplot(data = cchic) +
+  geom_point(mapping = aes(x = age_years, y = los, size = vital_status, shape = sex))
 ```
 
 \newpage
@@ -1054,7 +1376,7 @@ ggplot(data = cchic) +
   geom_point(mapping = aes(x = age_years, y = sodium), color = "blue")
 
 ggplot(data = cchic) +
-  geom_point(mapping = aes(x = age_years, y = sodium, color = "blue")) 
+  geom_point(mapping = aes(x = age_years, y = sodium, color = "blue"))
 ```
 
 Can you figure out why this happened? Look at the code and the help pages. Remember that syntax is important!
@@ -1066,20 +1388,20 @@ You can split your graph up using facets.
 ```{r, fig.width=5, fig.height =2}
 ggplot(data = cchic) +
   geom_point(mapping = aes(x = weight, y = los)) +
-  facet_wrap(~sex, nrow=2)
+  facet_wrap(~sex, nrow = 2)
 ```
 
 Look at this graph.
 ```{r, fig.width=5, fig.height =1.5}
 ggplot(data = cchic) +
-  geom_point(mapping = aes(x = age_years, y = los)) 
+  geom_point(mapping = aes(x = age_years, y = los))
 ```
 
 We should be able to see more data points in this graph. The problem is that a lot of the points are plotted on top of each other. We can use the `jitter` command to move the points a bit so that they are all visible.
 
 ```{r, fig.width=5, fig.height =1.5}
 ggplot(data = cchic) +
-geom_point(mapping = aes(x = age_years, y = los), position = "jitter") 
+  geom_point(mapping = aes(x = age_years, y = los), position = "jitter")
 ```
 
 \newpage
@@ -1096,7 +1418,7 @@ ggplot(data = cchic) +
 Using linetypes to convey differences
 
 ```{r, fig.width=5, fig.height =2}
-ggplot (data = cchic) +
+ggplot(data = cchic) +
   geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg, linetype = sex))
 ```
 
@@ -1120,28 +1442,28 @@ Some plots allow you to visualise the raw data (such as the scatter plots above)
 You can also change the labelling on the y-axis, so that you demonstrate proportion of all admissions in `cchic` and not just the raw count. 
 
 ```{r, fig.width=5, fig.height =2}
-ggplot(data = cchic) + 
+ggplot(data = cchic) +
   geom_bar(mapping = aes(x = care_level, y = ..prop.., group = 1))
 ```
 
 Just like with plots that allowed you to visualise the raw data, you can also provide aesthetic arguments to bar charts and histograms to include a second vector. 
 
 ```{r, fig.width=5, fig.height =2}
-ggplot(data = cchic) +  
+ggplot(data = cchic) +
   geom_bar(mapping = aes(x = care_level, fill = sex))
 ```
 
 What does this show? You can also use proportions to try and better visualise the relationship between these two vectors, this is done with the position argument. 
 
 ```{r, fig.width=5, fig.height =2}
-ggplot(data = cchic) + 
+ggplot(data = cchic) +
   geom_bar(mapping = aes(x = care_level, fill = sex), position = "fill")
 ```
 
 The position argument can also be used to compare the two vectors as if combining two bar charts. 
 
 ```{r, fig.width=5, fig.height =2}
-ggplot(data = cchic) + 
+ggplot(data = cchic) +
   geom_bar(mapping = aes(x = care_level, fill = sex), position = "dodge")
 ```
 
@@ -1319,7 +1641,7 @@ prop.table(care)
 
 -	Percentage
 ```{r}
-prop.table(care)*100
+prop.table(care) * 100
 ```
 
 Note - `summary(data_frame_name)` will report the mean, median, standard deviation and IQR for all numeric variables in the specified data frame. 
@@ -1354,8 +1676,8 @@ In general, we like to advocate a meaningful analysis where you consider the fol
 Let’s compare the height between men and women in the `cchic` database. (We already know that using `mean()` was the best way to describe height, as the distribution appears to be normal). 
 
 ```{r}
-cchic %>% 
-  group_by(sex) %>% 
+cchic %>%
+  group_by(sex) %>%
   summarise(av.height = mean(height, na.rm = TRUE))
 ```
 
@@ -1379,9 +1701,9 @@ The assumptions of a t-test are generally the following:
 Before looking at the code below, try conducting a t-test on differences in mean height between men and women, after looking at the help page with `?t.test`. Remember, to use any function your input data must fit the limits of the argument. 
 
 ```{r}
-cchic <- cchic %>% 
+cchic <- cchic %>%
   mutate(gender = as.factor(sex))
-cchic <- cchic %>% 
+cchic <- cchic %>%
   mutate(gender_num = as.numeric(gender))
 str(cchic$gender_num)
 t.test(cchic$height, cchic$gender_num)
@@ -1457,10 +1779,10 @@ ggplot(cchic, aes(x = los)) +
 We need to change lenth of stay to a numeric vector, to let us run tests using it. 
 
 ```{r}
-cchic <- cchic %>% 
+cchic <- cchic %>%
   mutate(los = as.factor(los))
 
-cchic <- cchic %>% 
+cchic <- cchic %>%
   mutate(los_num = as.numeric(los))
 ```
 
@@ -1470,21 +1792,19 @@ Let’s compute descriptive statistics.
 
 ```{r}
 # Descriptive statistics for males
-cchic %>% 
-  filter(sex == "M") %>% 
-  select(los_num) %>% 
+cchic %>%
+  filter(sex == "M") %>%
+  select(los_num) %>%
   summary()
-
 ```
 
 
 ```{r}
 # Descriptive statistics for females.
-cchic %>% 
-  filter(sex == "F") %>% 
-  select(los_num) %>% 
+cchic %>%
+  filter(sex == "F") %>%
+  select(los_num) %>%
   summary()
-
 ```
 
 What do you notice?
@@ -1516,9 +1836,9 @@ Up to this point, we have been using functions written by others. We can also wr
 Try writing this function for yourself. 
 
 ```{r}
-say_hello <- function (name) {
-  message <- paste ("Hello", name)
-  return (message)
+say_hello <- function(name) {
+  message <- paste("Hello", name)
+  return(message)
 }
 
 say_hello("cheryl")
@@ -1530,7 +1850,7 @@ Let's try writing another function.
 
 ```{r}
 BMI <- function(height, weight) {
-  x = weight/(height^2)
+  x <- weight / (height^2)
   return(x)
 }
 # Try calculating your own BMI
@@ -1544,12 +1864,11 @@ Where, BSA = $$\sqrt{(weight(kg)* height(cm))/3600}$$
 Then test your function.
 
 ```{r}
-BSA <- function (height, weight) {
-  x= sqrt((weight*height)/3600)
-   return(x)
- }
+BSA <- function(height, weight) {
+  x <- sqrt((weight * height) / 3600)
+  return(x)
+}
 
 BSA(height = 175, weight = 80)
 ```
-
 

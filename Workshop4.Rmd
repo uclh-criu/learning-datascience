@@ -6,6 +6,20 @@ output:
     reference_doc: Images/template.pptx
 ---
 
+```{r, include = FALSE}
+# We will need this data later. 
+library(tidyverse)
+library(lubridate)
+cchic <- read_csv("clean_CCHIC.csv")
+cchic <- cchic %>% 
+          mutate(los=(dmy(discharge)-
+          dmy(admission)))
+```
+
+##
+
+![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+
 ## Content
 
 - Using the `dplyr` package.
@@ -96,7 +110,7 @@ For instance, when you are selecting something
 Choose rows based on the conditions you specify.
 
 ```{r, eval = FALSE}
-cchic %>% 
+cchic %>%
   filter(age_years >= 65)
 ```
 
@@ -111,7 +125,7 @@ Dplyr works using 'verbs'. The first one is `filter`.
 Allows you to choose specific variables from your dataset.
 
 ```{r, eval = FALSE}
-cchic %>% 
+cchic %>%
   select(sex)
 ```
 
@@ -124,8 +138,8 @@ The second verb is select.
 ## Using filter and select together
 
 ```{r, eval = FALSE}
-cchic %>% 
-  filter(age_years >=65) %>% 
+cchic %>%
+  filter(age_years >= 65) %>%
   select(sex)
 ```
 
@@ -139,9 +153,9 @@ You have removed the age variable from the dataset, so you can’t filter based 
 Piped data can be passed on to almost any function in R
 
 ```{r, eval = FALSE}
-cchic %>% 
-  filter(age_years >= 65) %>% 
-  select(sex) %>% 
+cchic %>%
+  filter(age_years >= 65) %>%
+  select(sex) %>%
   summary()
 ```
 
@@ -158,10 +172,10 @@ Gives information on gender for patients older than 65.
 
 ## Example of using group by and summarise
 
-You should see:
+Try this.
 ```{r, eval = FALSE}
-cchic %>% 
-  group_by(sex) %>% 
+cchic %>%
+  group_by(sex) %>%
   summarise(mean_urea = mean(urea))
 ```
 
@@ -170,48 +184,16 @@ Hint – check for missing values in `cchic$urea`
 
 ## Make it work
 
-
-```{r, eval = FALSE}
-cchic %>% 
-  group_by(sex) %>% 
-  summarise(mean_urea = mean(urea, na.rm =
-  TRUE))
+```{r}
+cchic %>%
+  group_by(sex) %>%
+  summarise(mean_urea = mean(urea,
+    na.rm =
+      TRUE
+  ))
 ```
 
 An alternative is to filter out the missing values of urea.
-
-
-## Before dplyr
-
-Pre- 2014 tutorials and ‘fixes’ will refer to base R methods
-
-dplyr
-```{r, eval = FALSE}
-cchic %>% 
-  filter(age_years >= 65) %>%
-  select(sex) %>% 
-  summary
-```
-
-Base R
-```{r, eval = FALSE}
-summary(cchic[cchic$age_years >= 65,]$gender)
-```
-
-
-## Understanding base R
-
-```{r, eval = FALSE}
-summary(cchic[cchic$age_years >= 65,]$gender)
-```
-
-Uses the summary function. `summary()`
-
-On the variable `gender` from the data frame `cchic`. `cchic$gender`
-
-For rows where age is greater than 65. 
-  `[cchic$age_years >= 65,]`
-The comma on the end indicates that we are choosing rows.
 
 ## Take a break. Any questions?
 
@@ -235,15 +217,15 @@ Make sure you are happy running
 ## 1. Rename a variable
 
 
-```{r, eval = FALSE}
+```{r}
 names(cchic)
 ```
 
 The variable called `na` is very confusing
 
 ```{r, eval = FALSE}
-cchic <- cchic %>% 
-           rename(sodium = na)
+cchic <- cchic %>%
+  rename(sodium = na)
 ```
 
 
@@ -253,7 +235,7 @@ Use the `mutate` function
 
 ```{r, eval = FALSE}
 cchic <- cchic %>%
-  mutate(bmi=(weight/(height/100)^2))
+  mutate(bmi = (weight / (height / 100)^2))
 ```
 
 
@@ -297,7 +279,7 @@ R treats dates as characters unless you tell it not to.
 ```{r, message = FALSE}
 library(lubridate)
 
-test_dates <- c("02-01-12", "03-04-15", "15-06-02") 
+test_dates <- c("02-01-12", "03-04-15", "15-06-02")
 ```
 
 Convert these characters to dates. 
@@ -321,7 +303,7 @@ Extracting days
 
 ```{r, eval = FALSE}
 discharge_days <-
-  day(dmy(cchic$discharge)) 
+  day(dmy(cchic$discharge))
 ```
 
 ## Date intervals
@@ -346,9 +328,9 @@ cchic_los_test <- cchic$discharge - cchic$admission
 Or do it in one go. Calculate difference, ensuring that R knows the two variables are dates
 
 ```{r, eval = FALSE}
-cchic <- cchic %>% 
-          mutate(los=(dmy(discharge)-
-          dmy(admission)))
+cchic <- cchic %>%
+  mutate(los = (dmy(discharge) -
+    dmy(admission)))
 ```
 
 
@@ -373,29 +355,36 @@ library(tidyr)
 cchic
 
 cchic_long <- cchic %>%
-  gather("temp_point", "temperature",
-  temp_c:temp_nc)
+  gather(
+    "temp_point", "temperature",
+    temp_c:temp_nc
+  )
 
 names(cchic_long)
-
 ```
 
 ## This is why we 'gathered' the data
 
 ```{r, eval = FALSE}
 library(ggplot2)
-cchic_long %>% 
-  ggplot(aes(x = temp_point, y =
-  as.numeric(temperature))) +
+cchic_long %>%
+  ggplot(aes(
+    x = temp_point, y =
+      as.numeric(temperature)
+  )) +
   geom_boxplot()
 ```
+
+::: notes
+Get them to do this. 
+:::
 
 ## 7. Deleting columns
 
 What if we wanted to remove the `lactate` variable?
 
 ```{r, eval = FALSE}
-cchic %>% 
+cchic %>%
   select(-lactate)
 ```
 
@@ -415,9 +404,9 @@ Don’t forget to assign the above code to something, otherwise the output won�
 
 ## How many patients weigh more than 70kg?
 
-```{r, eval = FALSE}
-cchic %>% 
-  filter(weight > 70) %>% 
+```{r}
+cchic %>%
+  filter(weight > 70) %>%
   summarise(number = n())
 ```
 
@@ -425,14 +414,16 @@ cchic %>%
 
 ```{r, eval = FALSE}
 # Mean length of stay
-cchic %>% 
-  filter(age_years >= 60) %>% 
+cchic %>%
+  filter(age_years >= 60) %>%
   summarise(los = mean(los, na.rm = TRUE))
+```
 
+```{r}
 # Number of people alive at discharge.
-cchic %>% 
-  filter(age_years >=60) %>% 
-  select(vital_status) %>% 
+cchic %>%
+  filter(age_years >= 60) %>%
+  select(vital_status) %>%
   table()
 ```
 

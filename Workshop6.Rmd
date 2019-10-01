@@ -7,14 +7,18 @@ output:
 ---
 
 ```{r, include = FALSE}
-# We will need this data later. 
+# We will need this data later.
 library(tidyverse)
 library(lubridate)
 cchic <- read_csv("clean_CCHIC.csv")
-cchic <- cchic %>% 
-          mutate(los=(dmy(discharge)-
-          dmy(admission)))
+cchic <- cchic %>%
+  mutate(los = (dmy(discharge) -
+    dmy(admission)))
 ```
+
+##
+
+![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
 
 ## Content
 
@@ -129,7 +133,7 @@ How do we convey information on what your data looks like, using numbers or figu
 First establish the distribution of the data. 
 
 ```{r, eval = FALSE}
-ggplot(cchic, aes(x= age_years)) +
+ggplot(cchic, aes(x = age_years)) +
   geom_histogram()
 ```
 
@@ -200,13 +204,13 @@ How do you use numbers to convey what your data looks like.
 # small standard deviation
 dummy_1 <- rnorm(1000, mean = 10, sd = 0.5)
 dummy_1 <- as.data.frame(dummy_1)
-ggplot(dummy_1, aes(x =dummy_1)) +
+ggplot(dummy_1, aes(x = dummy_1)) +
   geom_histogram()
 
 # larger standard deviation
 dummy_2 <- rnorm(1000, mean = 10, sd = 20)
 dummy_2 <- as.data.frame(dummy_2)
-ggplot(dummy_2, aes(x =dummy_2)) +
+ggplot(dummy_2, aes(x = dummy_2)) +
   geom_histogram()
 ```
 
@@ -248,7 +252,7 @@ table(cchic$care_level)
 - Proportions
 ```{r, eval = FALSE}
 care <- table(cchic$care_level)
-prop.table (care)
+prop.table(care)
 ```
 
 - Percentatages
@@ -319,9 +323,9 @@ It all starts with a hypothesis
 Is there a difference between the heights of males and females?
 
 ```{r}
-cchic %>% 
-  group_by(sex) %>% 
-  summarise(av.height = mean(height, na.rm= TRUE))
+cchic %>%
+  group_by(sex) %>%
+  summarise(av.height = mean(height, na.rm = TRUE))
 ```
     
 Is the difference between heights statistically significant?
@@ -364,8 +368,8 @@ Notice the error. `sex` is in the wrong format.
 Correct this by changing the format of this variable in R.
 
 ```{r}
-cchic <- cchic %>% 
-  mutate(gender = as.factor(sex)) %>% 
+cchic <- cchic %>%
+  mutate(gender = as.factor(sex)) %>%
   mutate(gender_num = as.numeric(gender))
 ```
 
@@ -450,8 +454,6 @@ Is length of stay different between genders?
     - Skewed data
     - Unequal variance
     - Continuous data collapsed into small number of categories
-    
-`Biochem Med (Zagreb). 2013 Jun; 23(2): 143–149.`
 
 ## Using the Mann Whitney test
 
@@ -460,7 +462,7 @@ Is length of stay different between genders?
 Both variables need to be in numeric format.
 
 ```{r}
-cchic <- cchic %>% 
+cchic <- cchic %>%
   mutate(los_num = as.numeric(los))
 ```
 

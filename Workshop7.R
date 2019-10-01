@@ -25,14 +25,14 @@
 
 # Load necessary libaries ====
 # install.packages() i'll need this function if I haven't downloaded the package yet
-library(readr)     # to allow you to ‘read’ csv files and load into R
-library(tidyverse)  # loads in everything I tend to use on a daily basis
-library(Hmisc)      # Useful functions for describing data
-library(DescTools)  # Useful functions for describing data
-library(lubridate) #for working with dates
-library(dplyr)     # to wrangle data
-library(ggplot2)   # data visualisation
-library(stringr)   #working with string
+library(readr) # to allow you to ‘read’ csv files and load into R
+library(tidyverse) # loads in everything I tend to use on a daily basis
+library(Hmisc) # Useful functions for describing data
+library(DescTools) # Useful functions for describing data
+library(lubridate) # for working with dates
+library(dplyr) # to wrangle data
+library(ggplot2) # data visualisation
+library(stringr) # working with string
 
 # Make sure my working directory is set ===
 getwd()
@@ -53,8 +53,8 @@ describe(cchic)
 Desc(cchic)
 
 # Select a subset of the data
-cchic_small <- cchic %>% 
-  select (sex, gender2, age_years, los, los_num, vital_status)
+cchic_small <- cchic %>%
+  select(sex, gender2, age_years, los, los_num, vital_status)
 
 # modify a single column to a different data type
 cchic_small$sex <- as.factor(cchic$sex)
@@ -71,11 +71,15 @@ cchic <- cchic %>%
 # Plot data ====
 # will need to use ggplot2 to visually inspect data. The basic syntax is:
 
-ggplot(data = cchic,
-       mapping = aes(x = age_years,
-                     y = los_num,
-                     shape = random,
-                     color = sex)) +
+ggplot(
+  data = cchic,
+  mapping = aes(
+    x = age_years,
+    y = los_num,
+    shape = random,
+    color = sex
+  )
+) +
   geom_point() +
   ggtitle("Fun with Plots") +
   theme_bw()
@@ -83,7 +87,7 @@ ggplot(data = cchic,
 # A reminder that ggplot2 takes data in the following format:
 # ggplot(data = my_data,
 #        mapping = aes(x = some_column_name_1,
-#                     y = some_column_name_2)) + 
+#                     y = some_column_name_2)) +
 #   geom_point()
 
 # Apply some stats ====
