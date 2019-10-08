@@ -4,7 +4,7 @@ Clinician Coders teaching is hands-on, so participants need to bring their own l
 
 This course assumes no prior knowledge of the tools, but working through the course requires working copies of the software described below. We recommend you install the programmes below before the course begins. 
 
-Please note all of the requirements specified below are free. Get in contact if you are about to hand over any money for this course because you shouldn’t be.
+Please note all of the requirements specified below are free. Get in contact if you are about to hand over any money when setting up the pre-requisites, because you shouldn't be.
 
 ## Pre-course Objectives
 
@@ -15,6 +15,8 @@ Please note all of the requirements specified below are free. Get in contact if 
 - Download and install a speadsheet programme
 
 - Join Slack
+
+- Decide on the dataset you want to use for practice.
 
 ## Steps
 
@@ -54,6 +56,12 @@ For this lesson, if you don't have a spreadsheet program already, you can use [L
 
 ### 4. Join our group on Slack
 Slack is a geeky version of WhatsApp, but much better for coding and collaborating. We will use it to share files. You can use it chat, to ask questions, share material, and provide feedback. You should recieve an email invite to our group before the course.
+
+### 5. Decide on the dataset you want to use for practice.
+Workshop 7 of this course allows you to practice on your own data. You can either come in with your own dataset, and let us help you get started, or you can use the public version of the CCHIC dataset after signing the data sharing agreement. 
+
+The rest of the course relies on a small anonymised dataset in a simillar format to the CCHIC one. All candidates will have access to this.
+
 
 If you have problems with installing software, there is a small amount of setup time allocated for this at the beginning of the course. Bring your laptop, and we will be happy to help.
 
