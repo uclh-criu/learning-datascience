@@ -57,7 +57,7 @@ Note that the all of the powerpoint slides have speaker notes embedded in them. 
 
 Share all files via Slack. Candidates should then be able to download them onto their own computer. 
 
-Also note that the slides and handout are built using a truncated version of the CCHIC dataset. This may mean that candidates see different numbers on the slides, compared to the ones the see on their own screens. 
+Also note that the slides and handout are built using a truncated version of the CCHIC dataset. Candidates can use this trucated version to practice during the course. They will also be given the option to sign the CCHIC user sharing agreement and access the full CCHIC public dataset.
 
 Consider using a 'red sticker, green sticker' method of checking which candidates need help. Give each candidate a red and green post it note, and ask them to put the green sticker up when they have completed a task, and a red one up if they need help. 
 
