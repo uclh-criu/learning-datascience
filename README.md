@@ -1,6 +1,6 @@
 # ClinicianCoders
 
-Slides and handout for Clinician Coders course.
+Slides and handout for the [Clinician Coders](https://www.ucl.ac.uk/school-life-medical-sciences/about-slms/office-vice-provost-health/academic-careers-office/career-schemes/clinician-coders) course.
 
 No slides for Workshops 2 and 7. These are taught off the handouts.
 
