@@ -11,5 +11,7 @@ This course is licensed under a Creative Commons share-alike licence.
 The course has been adapted from the Data Science for Doctors course.
 [DS4D](http://datascibc.org)
 
-[](https://github.com/datascibc/ClinicianCoders/blob/master/Images/Clinician%20Coders%20Branding_FINAL_CMYK_Colour.png)
+
+
+![](https://github.com/datascibc/ClinicianCoders/blob/master/Images/Clinician%20Coders%20Branding_FINAL_CMYK_Colour.png)
 
