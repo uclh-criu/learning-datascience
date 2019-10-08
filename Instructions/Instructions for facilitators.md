@@ -67,6 +67,8 @@ Consider using a 'red sticker, green sticker' method of checking which candidate
 
 The instuctor needs to make sure that each candidate has met the prerequisites. Feel free to pause and help candidates out.
 
+A note on the datasets for workshop7. Candidates can either bring their own data, and work with it in R, or they can use the full CCHIC public access dataset. If they choose to do the latter, they need to sign the CCHIC user sharing agreement before the files can be released. Once they have signed the agreement, there is a clean, rectangular version of the CCHIC dataset available, which can be shared.
+
 At the end of this, upload the pdf document of the handout to the slack channel so that candidates can access it throughout the course. 
 
 
@@ -88,7 +90,8 @@ It may be helpful for instructors to split the candidates into small groups of 3
 
 #### Workshop 3.
 
-Just the slides. Aim to read in the csv file and have a dataframe called `cchic` in each candidates R environment by the time the workshop is over. 
+Just the slides. 
+Share the file called `clean_CCHIC.csv` on Slack. Aim to read in the csv file and have a dataframe called `cchic` in each candidates R environment by the time the workshop is over. 
 
 #### Workshop 4.
 
@@ -110,7 +113,7 @@ Just consists of the slides.
 
 Includes an R script which is just a template for working in R and analysing data generally. Upload to the slack channel at the beginning, and let candidates look through it in thier own time.
 
-Allow candidates to work with their own data. Just go around providing assistance as required. If candidates have not brought in their own data, give them the opportunity to answer questions they may be interested in using the CCHIC dataset. 
+Allow candidates to work with their own data. Just go around providing assistance as required. If candidates have not brought in their own data, give them the opportunity to answer questions they may be interested in using the CCHIC dataset. If they want to use the full CCHIC public dataset, they need to sign the user sharing agreement.
 
 
 Thank you, and good luck!
