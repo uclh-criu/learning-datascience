@@ -3,12 +3,12 @@ title: "Data Visualisation"
 
 output: 
   powerpoint_presentation:
-    reference_doc: Images/template.pptx
+    reference_doc: ../Images/template.pptx
 ---
 
 ##
 
-![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
 
 ## Content
 
@@ -17,7 +17,7 @@ output:
 
 ## 
 
-![](Images/Tufte1.png)
+![](../Images/Tufte1.png)
 
 ::: notes
 Say that the tips we are getting are from Edward Tufte. 
@@ -25,112 +25,112 @@ Say that the tips we are getting are from Edward Tufte.
 
 ## 
 
-![](Images/Tufte2.png)
+![](../Images/Tufte2.png)
 
 ##
 
-![](Images/Tufte3.png)
+![](../Images/Tufte3.png)
 
 ## 
 
-![](Images/Tufte4.png)
+![](../Images/Tufte4.png)
 
 ## 
 
-![](Images/Tufte5.png)
+![](../Images/Tufte5.png)
 
 ## 
 
-![](Images/Tufte6.png)
+![](../Images/Tufte6.png)
 
 ## 
 
-![](Images/Tufte7.png)
+![](../Images/Tufte7.png)
 
 ## 
 
-![](Images/Tufte8.png)
+![](../Images/Tufte8.png)
 
 ## 
 
-![](Images/Tufte9.png)
+![](../Images/Tufte9.png)
 
 ## 
 
-![](Images/Tufte10.png)
+![](../Images/Tufte10.png)
 
 ## 
 
-![](Images/Tufte11.png)
+![](../Images/Tufte11.png)
 
 ## 
 
-![](Images/Tufte12.png)
+![](../Images/Tufte12.png)
 
 ## 
 
-![](Images/Tufte13.png)
+![](../Images/Tufte13.png)
 
 ## 
 
-![](Images/Tufte14.png)
+![](../Images/Tufte14.png)
 
 ## 
 
-![](Images/Tufte15.png)
+![](../Images/Tufte15.png)
 
 ## 
 
-![](Images/Tufte16.png)
+![](../Images/Tufte16.png)
 
 ## 
 
-![](Images/Tufte17.png)
+![](../Images/Tufte17.png)
 
 
 ## 
 
-![](Images/Tufte18.png)
+![](../Images/Tufte18.png)
 
 ## 
 
-![](Images/Tufte19.png)
+![](../Images/Tufte19.png)
 
 ## 
 
-![](Images/Tufte20.png)
+![](../Images/Tufte20.png)
 
 ## 
 
-![](Images/Tufte21.png)
+![](../Images/Tufte21.png)
 
 ## 
 
-![](Images/Tufte22.png)
+![](../Images/Tufte22.png)
 
 ## 
 
-![](Images/Tufte23.png)
+![](../Images/Tufte23.png)
 
 ## 
 
-![](Images/Tufte24.png)
+![](../Images/Tufte24.png)
 
 ## 
 
-![](Images/Tufte25.png)
+![](../Images/Tufte25.png)
 
 ## 
 
-![](Images/Tufte26.png)
+![](../Images/Tufte26.png)
 
 ::: notes
-Say that though you can't see this images properly, this image is in the handout.
+Say that though you can't see this ../Images properly, this image is in the handout.
 :::
 
 ## Visualising data in R
 
-![This book is helpful](Images/R4DS.png)
+![This book is helpful](../Images/R4DS.png)
 
 ::: notes
 We now get to draw graphs!
@@ -211,7 +211,7 @@ ggplot(data = cchic) +
 Get them to type this code in and draw the graph. The graph they should get is on the next slide.
 :::
 
-![](Images/LineGraph1.png)
+![](../Images/LineGraph1.png)
 
 ## Adding a linetype
 
@@ -220,7 +220,7 @@ ggplot(data = cchic) +
   geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg, linetype = sex))
 ```
 
-![](Images/LineGraph2.png)
+![](../Images/LineGraph2.png)
 
 ## Adding colour 
 
@@ -229,7 +229,7 @@ ggplot(data = cchic) +
   geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg, colour = sex))
 ```
 
-![](Images/LineGraph3.png)
+![](../Images/LineGraph3.png)
 
 ## Combining multiple geoms
 
@@ -239,11 +239,11 @@ ggplot(data = cchic) +
   geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg))
 ```
 
-![](Images/LineGraph4.png)
+![](../Images/LineGraph4.png)
 
 ## Bar Graph
 
-![](Images/GraphTypes.png)
+![](../Images/GraphTypes.png)
 
 ## Drawing a bar graph
 
@@ -258,7 +258,7 @@ ggplot(data = cchic) +
   stat_count(mapping = aes(x = care_level))
 ```
 
-![](Images/BarGraph1.png)
+![](../Images/BarGraph1.png)
 
 ## Proportion instead of count
 
@@ -267,7 +267,7 @@ ggplot(data = cchic) +
   geom_bar(mapping = aes(x = care_level, y = ..prop.., group = 1))
 ```
 
-![](Images/BarGraph2.png)
+![](../Images/BarGraph2.png)
 
 ## Adding a second aesthetic
 
@@ -276,7 +276,7 @@ ggplot(data = cchic) +
   geom_bar(mapping = aes(x = care_level, fill = sex))
 ```
 
-![](Images/BarGraph3.png)
+![](../Images/BarGraph3.png)
 
 ## Standardising proportions
 
@@ -285,7 +285,7 @@ ggplot(data = cchic) +
   geom_bar(mapping = aes(x = care_level, fill = sex), position = "fill")
 ```
 
-![](Images/BarGraph4.png)
+![](../Images/BarGraph4.png)
 
 ## Changing position of bars
 
@@ -294,6 +294,6 @@ ggplot(data = cchic) +
   geom_bar(mapping = aes(x = care_level, fill = sex), position = "fill")
 ```
 
-![](Images/BarGraph5.png)
+![](../Images/BarGraph5.png)
 
 # Create your own plots now!

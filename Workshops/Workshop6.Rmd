@@ -3,7 +3,7 @@ title: "Basic Statistics"
 
 output: 
   powerpoint_presentation:
-    reference_doc: Images/template.pptx
+    reference_doc: ../Images/template.pptx
 ---
 
 ```{r, include = FALSE}
@@ -18,7 +18,7 @@ cchic <- cchic %>%
 
 ##
 
-![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
 
 ## Content
 
@@ -77,13 +77,13 @@ Data types have been covered in course before. The next few slides should be a b
 - Can’t be described
 :::
 ::: {.column}
-![](Images/ContinuousDistribution.png)
+![](../Images/ContinuousDistribution.png)
 :::
 ::::::::::::::
 
 ## What is normally distributed data?
 
-![](Images/NormalDistribution.png)
+![](../Images/NormalDistribution.png)
 
 ## Types of discrete variables
 
@@ -100,7 +100,7 @@ Data types have been covered in course before. The next few slides should be a b
     - However, the difference between Level 1 and Level 2 critical care may not be the same as the difference between Level 2 and Level 3. 
 :::
 ::: {.column}
-![](Images/OrdinalData.png)
+![](../Images/OrdinalData.png)
 :::
 ::::::::::::::
 
@@ -113,7 +113,7 @@ Data types have been covered in course before. The next few slides should be a b
     between these points are equal (e.g. 10 years)
 :::
 ::: {.column}
-![](Images/IntervalData.png)
+![](../Images/IntervalData.png)
 :::
 ::::::::::::::
 
@@ -140,7 +140,7 @@ ggplot(cchic, aes(x = age_years)) +
 What is the distribution of this data?
 :::
 ::: {.column}
-![](Images/AgeDistribution.png)
+![](../Images/AgeDistribution.png)
 :::
 ::::::::::::::
 
@@ -162,7 +162,7 @@ ggplot(data = cchic, aes(x = height)) +
 What is the distribution of this data?
 :::
 ::: {.column}
-![](Images/HeightDistribution.png)
+![](../Images/HeightDistribution.png)
 :::
 ::::::::::::::
 
@@ -264,10 +264,10 @@ PercTable(care)
 
 :::::::::::::: {.columns}
 ::: {.column}
-![](Images/Golem.png)
+![](../Images/Golem.png)
 :::
 ::: {.column}
-![](Images/StatisticalRethinking.png)
+![](../Images/StatisticalRethinking.png)
 :::
 ::::::::::::::
 
@@ -283,11 +283,11 @@ PercTable(care)
 
 ## What is a p-value?
 
-![](Images/pValue.png)
+![](../Images/pValue.png)
 
 ## What we are usually hoping...
 
-![](Images/pValue2.png)
+![](../Images/pValue2.png)
 
 ## Testing significance
 
@@ -342,7 +342,7 @@ Note that these number will not be the same as the one candidates see on their s
 - Paired vs. Unpaired
 :::
 ::: {.column}
-![](Images/Ttest.png)
+![](../Images/Ttest.png)
 :::
 ::::::::::::::
 
@@ -439,10 +439,10 @@ Is length of stay different between genders?
 
 :::::::::::::: {.columns}
 ::: {.column}
-![Male](Images/LOSMale.png)
+![Male](../Images/LOSMale.png)
 :::
 ::: {.column}
-![Female](Images/LOSFemale.png)
+![Female](../Images/LOSFemale.png)
 :::
 ::::::::::::::
 

@@ -3,13 +3,13 @@ title: "Introduction to R."
 
 output: 
   powerpoint_presentation:
-    reference_doc: Images/template.pptx
+    reference_doc: ../Images/template.pptx
 
 ---
 
 ##
 
-![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
 
 ## Disclaimer
 
@@ -61,7 +61,7 @@ output:
 
 ## The Reproducible Science Pipeline
 
-![](Images/Pipeline.png)
+![](../Images/Pipeline.png)
 
 ## Working with RStudio 
 
@@ -75,11 +75,11 @@ output:
 
 ## This is what R on it's own looks like
 
-![](Images/RConsole.png)
+![](../Images/RConsole.png)
 
 ## This is what RStudio looks like - much easier to work with
 
-![](Images/RStudio.png)
+![](../Images/RStudio.png)
 
 ::: notes
 Ask learners to open RStudio, but don't get them to type anything in yet.
@@ -87,7 +87,7 @@ Ask learners to open RStudio, but don't get them to type anything in yet.
 
 ## RStudio is made up of windows
 
-![](Images/RStudioHighlightWindows.png)
+![](../Images/RStudioHighlightWindows.png)
 
 ::: notes
 Explain each window.
@@ -100,7 +100,7 @@ Explain each window.
 
 ## Adjusting your view of RStudio.
 
-![](Images/RStudioButtonsHighlighted.png)
+![](../Images/RStudioButtonsHighlighted.png)
 
 ::: notes
 Explain what each button does.
@@ -108,7 +108,7 @@ Explain what each button does.
 
 ## Using the Console window
 
-![](Images/RStudioConsole.png)
+![](../Images/RStudioConsole.png)
 
 ## Using the console
 
@@ -135,7 +135,7 @@ Say that the ## sign is just printed on the slide as an indicator that we are se
 
 ## Using the Source
 
-![](Images/RStudioSource.png)
+![](../Images/RStudioSource.png)
 
 ## Using the Source
 
@@ -372,13 +372,13 @@ str(test2)
 - The vector is now a string vector.
 
 ## Functions as factories
-![](Images/Function1.png)
+![](../Images/Function1.png)
 
 ## Functions as factories
-![](Images/Function2.png)
+![](../Images/Function2.png)
 
 ## Functions as factories
-![](Images/Function3.png)
+![](../Images/Function3.png)
 
 
 ## Functions
@@ -393,7 +393,7 @@ str(test2)
 - View each function as a separate separate factory in a production line
 
 ## Functions in a line
-![](Images/Function4.png)
+![](../Images/Function4.png)
 
 ## Functions
 - You have been using functions already!
@@ -441,7 +441,7 @@ Get them to look up the help page for mean
 :::
 
 ## This is what a help page looks like.
-![](Images/HelpPage.png)
+![](../Images/HelpPage.png)
 
 ## Reading the help page
 

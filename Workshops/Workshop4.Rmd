@@ -3,7 +3,7 @@ title: "Data Wrangling"
 
 output: 
   powerpoint_presentation:
-    reference_doc: Images/template.pptx
+    reference_doc: ../Images/template.pptx
 ---
 
 ```{r, include = FALSE}
@@ -18,7 +18,7 @@ cchic <- cchic %>%
 
 ##
 
-![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
 
 ## Content
 
@@ -44,7 +44,7 @@ cchic <- cchic %>%
 - Subjecting it to processes along a data pipeline
 - You can then use your processed data for analysis
 
-![](Images/PipelineWrangling.png)
+![](../Images/PipelineWrangling.png)
 
 ## Load dplyr
 
@@ -72,7 +72,7 @@ Load data from the file you created earlier. The data frame should be called `cc
 - Shortcut - `Cmd + Shift + M` (Mac) `Ctrl + Shift + M` (Windows)
 :::
 ::: {.column}
-![](Images/Pipe.png)
+![](../Images/Pipe.png)
 :::
 ::::::::::::::
 ::: notes
@@ -336,7 +336,7 @@ cchic <- cchic %>%
 
 ## 6. Columns to rows.
 
-![Convert data spread over several variables into a single one](Images/WideToLong.png)
+![Convert data spread over several variables into a single one](../Images/WideToLong.png)
 
 ::: notes
 Warn them that this concept takes a while to grasp.

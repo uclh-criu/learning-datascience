@@ -3,7 +3,7 @@ title: "Importing Data into R"
 
 output: 
   powerpoint_presentation:
-    reference_doc: Images/template.pptx
+    reference_doc: ../Images/template.pptx
 
 ---
 
@@ -15,7 +15,7 @@ cchic <- read_csv("clean_CCHIC.csv")
 
 ##
 
-![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
 
 ## What will this workshop teach you?
 
@@ -39,7 +39,7 @@ The handout also includes some tips on using Google Sheets
 - Excel spreadsheets are easily converted into this format
 :::
 :::{.column}
-![](Images/UnformattedCSV.png)
+![](../Images/UnformattedCSV.png)
 :::
 :::::::::::: 
 
@@ -56,7 +56,7 @@ The handout also includes some tips on using Google Sheets
 
 :::
 :::{.column}
-![](Images/SaveAsCSV.png)
+![](../Images/SaveAsCSV.png)
 :::
 :::::::::::: 
 
@@ -79,7 +79,7 @@ The handout also includes some tips on using Google Sheets
 - However, the correct notation in R for both is `/`
 :::
 :::{.column}
-![](Images/FileProperties.png)
+![](../Images/FileProperties.png)
 :::
 ::::::::::::
 
@@ -100,7 +100,7 @@ setwd()
 ```
 :::
 :::{.column}
-![Remember. You need quotation marks (`""`) around your file path name](images/Setwd.png)
+![Remember. You need quotation marks (`""`) around your file path name](../Images/Setwd.png)
 :::
 ::::::::::::
 
@@ -133,7 +133,7 @@ Click `Import Dataset` tab in the `Environment` pane
 
 :::
 :::{.column}
-![](Images/Point and click.png)
+![](../Images/Point and click.png)
 :::
 ::::::::::::
 
@@ -143,7 +143,7 @@ Click `Import Dataset` tab in the `Environment` pane
 - Choose `From text (readr)`
 :::
 :::{.column}
-![](Images/ImportDataset1.png)
+![](../Images/ImportDataset1.png)
 :::
 ::::::::::::
 
@@ -156,7 +156,7 @@ Click `Import Dataset` tab in the `Environment` pane
 - IF you try this you will notice there is no text in the source pane. This method is not reproducible.  
 :::
 :::{.column}
-![](Images/ImportDataset2.png)
+![](../Images/ImportDataset2.png)
 :::
 ::::::::::::
 
@@ -167,7 +167,7 @@ Click `Import Dataset` tab in the `Environment` pane
 - You can copy and paste this code into your source pane to make this step reproducible 
 :::
 :::{.column}
-![](Images/ImportingDataset3.png)
+![](../Images/ImportingDataset3.png)
 :::
 ::::::::::::
 
@@ -202,7 +202,7 @@ Get them to do this
 
 ## Tibble
 
-![A `tibble` is a specially formatted data frame. Your data has been imported in this format.](Images/Tibble.png)
+![A `tibble` is a specially formatted data frame. Your data has been imported in this format.](../Images/Tibble.png)
 
 ## Viewing Your Data in R
 ::::::::::::{.columns}
@@ -219,7 +219,7 @@ View(cchic)
   - You can also view the data via the environment pane
 :::
 :::{.column}
-![](Images/View(cchic).png)
+![](../Images/View(cchic).png)
 :::
 ::::::::::::
 

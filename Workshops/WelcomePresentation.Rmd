@@ -3,13 +3,13 @@ title: "Welcome to Clinician Coders"
 
 output: 
   powerpoint_presentation:
-    reference_doc: Images/template.pptx
+    reference_doc: ../Images/template.pptx
 
 ---
 
 ##
 
-![](Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
 
 ## Hello!
 
@@ -29,12 +29,12 @@ Say that this is a quick intro to the course. And that this is what we cover dur
 - Access Wi-fi
 - Download R Studio
 - Have a spreadsheet program on your laptop
-- Sign user agreement for CCHIC 
 - Join the slack channel
-
+- Decide which dataset to use on the second day
 
 ::: notes
 Go through each item on list, make sure each person has completed all items. You can spend some time on this slide.
+Tell people that they can sign the CCHIC user sharing agreement if they want to access the full public dataset to play with later.
 :::
 
 ## Course schedule
@@ -80,7 +80,7 @@ Go through each item on list, make sure each person has completed all items. You
     - Privacy ensured through “highest standards of data security”
     - 18, 074 unique patients
     - Each with median 1030 time varying measurements (rows)
-- Extract of single admission time point for 1011 patients for Clinician Coders
+- You will be using a small annonymised extract from this dataset for the first part of the course.
 
 
 ## Workshop layout

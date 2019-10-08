@@ -2,7 +2,7 @@
 title: "Handout"
 
 header-includes:
-- \pretitle{\begin{center}\LARGE\includegraphics[width=12cm]{Images/Clinician Coders Branding_FINAL_CMYK_Colour.png}\\[\bigskipamount]}
+- \pretitle{\begin{center}\LARGE\includegraphics[width=12cm]{../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png}\\[\bigskipamount]}
 - \posttitle{\end{center}}
 
 output: pdf_document
@@ -66,7 +66,7 @@ With R:
 This is what the R studio interface looks like:
 
 <p>
-![R Studio Interface](Images/RStudio.png)
+![R Studio Interface](../Images/RStudio.png)
 </p>
 
 The windows (clockwise from bottom right) are:
@@ -305,7 +305,7 @@ To know how to best record and manage data, it is important to have an understan
 Have a look at this diagram from derangedphysiology.com.
 
 <p>
-![Types of data](Images/DataTypes.png)
+![Types of data](../Images/DataTypes.png)
 <p>
 
 R supports all these data types. Look at the diagram below and consider how you may represent these data types in R.
@@ -383,7 +383,7 @@ The time is stored as a fraction of the date, but 10467.5674 is not intuitive to
 
 Depending on the cell format, typing the same date in excel will give you different appearances, or even a different actual date. 
 <p>
-![Dates in Excel](Images/ExcelDates.png)
+![Dates in Excel](../Images/ExcelDates.png)
 <p>
 
 #### *Booleans*
@@ -400,15 +400,15 @@ Of note, FALSE is always 0. TRUE can be stored as any non-zero number. When reco
 A comma separated values file is as it says on the tin! The structure of columns and rows stays the same but data values on a single row are separated by commas instead of walls of a cell.
 Here is what a CSV file looks like if you were to look at the data raw:
 
-![](Images/UnformattedCSV.png)
+![](../Images/UnformattedCSV.png)
 
 Here is what you see when you open up your CSV file in a spreadsheet application:
 
-![](Images/FormattedCSV.png)
+![](../Images/FormattedCSV.png)
 
 Excel opens it up to view as above but also has formatting which makes it easier to read, and an interface where we can interact with the program to manipulate the data.
 
-![](Images/ExcelCSV.png)
+![](../Images/ExcelCSV.png)
 
 \newpage
 
@@ -478,7 +478,7 @@ The following are a list of common mistakes to avoid. See if you can find exampl
 
 <p>
 
-![Examples of names](Images/NameExamples.png)
+![Examples of names](../Images/NameExamples.png)
 <p>
 
 \newpage
@@ -604,13 +604,13 @@ It's a simple format. The top line are the column names, each separated by a com
 Its strength is in its simplicity. It only has data, no formulas, no tricks and is very well recognised amongst software packages as it is very easily supported. R has excellent support for CSV files.
 
 <p>
-![](Images/UnformattedCSV.png)
+![](../Images/UnformattedCSV.png)
 <p>
 
 \newpage
 Spreadsheet programs allow you to save your data in a .csv format.
 <p>
-![](Images/saveAscsv2.png)
+![](../Images/saveAscsv2.png)
 <p>
 
 \newpage
@@ -625,7 +625,7 @@ OR
 **The point and click method is not reproducible**  
 
 <p>
-![Notice how there is no text in the source window to describe how you got to this data](Images/Point and click.png)
+![Notice how there is no text in the source window to describe how you got to this data](../Images/Point and click.png)
 <p>
 
 \newpage
@@ -648,7 +648,7 @@ setwd()
 ```
 
 <p>
-![](images/Setwd.png)
+![](../Images/Setwd.png)
 <p>
 
 \newpage
@@ -661,7 +661,7 @@ Remember
   - `Properties` in Windows
   - `Get Info` in Mac
 <p>
-![](Images/FileProperties.png)
+![](../Images/FileProperties.png)
 <p>
 
 Note - Folders within directories are specified with:  
@@ -701,7 +701,7 @@ View(cchic)
 This gives you a neater view, which is more human legible than the output printed in the console.
 
 <p>
-![](Images/view.png)
+![](../Images/view.png)
 <p>
 
 ##### Shortcuts
@@ -853,7 +853,7 @@ Then you can have a look at the files in your google sheets account with the fun
 You will see a tibble of the list of files, here is an example of what that can look like:
 
 <p>
-![](Images/Googlesheetstibble.png)
+![](../Images/Googlesheetstibble.png)
 <p>
 
 - The first time you run this you will be asked to authenticate. 
@@ -889,7 +889,7 @@ Data wrangling is a step in the data pipeline. The term data pipeline refers to 
 
 <p>
 
-![The data pipeline](Images/PipelineWrangling.png)
+![The data pipeline](../Images/PipelineWrangling.png)
 <p>
 
 ### Data wrangling with dplyr
@@ -929,7 +929,7 @@ The keyboard shortcuts for the pipe are:
 This functions allows you to select rows based on the criteria you specify.
 
 <p>
-![Sourced from 'datanovia'](Images/Filter.png)
+![Sourced from 'datanovia'](../Images/Filter.png)
 <p>
 
 ```{r}
@@ -951,7 +951,7 @@ elder_cchic <- cchic %>%
 This allows you to select only certain columns, that you can also use to create a separate data frame if you wanted. 
 
 <p>
-![Image from 'datanovia'](Images/Select.png)
+![Image from 'datanovia'](../Images/Select.png)
 <p>
 
 ```{r}
@@ -1173,7 +1173,7 @@ You may want to do this to your data is you are interested in creating time seri
 
 The conversion looks like this.
 <p>
-![](Images/WideToLong.png)
+![](../Images/WideToLong.png)
 <p>
 
 This is how you convert the data.
@@ -1295,11 +1295,11 @@ These graphs give you a good idea of how the data is distributed.
 
 Colour can be used to clarify/strengthen your message:
 
-![](Images/Tufte21.png)
+![](../Images/Tufte21.png)
 
-![](Images/Tufte23.png)
+![](../Images/Tufte23.png)
 
-![](Images/Tufte24.png)
+![](../Images/Tufte24.png)
 
 Also remember that gender and colour blindess can affect perceived intensity of colour.
 
@@ -1479,7 +1479,7 @@ But also searchable with “ggplot cheat sheet”. Contains command prompts for 
 
 There are many different resources advising you on how to present your data (including the one below) but remember the important points above!
 
-![](Images/Tufte26.png)
+![](../Images/Tufte26.png)
 
 \newpage
 
@@ -1529,7 +1529,7 @@ There are tests of normality that can be conducted to check whether your variabl
 -	The extremes of the distribution are asymptotic (approach the x-axis)
 
 <p>
-![image from study.com](Images/NormalDistribution.png)
+![image from study.com](../Images/NormalDistribution.png)
 <p>
 
 #### Non-normal distribution
@@ -1539,7 +1539,7 @@ For simplicity continuous variables are said to have a non-parametric distributi
 -	Have more than one peak (e.g. bimodal)
 
 <p>
-![image from Reasearchgate](Images/ContinuousDistribution.png)
+![image from Reasearchgate](../Images/ContinuousDistribution.png)
 <p>
 
 \newpage
@@ -1655,13 +1655,13 @@ Inferential statistics refer to tests which are used to compare distributions or
 Traditionally we use the p-value to communicate the probability of the observed, or more extreme result, arising by chance if both distributions were from the same population (i.e. no difference in populations). P-values < 0.05 are deemed significant, although we argue that p-value results 0.03 – 0.049 should be deemed as requiring further testing. 
 
 <p>
-![Image from Students4bestevidence](Images/pValue.png)
+![Image from Students4bestevidence](../Images/pValue.png)
 <p>
 
 Depending on your project you may be looking for either a statistically significant difference or not (e.g. a non-inferiority study).
 
 <p>
-![Image from Towards Data Science](Images/pValue2.png)
+![Image from Towards Data Science](../Images/pValue2.png)
 <p>
 
 In general, we like to advocate a meaningful analysis where you consider the following (prior to plugging in your numbers to a function that will attempt to spit out a result):
@@ -1828,7 +1828,7 @@ wilcox.test(cchic$los_num, cchic$gender_num)
 Up to this point, we have been using functions written by others. We can also write our own functions to carry out operations we need to compute frequently.
 
 <p>
-![](Images/WriteFunction.png)
+![](../Images/WriteFunction.png)
 <p>
 
 ## Write a function
