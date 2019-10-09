@@ -10,7 +10,7 @@ output:
 ```{r, include=FALSE}
 library(readr)
 library(googlesheets)
-cchic <- read_csv("clean_CCHIC.csv")
+cchic <- read_csv("../clean_CCHIC.csv")
 ```
 
 ##

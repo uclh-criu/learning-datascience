@@ -10,7 +10,7 @@ output:
 # We will need this data later.
 library(tidyverse)
 library(lubridate)
-cchic <- read_csv("clean_CCHIC.csv")
+cchic <- read_csv("../clean_CCHIC.csv")
 cchic <- cchic %>%
   mutate(los = (dmy(discharge) -
     dmy(admission)))
@@ -271,6 +271,10 @@ PercTable(care)
 :::
 ::::::::::::::
 
+::: notes
+Describe the golem story, and say that the book is good if you want.
+:::
+
 ## Meaningful analysis
 
 - What is your hypothesis
@@ -331,7 +335,7 @@ cchic %>%
 Is the difference between heights statistically significant?
 
 ::: notes
-Note that these number will not be the same as the one candidates see on their screens. These slides are based on a smaller version of the dataset. 
+Note that these number may not be the same as the one candidates see on their screens. These slides are based on a smaller version of the dataset. 
 :::
 
 ## t-test
@@ -356,37 +360,18 @@ Note that these number will not be the same as the one candidates see on their s
 
 ## Doing a t-test
 
-Try:
-```{r, error=TRUE}
-t.test(cchic$height, cchic$sex)
-```
-
-Notice the error. `sex` is in the wrong format. 
-
-## Doing a t-test
-
-Correct this by changing the format of this variable in R.
-
-```{r}
-cchic <- cchic %>%
-  mutate(gender = as.factor(sex)) %>%
-  mutate(gender_num = as.numeric(gender))
-```
-
-
-Now do the test.
 ```{r, eval = FALSE}
-t.test(cchic$height, cchic$gender_num)
+t.test(height ~ sex, data = cchic)
 ```
 
 ::: notes
-Explain why this works. Also note that the number will not be exactly the same as the the ones they will see. This is because these slides are using a smaller version of the dataset.
+Tell them to do this.
 :::
 
 ## Doing the t-test
 
 ```{r, echo = FALSE}
-t.test(cchic$height, cchic$gender_num)
+t.test(height ~sex, data = cchic)
 ```
 
 ::: notes
@@ -398,7 +383,7 @@ Quickly explain the main points of the output
 - Is survival different between genders?
 
 ```{r}
-table(cchic$gender, cchic$vital_status)
+table(cchic$sex, cchic$vital_status)
 ```
 
 ## What is our hypothesis?
@@ -426,11 +411,15 @@ Start with `?chisq.test`.
 Then do the test.
 
 ```{r}
+# Changing the character vector to a factor one so that it works with the function.
+cchic <- cchic %>%
+  mutate(gender = as.factor(sex))
+# Doing the test.
 chisq.test(cchic$gender, cchic$vital_status)
 ```
 
 ::: notes
-Again, explain the output from this.
+Get them to do this, then explain the output.
 :::
 
 ## Non paramteric versions
@@ -469,7 +458,7 @@ cchic <- cchic %>%
 ## Doing the test
 
 ```{r}
-wilcox.test(cchic$los_num, cchic$gender_num)
+wilcox.test(los_num ~ sex, data = cchic)
 ```
 
 ::: notes

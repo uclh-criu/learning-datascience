@@ -10,7 +10,7 @@ output:
 # We will need this data later. 
 library(tidyverse)
 library(lubridate)
-cchic <- read_csv("clean_CCHIC.csv")
+cchic <- read_csv("../clean_CCHIC.csv")
 cchic <- cchic %>% 
           mutate(los=(dmy(discharge)-
           dmy(admission)))
