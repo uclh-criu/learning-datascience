@@ -217,7 +217,7 @@ Make sure you are happy running
 ## 1. Rename a variable
 
 
-```{r}
+```{r, eval = FALSE}
 names(cchic)
 ```
 

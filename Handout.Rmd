@@ -731,10 +731,8 @@ You can get to know your data frame with the following functions:
 head(cchic)
 ```
 
-- Gives you the first 6 rows and 12 columns as a tibble
+- Returns the first 6 rows of the dataset.
 - Lists other column headings at the bottom
-- Useful to see if there are two column heading rows
-
 
 ```{r}
 tail(cchic)
@@ -742,8 +740,6 @@ tail(cchic)
 
 - Like `head()` but gives you the last 6 rows as a tibble
 - Useful to look for missing data at the end of the dataset
-
-\newpage
 
 ```{r}
 names(cchic)
@@ -757,7 +753,7 @@ str(cchic)
 ```
 
 - Reports the format of each variable in R.
-- You can therefore check vectors before running functions. This would prevent you, for example, from trying to run a mean on a string vector
+- You can therefore check vectors before running functions. This would prevent you, for example, from trying to run a mean on a character vector
 
 #### Co-ordinates
 
@@ -815,7 +811,7 @@ str(cchic)
 ```
 
 2. Display the `discharge` vector from `cchic`
-```{r}
+```{r, eval = FALSE}
 cchic$discharge
 ```
 
@@ -1600,7 +1596,7 @@ ggplot(dummy_2, aes(x = dummy_2)) +
   geom_histogram()
 ```
 
-Do you notice the wider spread of data in the plot if data with the higher standard deviation?
+Do you notice the wider spread of data in the plot of data with the higher standard deviation?
 
 \newpage
 
