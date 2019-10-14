@@ -213,3 +213,5 @@ cchic %>%
 
 # Remember to save the `cchic` dataset somewhere safe so that you can use it tomorrow.
 # You will need some of the variables we calculated here.
+
+write_csv(cchic, "clean_CCHIC_intermediate.csv")
