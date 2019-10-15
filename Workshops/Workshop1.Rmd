@@ -132,6 +132,7 @@ You should see:
 
 ::: notes
 Say that the ## sign is just printed on the slide as an indicator that we are seeing output rather than code entered. They shouldn't see the symbol on their consoles.
+::: 
 
 ## Using the Source
 
