@@ -251,8 +251,8 @@ str(cchic$temp_nc)
 The unit is part of the value. We want to remove the unit.
 
 ```{r, eval = FALSE}
-cchic$temp_nc <-
-  parse_number(cchic$temp_nc)
+cchic <- cchic %>% 
+  mutate(temp_nc = parse_number(temp_nc))
 ```
 
 ## 4. Manipulate strings
@@ -296,36 +296,25 @@ We can extract components of dates.
 Extracting years
 
 ```{r, eval = FALSE}
-cchic_year_born <- year(dmy(cchic$dob))
+cchic <- cchic %>% 
+  mutate(year_born = year(dmy(dob)))
+
+str(cchic$year_born)
 ```
 
 Extracting days
 
 ```{r, eval = FALSE}
-discharge_days <-
-  day(dmy(cchic$discharge))
+cchic <- cchic %>% 
+  mutate(discharge_day = day(dmy(cchic$discharge)))
+
+str(cchic$discharge_day)
 ```
 
 ## Date intervals
 
-Calculating time differences between dates.
-
-1. Initially convert both variables to date format, then calculate difference (R normally imports dates as characters)
-
-2. Calculate difference in one go, ensuring that R knows the two variables are dates
-
-## 
-Convert both variables to date format, then calculate difference
-
-```{r, eval = FALSE}
-cchic$discharge <- dmy(cchic$discharge)
-cchic$admission <- dmy(cchic$admission)
-
-cchic_los_test <- cchic$discharge - cchic$admission
-```
-
-##
-Or do it in one go. Calculate difference, ensuring that R knows the two variables are dates
+We often want to calculate the difference between two dates or times.
+Let's calculate the length of stay of patients admitted to the ICU.
 
 ```{r, eval = FALSE}
 cchic <- cchic %>%

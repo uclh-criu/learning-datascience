@@ -302,7 +302,7 @@ cchic$weight
 - The function will look at each variable and will give you basic measures about the data, for example range and mean.
 - The data will also be described in a number of plots.
   - `Desc()` from `DescTools` package
-  - `Describe()` from `Hmisc` package  
+  - `describe()` from `Hmisc` package  
 - To use these you have to install the appropriate packages
 
 ::: notes

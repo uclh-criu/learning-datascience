@@ -784,9 +784,10 @@ This lists all of the data in the weight variable.
 Some packages contain functions that help describe the whole data frame. These normally describe the type of each variable, and may include summary statistics such as the mean, or the range of data values. 
 
 Examples include:
+
   - `Desc()` from `DescTools` package.
       - This function also outputs plots for each variable.
-  - `Describe()` from `Hmisc` package. 
+  - `describe()` from `Hmisc` package. 
   
 To use these you have to install the appropriate packages
 
@@ -1066,10 +1067,11 @@ str(cchic$temp_nc)
 Notice that the variable is structured as a character, because the unit has been recorded with it. We should remove the unit.
 
 ```{r}
-cchic$temp_nc <-
-  parse_number(cchic$temp_nc)
+cchic <- cchic %>% 
+  mutate(temp_nc = parse_number(temp_nc))
 
-head(cchic$temp_nc)
+# The variable is now numeric.
+str(cchic$temp_nc)
 ```
 
 \newpage
@@ -1124,43 +1126,37 @@ test_dates
 ```
 
 #### Extracting components of dates.
+
 If the dates are in date format, we can extract components of dates. 
 
 - Extracting years:
 ```{r}
-cchic_year_born <- year(dmy(cchic$dob))
-head(cchic_year_born)
+cchic <- cchic %>% 
+  mutate(year_born = year(dmy(dob)))
+str(cchic$year_born)
 ```
 
 - Extracting days.
 ```{r}
-cchic_discharge_days <- day(dmy(cchic$discharge))
-head(cchic_discharge_days)
+cchic <- cchic %>% 
+  mutate(discharge_day = day(dmy(cchic$discharge)))
+str(cchic$discharge_day)
 ```
 
 \newpage
 
 #### Date intervals
 
-There may be times when you are interested in computing the difference between two dates e.g. length of stay (discharge date – admission date). There are two main ways to do this with lubridate, both of which will compute a time difference in days. 
-
-- Quicker way - Calculate difference, telling R that both components are dates.
+We often want to calculate the difference between two dates or times.
+Let's calculate the lenght of stay of patients admitted to the ICU.
 
 ```{r}
 cchic <-
   cchic %>%
   mutate(los = (dmy(discharge) - dmy(admission)))
 # You have now added a new variable to your data frame and can recall it.
-head(cchic$los)
-```
 
-- Alternatively - Converting both vectors to date form, then calculating difference. 
-
-```{r}
-cchic$discharge <- dmy(cchic$discharge)
-cchic$admission <- dmy(cchic$admission)
-cchic_los_test <- cchic$discharge - cchic$admission
-# This time, we just saved the vector in a separate object - not the data frame.
+str(cchic$los)
 ```
 
 ### 6. Columns to rows.
