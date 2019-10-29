@@ -11,9 +11,9 @@ output:
 library(tidyverse)
 library(lubridate)
 cchic <- read_csv("../clean_CCHIC.csv")
-cchic <- cchic %>% 
-          mutate(los=(dmy(discharge)-
-          dmy(admission)))
+cchic <- cchic %>%
+  mutate(los = difftime(ymd_hms(discharge_dttm),
+                        ymd_hms(arrival_dttm), units = "days"))
 ```
 
 ##
@@ -245,14 +245,15 @@ Parse numbers from text using the `readr` package.
 
 ```{r, eval = FALSE}
 library(readr)
-str(cchic$temp_nc)
 ```
 
-The unit is part of the value. We want to remove the unit.
+Create a vector where the unit has been included as part of the value.
+You can't do maths on this vector. 
+```{r, eval = T}
+weight <- c("70kg", "80 kg", "82 kg", "74", "39")
 
-```{r, eval = FALSE}
-cchic <- cchic %>% 
-  mutate(temp_nc = parse_number(temp_nc))
+weight <- parse_number(weight)
+str(weight)
 ```
 
 ## 4. Manipulate strings
@@ -297,7 +298,7 @@ Extracting years
 
 ```{r, eval = FALSE}
 cchic <- cchic %>% 
-  mutate(year_born = year(dmy(dob)))
+  mutate(year_born = year(ymd(dob)))
 
 str(cchic$year_born)
 ```
@@ -306,7 +307,7 @@ Extracting days
 
 ```{r, eval = FALSE}
 cchic <- cchic %>% 
-  mutate(discharge_day = day(dmy(cchic$discharge)))
+  mutate(discharge_day = day(ymd_hms(cchic$discharge_dttm)))
 
 str(cchic$discharge_day)
 ```
@@ -318,8 +319,8 @@ Let's calculate the length of stay of patients admitted to the ICU.
 
 ```{r, eval = FALSE}
 cchic <- cchic %>%
-  mutate(los = (dmy(discharge) -
-    dmy(admission)))
+  mutate(los = difftime(ymd_hms(discharge_dttm),
+                        ymd_hms(arrival_dttm), units = "days"))
 ```
 
 
@@ -370,11 +371,11 @@ Get them to do this.
 
 ## 7. Deleting columns
 
-What if we wanted to remove the `lactate` variable?
+What if we wanted to remove the `temp_nc` variable?
 
 ```{r, eval = FALSE}
 cchic %>%
-  select(-lactate)
+  select(-temp_nc)
 ```
 
 The `-` sign means deselect here. 

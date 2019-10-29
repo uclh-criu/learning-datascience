@@ -6,6 +6,14 @@ output:
     reference_doc: ../Images/template.pptx
 ---
 
+```{r, include = FALSE}
+# We will need this data later.
+library(tidyverse)
+library(lubridate)
+library(ggplot2)
+cchic <- read_csv("../clean_CCHIC.csv")
+```
+
 ##
 
 ![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
@@ -202,44 +210,37 @@ There are a lot of commands in the file. Help them load up the file, get the dat
 
 ## Let's create a line graph together
 
-```{r, eval = FALSE}
-ggplot(data = cchic) +
-  geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg))
-```
-
 ::: notes
 Get them to type this code in and draw the graph. The graph they should get is on the next slide.
 :::
 
-![](../Images/LineGraph1.png)
+```{r, eval = T, message=FALSE}
+ggplot(data = cchic) +
+  geom_smooth(mapping = aes(x = wbc, y = crp))
+```
 
 ## Adding a linetype
 
-```{r, eval = FALSE}
+```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg, linetype = sex))
+  geom_smooth(mapping = aes(x = wbc, y = crp, linetype = sex))
 ```
-
-![](../Images/LineGraph2.png)
 
 ## Adding colour 
 
-```{r, eval = FALSE}
+```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg, colour = sex))
+  geom_smooth(mapping = aes(x = wbc, y = crp, colour = sex))
 ```
 
-![](../Images/LineGraph3.png)
 
 ## Combining multiple geoms
 
-```{r, eval = FALSE}
+```{r, , message=FALSE}
 ggplot(data = cchic) +
-  geom_point(mapping = aes(x = sao2_abg, y = pao2_abg, colour = sex)) +
-  geom_smooth(mapping = aes(x = sao2_abg, y = pao2_abg))
+  geom_point(mapping = aes(x = wbc, y = crp, colour = sex)) +
+  geom_smooth(mapping = aes(x = wbc, y = crp))
 ```
-
-![](../Images/LineGraph4.png)
 
 ## Bar Graph
 
@@ -249,51 +250,41 @@ ggplot(data = cchic) +
 
 - `geom_bar` and `stat_count` are interchangeable
 
-```{r, eval = FALSE}
+```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = care_level))
+  geom_bar(mapping = aes(x = medical))
 
 
 ggplot(data = cchic) +
-  stat_count(mapping = aes(x = care_level))
+  stat_count(mapping = aes(x = medical))
 ```
-
-![](../Images/BarGraph1.png)
 
 ## Proportion instead of count
 
-```{r, eval = FALSE}
+```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = care_level, y = ..prop.., group = 1))
+  geom_bar(mapping = aes(x = medical, y = ..prop.., group = 1))
 ```
-
-![](../Images/BarGraph2.png)
 
 ## Adding a second aesthetic
 
-```{r, eval = FALSE}
+```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = care_level, fill = sex))
+  geom_bar(mapping = aes(x = medical, fill = sex))
 ```
-
-![](../Images/BarGraph3.png)
 
 ## Standardising proportions
 
-```{r, eval = FALSE}
+```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = care_level, fill = sex), position = "fill")
+  geom_bar(mapping = aes(x = medical, fill = sex), position = "fill")
 ```
-
-![](../Images/BarGraph4.png)
 
 ## Changing position of bars
 
-```{r, eval = FALSE}
+```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = care_level, fill = sex), position = "fill")
+  geom_bar(mapping = aes(x = medical, fill = sex), position = "fill")
 ```
-
-![](../Images/BarGraph5.png)
 
 # Create your own plots now!

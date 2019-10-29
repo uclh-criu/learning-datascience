@@ -10,10 +10,7 @@ output:
 # We will need this data later.
 library(tidyverse)
 library(lubridate)
-cchic <- read_csv("../clean_CCHIC.csv")
-cchic <- cchic %>%
-  mutate(los = (dmy(discharge) -
-    dmy(admission)))
+cchic <- read_csv("../intermediate_CCHIC.csv")
 ```
 
 ##
@@ -132,7 +129,7 @@ How do we convey information on what your data looks like, using numbers or figu
 ::: {.column}
 First establish the distribution of the data. 
 
-```{r, eval = FALSE}
+```{r, eval = F}
 ggplot(cchic, aes(x = age_years)) +
   geom_histogram()
 ```
@@ -140,13 +137,9 @@ ggplot(cchic, aes(x = age_years)) +
 What is the distribution of this data?
 :::
 ::: {.column}
-![](../Images/AgeDistribution.png)
+![](../Images/hist_age.png)
 :::
 ::::::::::::::
-
-::: notes
-Get them to do this with you. 
-:::
 
 ## What is the distribution of height?
 
@@ -162,7 +155,7 @@ ggplot(data = cchic, aes(x = height)) +
 What is the distribution of this data?
 :::
 ::: {.column}
-![](../Images/HeightDistribution.png)
+![](../Images/hist_height.png)
 :::
 ::::::::::::::
 
@@ -221,11 +214,11 @@ Get them to plot the graphs. Explain that we are generating ramdom data from dif
 
 ## Calculating mean and standard deviation
 
-```{r, eval = FALSE}
+```{r, eval = T}
 mean(cchic$height, na.rm = TRUE)
 ```
 
-```{r, eval = FALSE}
+```{r, eval = T}
 sd(cchic$height, na.rm = TRUE)
 ```
 
@@ -233,10 +226,10 @@ The `na.rm` argument tells R to ignore missing values in the variable. What happ
 
 ## Calculating median and interquartile range
 
-```{r, eval = FALSE}
+```{r, eval = T}
 median(cchic$age_years, na.rm = TRUE)
 ```
-```{r, eval = FALSE}
+```{r, eval = T}
 IQR(cchic$age_years, na.rm = TRUE)
 ```
 
@@ -245,20 +238,16 @@ Again, we ignore the missing values.
 ## Describing discrete data
 
 - Frequencies
-```{r, eval = FALSE}
-table(cchic$care_level)
+```{r, eval = T}
+table(cchic$medical)
 ```
 
 - Proportions
-```{r, eval = FALSE}
-care <- table(cchic$care_level)
-prop.table(care)
+```{r, eval = T}
+type <- table(cchic$medical)
+prop.table(type)
 ```
 
-- Percentatages
-```{r, eval = FALSE}
-PercTable(care)
-```
 
 ## Inferential statistics
 
@@ -411,11 +400,7 @@ Start with `?chisq.test`.
 Then do the test.
 
 ```{r}
-# Changing the character vector to a factor one so that it works with the function.
-cchic <- cchic %>%
-  mutate(gender = as.factor(sex))
-# Doing the test.
-chisq.test(cchic$gender, cchic$vital_status)
+chisq.test(cchic$sex, cchic$vital_status)
 ```
 
 ::: notes
@@ -426,14 +411,11 @@ Get them to do this, then explain the output.
 
 Is length of stay different between genders?
 
-:::::::::::::: {.columns}
-::: {.column}
-![Male](../Images/LOSMale.png)
-:::
-::: {.column}
-![Female](../Images/LOSFemale.png)
-:::
-::::::::::::::
+```{r, message=FALSE}
+ggplot(data = cchic, aes(x = los)) +
+  geom_histogram() +
+  facet_grid(~sex)
+```
 
 ## When do you use a non-parametric test?
 
@@ -446,19 +428,10 @@ Is length of stay different between genders?
 
 ## Using the Mann Whitney test
 
-`??Mann-Whitney` will show you that the command is actually called `wilcox.test`.
-
-Both variables need to be in numeric format.
+`??Mann-Whitney` will show you that the command is actually called `wilcox.test`.t
 
 ```{r}
-cchic <- cchic %>%
-  mutate(los_num = as.numeric(los))
-```
-
-## Doing the test
-
-```{r}
-wilcox.test(los_num ~ sex, data = cchic)
+wilcox.test(los ~ sex, data = cchic)
 ```
 
 ::: notes
