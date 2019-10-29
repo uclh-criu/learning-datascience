@@ -1,6 +1,6 @@
 # Pre-requisites for Clinician Coders.
 
-Clinician Coders teaching is hands-on, so participants need to bring their own laptops to insure the proper setup of tools for an efficient workflow. In exchange, you will leave with a working version of R, and the skills to use it.
+Clinician Coders teaching is hands-on, so participants need to bring their own laptops to ensure the proper setup of tools for an efficient workflow. In exchange, you will leave with a working version of R, and the skills to use it.
 
 This course assumes no prior knowledge of the tools, but working through the course requires working copies of the software described below. We recommend you install the programmes below before the course begins. 
 
