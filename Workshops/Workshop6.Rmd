@@ -222,7 +222,7 @@ mean(cchic$height, na.rm = TRUE)
 sd(cchic$height, na.rm = TRUE)
 ```
 
-The `na.rm` argument tells R to ignore missing values in the variable. What happens if you leave it out?
+The `na.rm` argument tells R to ignore missing values in the variable. 
 
 ## Calculating median and interquartile range
 
@@ -239,13 +239,13 @@ Again, we ignore the missing values.
 
 - Frequencies
 ```{r, eval = T}
-table(cchic$medical)
+table(cchic$vital_status)
 ```
 
 - Proportions
 ```{r, eval = T}
-type <- table(cchic$medical)
-prop.table(type)
+status <- table(cchic$vital_status)
+prop.table(status)
 ```
 
 

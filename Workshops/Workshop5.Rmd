@@ -252,39 +252,39 @@ ggplot(data = cchic) +
 
 ```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = medical))
+  geom_bar(mapping = aes(x = vital_status))
 
 
 ggplot(data = cchic) +
-  stat_count(mapping = aes(x = medical))
+  stat_count(mapping = aes(x = vital_status))
 ```
 
 ## Proportion instead of count
 
 ```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = medical, y = ..prop.., group = 1))
+  geom_bar(mapping = aes(x = vital_status, y = ..prop.., group = 1))
 ```
 
 ## Adding a second aesthetic
 
 ```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = medical, fill = sex))
+  geom_bar(mapping = aes(x = vital_status, fill = sex))
 ```
 
 ## Standardising proportions
 
 ```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = medical, fill = sex), position = "fill")
+  geom_bar(mapping = aes(x = vital_status, fill = sex), position = "fill")
 ```
 
 ## Changing position of bars
 
 ```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = medical, fill = sex), position = "fill")
+  geom_bar(mapping = aes(x = vital_status, fill = sex), position = "fill")
 ```
 
 # Create your own plots now!

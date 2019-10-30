@@ -1430,28 +1430,28 @@ You can also change the labelling on the y-axis, so that you demonstrate proport
 
 ```{r, fig.width=5, fig.height =2}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = medical, y = ..prop.., group = 1))
+  geom_bar(mapping = aes(x = vital_status, y = ..prop.., group = 1))
 ```
 
 Just like with plots that allowed you to visualise the raw data, you can also provide aesthetic arguments to bar charts and histograms to include a second vector. 
 
 ```{r, fig.width=5, fig.height =2}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = medical, fill = sex))
+  geom_bar(mapping = aes(x = vital_status, fill = sex))
 ```
 
 What does this show? You can also use proportions to try and better visualise the relationship between these two vectors, this is done with the position argument. 
 
 ```{r, fig.width=5, fig.height =2}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = medical, fill = sex), position = "fill")
+  geom_bar(mapping = aes(x = vital_status, fill = sex), position = "fill")
 ```
 
 The position argument can also be used to compare the two vectors as if combining two bar charts. 
 
 ```{r, fig.width=5, fig.height =2}
 ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = medical, fill = sex), position = "dodge")
+  geom_bar(mapping = aes(x = vital_status, fill = sex), position = "dodge")
 ```
 
 \newpage 
@@ -1617,18 +1617,18 @@ These can be described using frequencies, proportions or percentages.
 
 - Frequencies
 ```{r}
-table(cchic$medical)
+table(cchic$vital_status)
 ```
 
 -	Proportions
 ```{r}
-type <- table(cchic$medical)
-prop.table(type)
+status <- table(cchic$vital_status)
+prop.table(status)
 ```
 
 -	Percentage
 ```{r}
-prop.table(type) * 100
+prop.table(status) * 100
 ```
 
 Note - `summary(data_frame_name)` will report the mean, median, standard deviation and IQR for all numeric variables in the specified data frame. 

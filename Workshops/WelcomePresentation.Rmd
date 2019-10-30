@@ -79,8 +79,8 @@ Tell people that they can sign the CCHIC user sharing agreement if they want to 
     - 5 UK teaching hospitals
     - Privacy ensured through “highest standards of data security”
     - 18, 074 unique patients
-    - Each with median 1030 time varying measurements (rows)
-- You will be using a synthetic dataset structured in a simillar format to the CCHIC data. 
+- You will be using a synthetically derived dataset structured in a simillar format to the CCHIC data. 
+- Data looks real, but isn't.
 
 
 ## Workshop layout
