@@ -58,10 +58,9 @@ For this lesson, if you don't have a spreadsheet program already, you can use [L
 Slack is a geeky version of WhatsApp, but much better for coding and collaborating. We will use it to share files. You can use it chat, to ask questions, share material, and provide feedback. You should recieve an email invite to our group before the course.
 
 ### 5. Decide on the dataset you want to use for practice.
-Workshop 7 of this course allows you to practice on your own data. You can either come in with your own dataset, and let us help you get started, or you can use the public version of the CCHIC dataset after signing the data sharing agreement. 
+The course is ran on a synthetic version of the CCHIC database, which is a Critical Care Collaboration across trusts. This is not real patient data, but is made to look real! You will all have access to this dataset. 
 
-The rest of the course relies on a small anonymised dataset in a simillar format to the CCHIC one. All candidates will have access to this.
-
+Workshop 7 of this course allows you to put some of what you have learnt into practise. You can either come in with your own dataset, and let us help you get started, or you can continue using the synthetic CCHIC dataset. 
 
 If you have problems with installing software, there is a small amount of setup time allocated for this at the beginning of the course. Bring your laptop, and we will be happy to help.
 
