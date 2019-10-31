@@ -57,7 +57,14 @@ Note that the all of the powerpoint slides have speaker notes embedded in them. 
 
 Share all files via Slack. Candidates should then be able to download them onto their own computer. 
 
-Also note that the slides and handout are built using a truncated version of the CCHIC dataset. Candidates can use this trucated version to practice during the course. They will also be given the option to sign the CCHIC user sharing agreement and access the full CCHIC public dataset.
+Also note that the slides and handout are built using a synthetic version of the CCHIC dataset. The CCHIC dataset is a Critical Care collaboration across trusts. Candidates can use this synthetic version to practice during the course.  
+
+The Github repository will have 3 datasets on it:
+1) A messy spread sheet version of the synthetic CCHIC database for workshop 2
+2) A cleaner verions of the synthetic CCHIC database in .csv format
+3) Readily wrangled synthetic CCHIC database, in case any candidates were no present, or lost their work from Day 1 
+
+These files should be uploaded onto the slack channel so that candidates can easily access them. 
 
 Consider using a 'red sticker, green sticker' method of checking which candidates need help. Give each candidate a red and green post it note, and ask them to put the green sticker up when they have completed a task, and a red one up if they need help. 
 
@@ -67,7 +74,7 @@ Consider using a 'red sticker, green sticker' method of checking which candidate
 
 The instuctor needs to make sure that each candidate has met the prerequisites. Feel free to pause and help candidates out.
 
-A note on the datasets for workshop7. Candidates can either bring their own data, and work with it in R, or they can use the full CCHIC public access dataset. If they choose to do the latter, they need to sign the CCHIC user sharing agreement before the files can be released. Once they have signed the agreement, there is a clean, rectangular version of the CCHIC dataset available, which can be shared.
+A note on the datasets for workshop7. Candidates can either bring their own data, and work with it in R, or they can use the synthetic CCHIC dataset. 
 
 At the end of this, upload the pdf document of the handout to the slack channel so that candidates can access it throughout the course. 
 
@@ -113,7 +120,7 @@ Just consists of the slides.
 
 Includes an R script which is just a template for working in R and analysing data generally. Upload to the slack channel at the beginning, and let candidates look through it in thier own time.
 
-Allow candidates to work with their own data. Just go around providing assistance as required. If candidates have not brought in their own data, give them the opportunity to answer questions they may be interested in using the CCHIC dataset. If they want to use the full CCHIC public dataset, they need to sign the user sharing agreement.
+Allow candidates to work with their own data. Just go around providing assistance as required. If candidates have not brought in their own data, give them the opportunity to answer questions they may be interested in using the synthetic CCHIC dataset. 
 
 
 Thank you, and good luck!
