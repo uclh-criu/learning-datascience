@@ -1,23 +1,11 @@
 ---
-title: "Introduction to R."
+title: "session2: Intro to R"
 
 output: 
   powerpoint_presentation:
     reference_doc: ../Images/template.pptx
 
 ---
-
-##
-
-![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
-
-## Disclaimer
-
-- Much of the following material can be sourced from open access resources
-    - Software Carpentry
-    - Stack Overflow
-
-- Initially collated by members of the DataSciBC (www.datascibc.org)
 
 
 ## Content
@@ -29,13 +17,10 @@ output:
 
 ## What is R?
 
-- Free software for statistical computing and plotting
-- Works with variety of platforms
-    - UNIX
-    - MacOS
-    - Windows
-- Built around handling data. 'Understands' data.
-    - Particularly well suited to data science / statistics
+- Free software for statistical computing, plotting (and almost anything else you can think of )
+- Works on all platforms
+- Built around handling data. 
+
 
 ## Why use R?
 
@@ -59,13 +44,11 @@ output:
     - Code makes your analysis explicit
     - Writing code = writing lab-book = good reproducible science
 
-## The Reproducible Science Pipeline
-
-![](../Images/Pipeline.png)
 
 ## Working with RStudio 
 
-- RStudio is an Integrated Development Environment.
+- RStudio is an Integrated Development Environment (IDE).
+-- (also the name of the company that develops it and a lot more)
 - Easier to work with than R on it's own, since it it a bit more 'point and clicky'
 - Allows
     - Code editing
@@ -95,7 +78,7 @@ Explain each window.
 - Console - this is where R is run. Commands executed but not saved.
 - Source - text files that contain commands.
 - Environment - tells you which R objects you are working with.
-- Files - actually a helper window. Gives you files, help, plots. Warn people not to delete files from their computer.
+- Files - actually a helper window. Gives you files, help, plots.
 :::
 
 ## Adjusting your view of RStudio.
@@ -134,7 +117,7 @@ You should see:
 Say that the ## sign is just printed on the slide as an indicator that we are seeing output rather than code entered. They shouldn't see the symbol on their consoles.
 :::
 
-## Using the Source
+## Using the Source or Text editor windows
 
 ![](../Images/RStudioSource.png)
 
@@ -230,16 +213,10 @@ say_hello
 say hello <- "hello"
 ```
 
-## Data
-- R is a statistical computing language
-- It is built around an understanding of data
-- Statistics uses:
-    - Vectors
-    - Data frames
 
 ## Vectors
 
-- A vector contains elements of the same datatype.
+- for R a vector is a container with elements of the same type.
     - A vector of integers - an example would be age
     ```{r, echo = FALSE}
 c(50, 25, 32, 67, 46, 19, 48)
@@ -252,7 +229,7 @@ c(37.5, 37.1, 37.3, 38.3, 37.4, 38.9)
     ```{r, echo = FALSE}
 c("Adam", "Sally", "Eve", "John", "James")
 ```
-    - A vector of logicals - an example would be 'are the blood results avaiblable?'
+    - A vector of logicals - an example would be 'are the blood results available?'
     ```{r, echo = FALSE}
 c(TRUE, FALSE, FALSE, TRUE, TRUE)
 ```
@@ -284,16 +261,18 @@ name[5]
 ```
 
 ## Data Frames.
-- You are already familiar with data frames
+- A data frame is a series of vectors aligned to form a table
+- Each vector becomes a column in the table
+- A properly formatted excel spreadsheet is essentially a data frame
 
+- Here we can create a new vector for gender
+- and combine the 3 vectors (name, age, gender) into a dataframe
 ```{r, echo = FALSE}
 gender <- c("male", "female", "female", "male", "male", "female")
 data.frame(name, age, gender)
 ```
 
-- A data frame is a series of vectors aligned to form a table
-- Each vector becomes a column in the table
-- A properly formatted excel spreadsheet is essentially a data frame
+
 
 ## Creating a data frame - excercise
 
@@ -433,10 +412,6 @@ data.frame(name, age, gender)
 - Functions are carrying out pre-written instructions
 - They will fail if they are supplied with the wrong kind of data - they will return an error message instead
 - Try `mean(group$gender)`
-- There are other constraints
-- Dependent on the function itself
-- HINT: some functions will not work with missing values
-- You will then need to specify the argument to remove these missing values
 
 ## Help with functions
 - How do you find out how to use a particular function?
@@ -492,17 +467,17 @@ Work through this with them.
 - Thousands of open access functions in other packages
 - To access these: install the packages, then load them.
 
-- Let's install and load the 'tidyverse' package
+- Let's install and load the 'ggplot2' package
 ```{r, eval=FALSE}
-install.packages("tidyverse")
-library(tidyverse)
+install.packages("ggplot2")
+library(ggplot2)
 ```
 
-- You can now use all of the functions that come with 'tidyverse'.
+- You can now use all of the functions that come with 'ggplot2'.
 - You need to load the package using `library` each time you open R. But you will not need to install it again.
 
 ::: notes
-Get them to load tidyverse. Emphasise that this is a process we will keep repeating throughout the course. 
+Get them to load ggplot2. Emphasise that this is a process we will keep repeating throughout the course. 
 :::
 
 ## Other useful packages
@@ -515,5 +490,5 @@ These are some packages we will be user later in the course.
 - `lubridate` - helps you manipulate dates
 
 ::: notes
-Maybe mention that a few of these packages are loaded with tidyverse.
+Maybe mention tidyverse as a collection of packages including some of the above that can be loaded together.
 :::
