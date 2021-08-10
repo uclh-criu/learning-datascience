@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Clinician Coders"
+title: "Welcome to our Patient Data Skills course for UCLH data fellows "
 
 output: 
   powerpoint_presentation:
@@ -9,7 +9,7 @@ output:
 
 ##
 
-![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
+![](../Images/logo-patient-data-skills.png)
 
 ## Hello!
 
@@ -25,22 +25,18 @@ Say that this is a quick intro to the course. And that this is what we cover dur
 
 ## Pre-requisites
 
-- Charging facilities – where’s your nearest?
-- Access Wi-fi
 - Download R Studio
-- Have a spreadsheet program on your laptop
-- Join the slack channel
-- Decide which dataset to use on the second day
+- Access Wi-fi
+- ? Join the slack channel
+
 
 ::: notes
 Go through each item on list, make sure each person has completed all items. You can spend some time on this slide.
-Tell people that they can sign the CCHIC user sharing agreement if they want to access the full public dataset to play with later.
 :::
 
 ## Course schedule
-
 - 2 days of intensive learning
-- Coffee and lunch provided
+
 
 ## Schedule - Day 1
 
