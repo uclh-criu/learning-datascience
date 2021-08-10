@@ -1,5 +1,5 @@
 ---
-title: "Welcome to our Patient Data Skills course for UCLH data fellows "
+title: "Welcome to the UCLH learning data science course"
 
 output: 
   powerpoint_presentation:
@@ -7,9 +7,8 @@ output:
 
 ---
 
-##
 
-![](../Images/logo-patient-data-skills.png)
+![](../Images/UCLH-logo-colour-scaled.jpg)
 
 ## Hello!
 
