@@ -1,0 +1,29 @@
+---
+title: "session1: an R taster"
+
+output: 
+  powerpoint_presentation:
+    reference_doc: ../Images/template.pptx
+
+---
+
+
+## Rationale
+
+- in this session we will give you a quick taste of R 
+- to show you what you can do
+- we will get you to type commands in R and see what happens
+- we don't expect you to understand completely at this stage
+- we will return to concepts later
+
+
+## Content
+
+- read in data from a file
+- look at the data
+- manipulate the data
+- plot the data
+
+
+
+
