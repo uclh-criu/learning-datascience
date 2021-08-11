@@ -1,10 +1,6 @@
 ---
 title: "Handout"
 
-header-includes:
-- \pretitle{\begin{center}\LARGE\includegraphics[width=12cm]{Images/Clinician Coders Branding_FINAL_CMYK_Colour.png}\\[\bigskipamount]}
-- \posttitle{\end{center}}
-
 output: pdf_document
 number_sections: true
 linkcolor: blue             

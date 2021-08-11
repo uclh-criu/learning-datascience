@@ -1,5 +1,5 @@
 ---
-title: "Importing Data into R"
+title: "session4: read data into R"
 
 output: 
   powerpoint_presentation:
@@ -13,9 +13,6 @@ library(googlesheets)
 cchic <- read_csv("../clean_CCHIC.csv")
 ```
 
-##
-
-![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
 
 ## What will this workshop teach you?
 

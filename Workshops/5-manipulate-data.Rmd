@@ -1,5 +1,5 @@
 ---
-title: "Data Wrangling"
+title: "session5: manipulate data in R"
 
 output: 
   powerpoint_presentation:
@@ -15,10 +15,6 @@ cchic <- cchic %>%
   mutate(los = difftime(ymd_hms(discharge_dttm),
                         ymd_hms(arrival_dttm), units = "days"))
 ```
-
-##
-
-![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
 
 ## Content
 

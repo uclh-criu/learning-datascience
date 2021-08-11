@@ -15,58 +15,27 @@ output:
 - Pre-requisites
 - Course schedule
 - What to expect from the workshops
-    - Data
-    - Layout
 
-::: notes
-Say that this is a quick intro to the course. And that this is what we cover during this intro.
-:::
+
 
 ## Pre-requisites
 
-- Download R Studio
-- Access Wi-fi
-- ? Join the slack channel
+- If need to run locally use these links to download [R](https://cran.r-project.org/) & [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
+- 
+- Collaborative google document [todo add link to googledoc here]
 
 
-::: notes
-Go through each item on list, make sure each person has completed all items. You can spend some time on this slide.
-:::
 
 ## Course schedule
 - 2 days of intensive learning
 
+[todo : add updated schedule here from the readme]
 
-## Schedule - Day 1
-
-- 09:00 - 09:30: Start and Welcome
-
-- 09:30 - 10:30: Workshop 1: Introduction to R
-
-- 10:30 - 11:00: Coffee Break
-
-- 11:00 - 11:45: Workshop 2: Cleaning your Dataset
-
-- 11:45 - 13:00: Workshop 3: Getting your Data into R
-
-- 13:00 - 14:00: Lunch
-
-- 14:00 - 16:30: Workshop 4: Data Wrangling
- 
-## Schedule - Day 2
-
-- 09:30 - 11:20: Workshop 5: Data Visualisation
-
-- 11:20 - 11:40: Coffee Break
-
-- 11:40 - 13:30: Workshop 6: Basic Satistics
-
-- 13:30 - 14:15: Lunch
-
-- 14:15 - 16:00: Workshop 7: Using your own Data
 
 ## The Data
 
+
+[todo probably replace this data section to refer to the new data]
 - We use the Critical Care Health Informatics Collaborative dataset.
 
 - Multicentre Adult ITU database
@@ -74,26 +43,23 @@ Go through each item on list, make sure each person has completed all items. You
     - 5 UK teaching hospitals
     - Privacy ensured through “highest standards of data security”
     - 18, 074 unique patients
-- You will be using a synthetically derived dataset structured in a simillar format to the CCHIC data. 
+- You will be using a synthetically derived dataset structured in a similar format to the CCHIC data. 
 - Data looks real, but isn't.
 
 
-## Workshop layout
+## What to expect from the sessions
 
-- 7 workshops.
-- 5 of these include a presentation and chances for you to follow along on your laptops.
-- You work your way through a worksheet during Workshop 2. 
-- You try to answer a question of your own using data during Workshop 7. 
+- we will follow a learning by doing approach
+-- getting you interacting with R early
 
-- A pdf file will be uploaded to the Slack channel after this presentation. It contains all of the content from the course workshops for future reference. 
+- don't worry if you don't understand everything at the start
+- do feel free to ask us questions at any time
 
-## Final note - tips on writing code
+- we apologise in advance for when we 
+-- a) assume you know something that you don't
+-- b) patronise you by explaining something you already know
 
-- Save your work where prompted by facilitator
-- It takes a while to get the hang of writing code. 
-- There may be code glitches (erroneous `()` or `,`) 
-- But that is part of coding.
-- Be mindful as you type them out
-- Tell us if you spot any we’ve made!
+We expect to do both and please feel free to tell us when we are.
+
 
 # Thank you. We hope you enjoy the course. 

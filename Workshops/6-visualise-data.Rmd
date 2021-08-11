@@ -1,5 +1,5 @@
 ---
-title: "Data Visualisation"
+title: "session6: visualise data in R"
 
 output: 
   powerpoint_presentation:
@@ -14,127 +14,22 @@ library(ggplot2)
 cchic <- read_csv("../clean_CCHIC.csv")
 ```
 
-##
-
-![](../Images/Clinician Coders Branding_FINAL_CMYK_Colour.png)
 
 ## Content
 
-- General data visualisation tips
 - Visualising Data in R with `ggplot2`
 
-## 
-
-![](../Images/Tufte1.png)
-
-::: notes
-Say that the tips we are getting are from Edward Tufte. 
-:::
-
-## 
-
-![](../Images/Tufte2.png)
-
-##
-
-![](../Images/Tufte3.png)
-
-## 
-
-![](../Images/Tufte4.png)
-
-## 
-
-![](../Images/Tufte5.png)
-
-## 
-
-![](../Images/Tufte6.png)
-
-## 
-
-![](../Images/Tufte7.png)
-
-## 
-
-![](../Images/Tufte8.png)
-
-## 
-
-![](../Images/Tufte9.png)
-
-## 
-
-![](../Images/Tufte10.png)
-
-## 
-
-![](../Images/Tufte11.png)
-
-## 
-
-![](../Images/Tufte12.png)
-
-## 
-
-![](../Images/Tufte13.png)
-
-## 
-
-![](../Images/Tufte14.png)
-
-## 
-
-![](../Images/Tufte15.png)
-
-## 
-
-![](../Images/Tufte16.png)
-
-## 
-
-![](../Images/Tufte17.png)
+- General data visualisation tips
 
 
-## 
 
-![](../Images/Tufte18.png)
+## What can data visualisation do ?
 
-## 
+1. help you to explore & understand your data
 
-![](../Images/Tufte19.png)
+2. communicate your data
 
-## 
 
-![](../Images/Tufte20.png)
-
-## 
-
-![](../Images/Tufte21.png)
-
-## 
-
-![](../Images/Tufte22.png)
-
-## 
-
-![](../Images/Tufte23.png)
-
-## 
-
-![](../Images/Tufte24.png)
-
-## 
-
-![](../Images/Tufte25.png)
-
-## 
-
-![](../Images/Tufte26.png)
-
-::: notes
-Say that though you can't see this ../Images properly, this image is in the handout.
-:::
 
 ## Visualising data in R
 
@@ -288,3 +183,97 @@ ggplot(data = cchic) +
 ```
 
 # Create your own plots now!
+
+
+## A few more general datavis guidelines to consider
+
+## 
+
+![](../Images/Tufte6.png)
+
+## 
+
+![](../Images/Tufte7.png)
+
+## 
+
+![](../Images/Tufte8.png)
+
+## 
+
+![](../Images/Tufte9.png)
+
+## 
+
+![](../Images/Tufte10.png)
+
+## 
+
+![](../Images/Tufte11.png)
+
+## 
+
+![](../Images/Tufte12.png)
+
+## 
+
+![](../Images/Tufte13.png)
+
+## 
+
+![](../Images/Tufte14.png)
+
+## 
+
+![](../Images/Tufte15.png)
+
+## 
+
+![](../Images/Tufte16.png)
+
+## 
+
+![](../Images/Tufte17.png)
+
+
+## 
+
+![](../Images/Tufte18.png)
+
+## 
+
+![](../Images/Tufte19.png)
+
+## 
+
+![](../Images/Tufte20.png)
+
+## 
+
+![](../Images/Tufte21.png)
+
+## 
+
+![](../Images/Tufte22.png)
+
+## 
+
+![](../Images/Tufte23.png)
+
+## 
+
+![](../Images/Tufte24.png)
+
+## 
+
+![](../Images/Tufte25.png)
+
+## 
+
+![](../Images/Tufte26.png)
+
+::: notes
+Say that though you can't see this ../Images properly, this image is in the handout.
+:::
+
+

@@ -1,6 +1,6 @@
-# Pre-requisites for Clinician Coders.
+# Course Pre-requisites 
 
-Clinician Coders teaching is hands-on, so participants need to bring their own laptops to ensure the proper setup of tools for an efficient workflow. In exchange, you will leave with a working version of R, and the skills to use it.
+The teaching will be hands-on, so participants need to bring their own laptops to ensure the proper setup of tools for an efficient workflow. In exchange, you will leave with a working version of R, and the skills to use it.
 
 This course assumes no prior knowledge of the tools, but working through the course requires working copies of the software described below. We recommend you install the programmes below before the course begins. 
 
@@ -11,10 +11,6 @@ Please note all of the requirements specified below are free. Get in contact if 
 - Install R
 
 - Install R studio
-
-- Download and install a speadsheet programme
-
-- Join Slack
 
 - Decide on the dataset you want to use for practice.
 
@@ -30,34 +26,10 @@ We’re going to get you up and running in R which is a highly respected, free s
 
 Download and install R from [here](https://cran.rstudio.com/)
 
-Download and install RStudio. This is a nice shiny interface for R, and the easiest way to use it. Download it [here](https://www.rstudio.com/products/rstudio/download/). There should be an ‘installer’ for your operating system.
+Download and install RStudio. This is a nice interface for R, and the easiest way to use it. Download it [here](https://www.rstudio.com/products/rstudio/download/). There should be an ‘installer’ for your operating system. You want the FREE desktop version.
 
-Operating system specific instructions and links are detailed below
 
-**Windows**
-
-Install R by downloading and running [this .exe](http://cran.r-project.org/bin/windows/base/release.htm) file from [CRAN](http://cran.r-project.org/index.html). Also, please install the [RStudio IDE](http://www.rstudio.com/ide/download/desktop).
-
-**Mac OS X**
-
-Install R by downloading and running [this .pkg](http://cran.r-project.org/bin/macosx/R-latest.pkg) file from [CRAN](http://cran.r-project.org/index.html). Also, please install the [RStudio IDE](http://www.rstudio.com/ide/download/desktop).
-
-**Linux**
-
-You can download the binary files for your distribution from [CRAN](http://cran.r-project.org/index.html). Or you can use your package manager (e.g. for Debian/Ubuntu run `sudo apt-get install r-base` and for Fedora run `sudo yum install R`). Also, please install the [RStudio IDE](http://www.rstudio.com/ide/download/desktop).
-
-### 3. Download and install a spreadsheet program
-
-This only applies if you don't already have Excel or simillar installed.
-
-Spreadsheets are useful for data entry and data organization, and some subsetting and sorting of the data as well as getting an overview of the data. To interact with spreadsheets, we can use [LibreOffice](https://www.libreoffice.org/), [Microsoft Excel](https://products.office.com/en-us/excel), [Gnumeric](http://www.gnumeric.org/), [OpenOffice.org](https://www.openoffice.org/), or other programs. Commands may differ a bit between programs, but general ideas for thinking about spreadsheets are the same.
-
-For this lesson, if you don't have a spreadsheet program already, you can use [LibreOffice](https://www.libreoffice.org/). It's a free, open source spreadsheet program.
-
-### 4. Join our group on Slack
-Slack is a geeky version of WhatsApp, but much better for coding and collaborating. We will use it to share files. You can use it chat, to ask questions, share material, and provide feedback. You should recieve an email invite to our group before the course.
-
-### 5. Decide on the dataset you want to use for practice.
+### 4. Decide on the dataset you want to use for practice.
 The course is ran on a synthetic version of the CCHIC database, which is a Critical Care Collaboration across trusts. This is not real patient data, but is made to look real! You will all have access to this dataset. 
 
 Workshop 7 of this course allows you to put some of what you have learnt into practise. You can either come in with your own dataset, and let us help you get started, or you can continue using the synthetic CCHIC dataset. 
