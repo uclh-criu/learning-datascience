@@ -1,23 +1,40 @@
 ## Instructions for Trainers
 
+### For August 2021 course
+
+Online in MS Teams.
 
 
-### Structure of the Course
+#### Trainer Roles
+
+Content delivery [Andy South] deliver content to the main room.
+Meeting organiser & learner support [Mei Bai] monitor learner responses, manage breakout rooms, chip in.
+Learner support [Steve Harris & Deborah Douglas] support individual learners in breakout rooms as required, feedback & chip in.
 
 
-- You will be supporting candidates on an individual basis with their queries as they work through problems
-- For each workshop there will be 3 Facilitators
-    - 1 Lead Facilitator, who will also be co-ordinating and presenting that workshop contents
-    - 2 Assitant Facilitators
-- The Lead Facilitator could be the same person for the 2 days, different on each day or they may alternate on a single day
-- You should have been told in advance what your role will be
+#### MS Teams details
+
+Main room for content delivery - 2 breakout rooms for troubleshooting.
+
+Meeting organiser [Mei] can upgrade others initially to an 'attendee' and then to 'presenter'.
+
+Meeting organiser [Mei] can create the breakout rooms & allocate people to them. If a learner has a problem, Mei can allocate them to a breakout room & one of the other trainers to go in too. Rooms are initially closed and those allocated are not moved until the room is opened by the organiser. Those moved will be given a 10s warning.
+
+In a breakout room learners can share their screen, a trainer can ask to 'Take control' and can potentially e.g. type into R console on the learners machine.
+
+Both learner & trainer can press leave to exit breakout room & return to main room - may need to press 'Resume'.
+
+The chat in Teams can be used for communication. We will also use an [online collaborative document](https://nhs-my.sharepoint.com/:w:/r/personal/mei_bai_nhs_net/_layouts/15/guestaccess.aspx?e=TIhNZt&share=ERBkMbqA6QVAo6DOtqNxVfQBBBwvGvroM5yO3e_3Vy_Xtg). (In sharepoint because a googledoc was less easy for contribution from NHS email addresses).
+
+
+
 
 
 ## General tips.
+- Note that powerpoint slides have speaker notes switch to 'presenter view' to see.
 
-Note that the all of the powerpoint slides have speaker notes embedded in them. Instructors will be able to view these if they change their powerpoint view to 'presenter view' while speaking.
 
-
+[todo OLD below, do we need it]
 ### Tips on individual workshops.
 
 #### The welcome slides.
