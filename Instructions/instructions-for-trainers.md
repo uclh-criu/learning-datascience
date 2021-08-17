@@ -28,14 +28,11 @@ The chat in Teams can be used for communication. We will also use an [online col
 
 
 
-
-
 ## General tips.
 - Powerpoint slides have some speaker notes switch to 'presenter view' to see.
 
 
-[todo OLD below, do we need it]
-### Tips on individual workshops.
+### Tips on individual sessions.
 
 #### The welcome slides.
 
