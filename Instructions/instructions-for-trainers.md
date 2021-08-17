@@ -9,7 +9,7 @@ Online in MS Teams.
 
 Content delivery [Andy South] deliver content to the main room.
 Meeting organiser & learner support [Mei Bai] monitor learner responses, manage breakout rooms, chip in.
-Learner support [Steve Harris & Deborah Douglas] support individual learners in breakout rooms as required, feedback & chip in.
+Learner support [?Steve Harris & Deborah Douglas & ?] support individual learners in breakout rooms as required, feedback & chip in.
 
 
 #### MS Teams details
@@ -31,7 +31,7 @@ The chat in Teams can be used for communication. We will also use an [online col
 
 
 ## General tips.
-- Note that powerpoint slides have speaker notes switch to 'presenter view' to see.
+- Powerpoint slides have some speaker notes switch to 'presenter view' to see.
 
 
 [todo OLD below, do we need it]
@@ -41,53 +41,45 @@ The chat in Teams can be used for communication. We will also use an [online col
 
 The instructor needs to make sure that each candidate has met the prerequisites. Feel free to pause and help candidates out.
 
-A note on the datasets for workshop7. Candidates can either bring their own data, and work with it in R, or they can use the synthetic CCHIC dataset. 
-
-At the end of this, upload the pdf document of the handout to the slack channel so that candidates can access it throughout the course. 
+A note on the datasets for workshop7. Candidates can either bring their own data, and work with it in R, or they can use the provided UCLH data. 
 
 
-#### Workshop 1. 
+#### 1: an R taster 
 
-Just consists of the slides. 
+To give a quick taste of R & show what we will do in the course. Learners will be asked to type commands in R and see what happens. We don't expect learners to understand completely at this stage, we will return to concepts later. 
 
-#### Workshop 2.
+#### 2: intro to R
 
-This does not include slides. Candidates navigate to the 'Workshop 2' section of the handout, read it and follow the instructions there. 
+
+#### 3: data cleaning exercise
+
+This does not include slides. Candidates navigate to the section of the handout, read it and follow the instructions there. 
 
 The workshop aims to demonstrate the principles of tidy data. 
 
-A 'dirty' version of the cchic dataset is provided, as well as a clean one. 
+A 'dirty' version of the dataset is provided, as well as a clean one. 
 
-Instructors should upload the file called `dirty_CCHIC.xlsx` to Slack, get the candidates to download it, open it in their spreadsheet application, and apply the principles described in the handout to clean it up. 
 
-It may be helpful for instructors to split the candidates into small groups of 3-5 people each, and get each group to fix a particular problem with the csv file. The groups then discuss the changes they made.
+#### 4: getting data into R
 
-#### Workshop 3.
+This includes both the slides and an additional R script. The instructor presents the slides, and the candidates can follow along using the R script. Demonstrates getting in some of the course datasets. 
 
-Just the slides. 
-Share the file called `clean_CCHIC.csv` on Slack. Aim to read in the csv file and have a dataframe called `cchic` in each candidates R environment by the time the workshop is over. 
 
-#### Workshop 4.
-
-This includes both the slides and an additional R script. The instructor presents the slides, and the candidates can follow along using the R script. Alternatively, they can type as they go along. 
-
-Remind the candidates that they will need the variables created in this session on the next day. This means that their `cchic` dataframe needs to contain a `los` variable. 
-
-#### Workshop 5.
-
-Remind candidates to load the same R object they created the day before. This cchic object should include the `los` variable. Allow a bit of time to make sure everyone has the dataset in their environment before demonstrating `ggplot` functions. 
+#### 5: data visualisation with ggplot2
 
 The workshop includes both the slides and the R script. At one point in the slides, candidates will be asked to open up the R script, and work through those examples. The R script should help them get a better idea of how small changes in the code can build on the same base graph. 
 
-#### Workshop 6.
+#### 6: data manipulation with dplyr
 
-Just consists of the slides.
 
-#### Workshop 7.
 
-Includes an R script which is just a template for working in R and analysing data generally. Upload to the slack channel at the beginning, and let candidates look through it in thier own time.
+#### 7: practical challenge using UCLH or participant provided data
 
-Allow candidates to work with their own data. Just go around providing assistance as required. If candidates have not brought in their own data, give them the opportunity to answer questions they may be interested in using the synthetic CCHIC dataset. 
+Opportunity for learners to take time to apply what they've been introduced to. They can either work with provided UCLH data or data they have brought themselves. Instructors will provide assistance as required.
+
+Includes an R script which contains suggestions & questions for getting started. 
+
+Learners will be challenged to share one novel plot they have made at the end of the session and talk about it fo a minute.
 
 
 Thank you, and good luck!
