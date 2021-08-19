@@ -1,0 +1,241 @@
+---
+title: "explore-covid-data"
+
+output: 
+  powerpoint_presentation:
+    reference_doc: ../Images/template.pptx
+
+---
+
+Andy exploring the covid emop data to be used in workshop exercises.
+Just knitting to ppt for first go.
+
+##
+
+```{r, read-dataset1}
+
+library(readr)
+
+# data stored locally because we can't make available yet
+filename <- "C:\\Users\\andy.south\\Desktop\\uclh-data\\Dataset_1.csv"
+df1 <- read_csv(filename)
+
+# to show structure of imported data
+str(df1)
+
+```
+
+##
+
+```{r, read-dataset2}
+
+library(readr)
+
+# data stored locally because we can't make available yet
+filename <- "C:\\Users\\andy.south\\Desktop\\uclh-data\\dataset2_new.csv"
+df2 <- read_csv(filename)
+
+# to show structure of imported data
+str(df2)
+
+```
+
+##
+
+```{r, read-lsoa-deprivation}
+
+# dataset1 is meant (according to dataset_documentation.docx) to have an LSOA code but doesn't yet
+
+# Mei: attached a separate file for postcodes (which are real patients’ postcodes)
+# Mei: The postcodes file can be linked with LSOA file in R to get LSOA code, and LSOA code is linked with deprivation score
+
+filename <- "C:\\Users\\andy.south\\Desktop\\uclh-data\\Postcodes.csv"
+# delim="\t" to account for columns being tab delimited
+dfpostcodes <- read_delim(filename, delim="\t")
+# BUT it has 2000 obs, and no person_id
+# email Mei early Friday to check
+
+# we probably want : "Index of Multiple Deprivation (IMD) Decile (where 1 is most deprived 10% of LSOAs)"
+
+# I saved the 2nd sheet of the xls as a csv from Excel
+filename <- "C:\\Users\\andy.south\\Desktop\\uclh-data\\File_1_ID_2015_Index_of_Multiple_Deprivation.csv"
+dfdeprivation <- read_csv(filename)
+
+# should be able to join the deprivation scores to the postcodes file though
+
+# file with postcode to lsoa lookup (2 million+ records)
+filename <- "C:\\Users\\andy.south\\Desktop\\uclh-data\\PCD_OA_LSOA_MSOA_LAD_AUG19_UK_LU.csv"
+df_pc_lsoa <- read_csv(filename)
+
+#first 3 columns are postcodes in diff. formats (maybe diff spaces between)
+names(df_pc_lsoa)
+# [1] "pcd7"     "pcd8"     "pcds"     "dointr"   "doterm"   "usertype" "oa11cd"
+# [8] "lsoa11cd" "msoa11cd" "ladcd"    "lsoa11nm" "msoa11nm" "ladnm"    "ladnmw" 
+# try left joining dfpostcodes & df_pc_lsoa - "pcds" works well just couple NAs
+dfjoined <- left_join(dfpostcodes, df_pc_lsoa, by=c("Postcode"="pcds"))
+
+#I think this is probably LSOA code we want
+#"lsoa11cd"
+
+
+#reading in lsoa shapefile
+library(sf)
+filename <- "C:\\Users\\andy.south\\Desktop\\uclh-data\\statistical-gis-boundaries-london\\ESRI\\LSOA_2011_London_gen_MHW.shp"
+
+sflsoa <- sf::st_read(filename)
+
+# test plotting lsoa boundaries
+plot(st_geometry(sflsoa))
+
+#test joining polygons onto the postcode/lsoa data
+#this way around should just retain lsoas that have data
+#st_as_sf needed to convert back to sf object after join
+sfjoined <- st_as_sf(left_join(dfjoined, sflsoa, by=c("lsoa11cd"="LSOA11CD")))
+
+plot(st_geometry(sfjoined))
+
+```
+
+
+
+
+```{r, barplots-dataset2}
+
+ggplot(df2, aes(x=discharge)) + geom_bar()
+
+```
+
+
+```{r, make-taster-dataset2}
+
+# to make an anonimised tiny dataset for taster exercise
+# important that records can't possibly be identified
+# so remove all IDs & mix the data up
+
+# replace some values with shorter
+df3 <- mutate(df2, discharge = str_replace(df2$discharge, "Inpatient Hospital", "Inpatient"))
+
+# rename some columns
+df3 <- rename(df3, visit_start = visit_detail_start_datetime )
+df3 <- rename(df3, visit_end = visit_detail_end_datetime )
+
+# filter rows where discharge is Home, Patient died, or Inpatient
+df3 <- filter(df3, discharge %in% c("Home","Inpatient","Patient died"))
+
+# filter distinct person_id
+df3 <- distinct(df3, person_id, .keep_all = TRUE)
+
+# select just some of columns
+#df3 <- select(df3, !c(year_of_birth, visit_start, visit_end))
+# exclude columns (note ! = not)
+df3 <- select(df3, !c(person_id, visit_occurrence_id, care_site_name))
+
+# add a random gender column
+df3$gender <- sample(c("male","female","other"), nrow(df3), replace=TRUE)
+
+# filter 20 rows using base notation [rows,columns]
+df3 <- df3[(6:25),]
+
+# reorder year_of_birth column to anonimise
+# usually take care doing this because it does mess up the data
+# but in this case that's what we want
+df3$year_of_birth <- sample(df3$year_of_birth)
+
+# convert date columns to time
+
+
+# write to csv
+
+
+# in the taster exercise
+
+## read in csv
+
+## look at data
+
+## calculate length of stay & age
+
+## ggplot
+
+
+```
+
+
+##
+
+```{r, echo=FALSE}
+
+# data import issues to create first intro dataset
+## shorten column names & remove spaces
+## convert lymphocyte & oxygen sat columns from char to numeric (prob happened due to null values)
+## convert race values to shorter
+## ask Mei to get length of stay in easier units (e.g. numeric number of hours)
+
+
+```
+
+##
+
+```{r, simplify-data1}
+
+# making a simple starting dataset
+library(dplyr) 
+library(ggplot2)
+
+df1_2 <- df1
+
+df1_2$lymphocytes <- as.numeric(df1_2$`First lymphocytes count`)
+df1_2$oxygen <- as.numeric(df1_2$`First oxygen saturation`)
+df1_2$age <- 2021 - df1_2$year_of_birth
+
+
+ggplot(df1_2, aes(x=year_of_birth, y=oxygen)) +
+        geom_point()
+
+# lymphocytes
+ggplot(df1_2, aes(x=year_of_birth, y=lymphocytes)) + geom_point()
+# focus to avoid outliers
+ggplot(df1_2, aes(x=year_of_birth, y=lymphocytes)) +
+        geom_point() + 
+        ylim(0,10)
+
+# age vs oxygen colour by lymphocytes - not very informative
+ggplot(df1_2, aes(x=age, y=oxygen)) +
+        geom_point(aes(colour=lymphocytes))
+
+# age vs lymphocytes colour by oxygen
+ggplot(df1_2, aes(x=age, y=lymphocytes)) +
+        geom_point(aes(colour=oxygen)) + 
+        ylim(0,5)
+
+# age
+ggplot(df1_2, aes(x=age, y=lymphocytes)) +
+        geom_point() + 
+        ylim(0,10)
+
+# oxygen vs lymphocytes
+ggplot(df1_2, aes(x=oxygen, y=lymphocytes)) +
+        geom_point() + 
+        ylim(0,10)
+
+# failing to cope with time format in length of stay
+#library(lubridate)
+#df1_2$time <- lubridate::parse_date_time(df1_2$`length of stay`)
+
+```
+
+
+```{r, join-data1-lsoa}
+
+# use df1_2 - the version cleaned in previous chunk
+
+df1_2 <- df1
+
+df1_2$lymphocytes <- as.numeric(df1_2$`First lymphocytes count`)
+df1_2$oxygen <- as.numeric(df1_2$`First oxygen saturation`)
+df1_2$age <- 2021 - df1_2$year_of_birth
+
+
+
+
+```
