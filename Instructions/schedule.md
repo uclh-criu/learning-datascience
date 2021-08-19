@@ -1,8 +1,10 @@
 # Schedule
 
-## UCLH Data Science Fellows training August 2021
+## UCLH Data Science Fellows training 2021 August 23 & 24, 9 - 4
 
-*draft - suggestions welcome*
+Online via MS Teams
+
+*draft - subject to minor changes*
 
 #### Day 1
 
@@ -18,6 +20,7 @@ Start | Duration | Topic
 13:40 | 60       |   4: getting data into R
 14:40 | 60       |   5: data visualisation with ggplot2
 15:40 | 20       |   discussion
+16:00 | 60       |   4pm finish - instructors available for an hour to answer questions 
 
 
 #### Day 2
@@ -36,5 +39,6 @@ Start | Duration | Topic
 13:40 | 80       |   7: practical challenge using UCLH or participant provided data
 15:00 | 30       |   sharing of challenge results - each participant to show 1 plot & talk about it for 1 min.
 15:30 | 30       |   wrapup & discussion
+16:00 | 60       |   4pm finish - instructors available for an hour to answer questions
 
 
