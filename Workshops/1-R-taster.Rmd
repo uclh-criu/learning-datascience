@@ -19,11 +19,30 @@ output:
 
 ## Content
 
+- download a project from Github into RStudio
 - read in data from a file
 - look at the data
 - manipulate the data
 - plot the data
 
 
+## download a project from Github into RStudio
+
+![](../Images/00-01-new-project.png)
+
+##
+
+![](../Images/00-02-from-version-control.png)
+
+## 
+
+![](../Images/00-03-from-git.png)
+
+## Copy into first box **https://github.com/ucl-criu/learning-datascience**
+![](../Images/00-04-git-url.png)
+
+## may take a while to copy files.
+
+![](../Images/00-05-clone-progress.png)
 
 
