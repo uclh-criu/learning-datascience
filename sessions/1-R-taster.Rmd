@@ -45,7 +45,7 @@ output:
 
 ![](../Images/00-05-clone-progress.png)
 
-## Intructor will take you through opening sessions/1-R-taster-script.R
+## Intructor will step through sessions/1-R-taster-script.R
 
 
 
