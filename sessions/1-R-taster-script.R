@@ -5,7 +5,7 @@
 
 
 #############################
-## read in csv to a dataframe
+## 1.1 read in csv to a dataframe
 
 dfpatient <- read_csv("..//data//patient-data-tiny.csv")
 
@@ -13,7 +13,7 @@ dfpatient <- read_csv("..//data//patient-data-tiny.csv")
 
 
 ########################
-## look at the data in R
+## 1.2 look at the data in R
 
 str(dfpatient)  #structure
 head(dfpatient) #first 5 rows
@@ -22,7 +22,7 @@ View(dfpatient)
 
 
 #####################
-## create new columns
+## 1.3 create new columns
 
 ## calculate length of stay & age
 dfpatient$visit_mins <- dfpatient$visit_end_time - dfpatient$visit_start_time 
@@ -31,7 +31,7 @@ dfpatient$age <- 2021 - dfpatient$year_of_birth
 
 
 ##############################
-## make some plots with ggplot
+## 1.4 make some plots with ggplot
 
 # for a bar plot just need to specify x
 ggplot(dfpatient, aes(x=discharge)) + geom_bar()
