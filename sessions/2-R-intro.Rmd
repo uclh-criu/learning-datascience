@@ -24,14 +24,14 @@ output:
 
 ## Why use R?
 
-- Why not?
-    - Need to learn a new language
-    - Does not use 'point and click'
-    - Need to describe to the computer the steps you want it to take
 - Why?
     - You can do *anything*
     - Not limited to the pre-designed command process of an app.
     - You record everything you do, so you can do it again.
+- Hurdles
+    - Need to learn a new language
+    - Little 'point and click'
+    - Need to describe to the computer the steps you want it to take
 
 ## Really, why R?
 
@@ -45,77 +45,7 @@ output:
     - Writing code = writing lab-book = good reproducible science
 
 
-## Working with RStudio 
-
-- RStudio is an Integrated Development Environment (IDE).
--- (also the name of the company that develops it and a lot more)
-- Easier to work with than R on it's own, since it it a bit more 'point and clicky'
-- Allows
-    - Code editing
-    - Syntax highlighting
-    - Plotting tools
-    - Workspace management 
-
-## This is what R on it's own looks like
-
-![](../Images/RConsole.png)
-
-## This is what RStudio looks like - much easier to work with
-
-![](../Images/RStudio.png)
-
-::: notes
-Ask learners to open RStudio, but don't get them to type anything in yet.
-:::
-
-## RStudio is made up of windows
-
-![](../Images/RStudioHighlightWindows.png)
-
-::: notes
-Explain each window.
-
-- Console - this is where R is run. Commands executed but not saved.
-- Source - text files that contain commands.
-- Environment - tells you which R objects you are working with.
-- Files - actually a helper window. Gives you files, help, plots.
-:::
-
-## Adjusting your view of RStudio.
-
-![](../Images/RStudioButtonsHighlighted.png)
-
-::: notes
-Explain what each button does.
-:::
-
-## Using the Console window
-
-![](../Images/RStudioConsole.png)
-
-## Using the console
-
-- Bottom left window.
-- This is R!
-- This is your prompt to type  `>`.
-- Type `2 + 2` then hit `Enter`.
-
-## Console output
-
-You should see:
-
-```{r}
-2 + 2
-```
-
--  `>` is the command prompt
--  `2 + 2` is the command
--  `4` is the output from R.
--  `[1]` is telling you that 4 is the first value in a sequence returned by R.
-
-::: notes
-Say that the ## sign is just printed on the slide as an indicator that we are seeing output rather than code entered. They shouldn't see the symbol on their consoles.
-:::
+## Return to looking at RStudio live again
 
 ## Using the Source or Text editor windows
 
@@ -146,57 +76,29 @@ Say that the ## sign is just printed on the slide as an indicator that we are se
 - Your code still there
 - You can run it again.
 
-::: notes
 
-Get them to do this.
-?Use this to introduce the labbook idea?
-Every scientist is expected to maintain a labbook and this should be no different for a data scientist; so each time you sit down to work create a new file; I do this by creating a directory in each project called labbooks and then files named according as `CCYY-MM-DD.R`
-See 
-- https://www.training.nih.gov/assets/Lab_Notebook_508_(new).pdf
-- http://www3.imperial.ac.uk/pls/portallive/docs/1/7289716.PDF
-- https://en.wikipedia.org/wiki/Lab_notebook
+## 3 Main R Building Blocks
 
-:::
-
-## R building blocks
-
-- Names
-- Data
-    - Vectors
-    - Data Frames
-- Functions
-    - Stored in packages
-
-## 3 Main Building Blocks
-
-- Names
-    - Everything needs a name in R: tables, plots, data files
-- Data
-    - Data comes in different forms: Real Numbers/Counting Numbers/Characters etc.
-    - Data is stored in vectors
-    - Vectors are stored in data frames
+- Objects
+    - named objects store data (& other things)
 - Functions
     - Little factories
     - Take an input (raw material) use function (factory) get an output (product)
-    - Functions are collated into packages
+- Packages
+    - collections of objects (data) and functions
+    - provide additional functionality
 
 ## Names
 
 - You assign names to objects in R.
 - This is the assignment operator `<-`
-- Shortcut:
-    - Mac OSX: `Option + - `
-    - Windows: `Alt + - `
 - Return the stored value by typing the name.
 
 ```{r}
-practice <- 2 + 2 + 6
+practice <- 2 + 2
 practice
 ```
 
-::: notes
-Get them to do this.
-:::
 
 ## Names
 
@@ -246,7 +148,7 @@ name <- c("Adam", "Sally", "Eve", "John", "James", "Jennifer")
 name
 ```
 
-## Recalling elements of a vector
+## Accessing elements of a vector
 
 - R creates an index for each element of the vector.
 - It allocates a number to each element within the vector from left to right, starting with `1`.
@@ -317,7 +219,7 @@ patients
 - R numbers each row of the data frame
 
 ## Recalling a vector in a data frame
-- Data frame colums are vectors.
+- Data frame columns are vectors.
 - `$` can be used to extract a vector from a data frame.
 - We can get the `age` column from the data frame `group`
 ```{r}

@@ -25,6 +25,42 @@ output:
 - manipulate the data
 - plot the data
 
+## If you don't see something like this, let us know and we'll help
+
+![](../Images/RStudioServer.png)
+
+## Working with RStudio 
+
+- RStudio is an Integrated Development Environment (IDE).
+-- (also the name of the company that develops it and a lot more)
+- Easier to work with than R on it's own, since it it a bit more 'point and clicky'
+- Allows
+    - Code editing
+    - Syntax highlighting
+    - Plotting tools
+    - Workspace management
+    - Version control
+
+## This is what R on it's own looks like
+
+![](../Images/RConsole.png)
+
+
+## RStudio is much easier to work with & what we recommend
+
+![](../Images/RStudioHighlightWindows.png)
+
+::: notes
+Explain each window.
+
+- Console - this is where R is run. Commands executed but not saved.
+- Source - text files that contain commands.
+- Environment - tells you which R objects you are working with.
+- Files - actually a helper window. Gives you files, help, plots.
+:::
+
+
+## Instructor to switch to live demo in RStudio (remaining slides for info)
 
 ## download a project from Github into RStudio
 

@@ -41,19 +41,26 @@ Powerpoint slides have some speaker notes switch to 'presenter view' to see.
 
 #### The welcome slides.
 
-Check that learners have managed to login.
 
 
 #### 1: an R taster 
 
-Work first through the ppt, then the .R script giving learners time to type themselves & experiment.
-
 To give a quick taste of R & show what we will do in the course. Learners will be asked to type commands in R and see what happens. We don't expect learners to understand completely at this stage, we will return to concepts later. 
+
+Check that learners have managed to login.
+
+- Instructor start on ppt
+- switch to live demo in RStudio to clone Github project 
+- demo opening .R script & work through
+- give learners time to type themselves & experiment.
+[todo] decide whether to get learners, now or later to save a source file in another folder, maybe in next intro R session
 
 
 #### 2: intro to R
 
-Use the ppt - initially learners won't need to type. Can switch to RStudio to demo later parts - either copy & pasting or typing.
+Use the ppt - initially learners won't need to type. 
+
+Can switch to RStudio to demo later parts - either copy & pasting or typing.
 
 
 #### 3: data cleaning exercise
