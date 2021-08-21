@@ -125,12 +125,21 @@ df3 <- filter(df3, discharge %in% c("Home","Inpatient","Patient died"))
 # filter distinct person_id
 df3 <- distinct(df3, person_id, .keep_all = TRUE)
 
+# # convert date columns to day 
+# df3$visit_start_day <- strptime(df3$visit_start,"%d/%m/%Y")
+# df3$visit_end_day <- strptime(df3$visit_end,"%d/%m/%Y")
+# # convert to just day, add 7 days for more anonimisation
+# df3$visit_start_day <- 7 + as_date(df3$visit_start_day)
+# df3$visit_end_day   <- 7 + as_date(df3$visit_end_day)
+
 # convert date columns to time 
-df3$visit_start_day <- strptime(df3$visit_start,"%d/%m/%Y")
-df3$visit_end_day <- strptime(df3$visit_end,"%d/%m/%Y")
+df3$visit_start_time <- strptime(df3$visit_start,"%d/%m/%Y %H:%M")
+df3$visit_end_time <- strptime(df3$visit_end,"%d/%m/%Y %H:%M")
+
 # convert to just day, add 7 days for more anonimisation
-df3$visit_start_day <- 7 + as_date(df3$visit_start_day)
-df3$visit_end_day   <- 7 + as_date(df3$visit_end_day)
+df3$visit_start_time <- days(7) + df3$visit_start_time
+df3$visit_end_time   <- days(7) + df3$visit_end_time
+
 
 # select just some of columns
 #df3 <- select(df3, !c(year_of_birth, visit_start, visit_end))
@@ -148,21 +157,34 @@ df3 <- df3[(6:25),]
 # but in this case that's what we want
 # maybe I don't need this as I've added a week to the entry dates ?
 # and also gender is synthetic
-# df3$year_of_birth <- sample(df3$year_of_birth)
+# but otherwise day could be back-calculated given that this code is on github too 
+df3$year_of_birth <- sample(df3$year_of_birth)
 
 
 # write to csv
 write_csv( df3, file="..//data//patient-data-tiny.csv")
 
 # in the taster exercise
+# (I can copy this both to a R file & the Rmd)
 
-## read in csv
+## read in csv to a dataframe
+dfpatient <- read_csv("..//data//patient-data-tiny.csv")
+# note that if it doesn't work try dfpatient <- read_csv("data//patient-data-tiny.csv")
 
 ## look at data
+str(dfpatient)  #structure
+head(dfpatient) #first 5 rows
+#display as table in RStudio (you can also click on the object name in the Environment tab, top right)
+View(dfpatient) 
 
 ## calculate length of stay & age
+## to create new columns
+#dfpatient$visit_days <- dfpatient$visit_end_day - dfpatient$visit_start_day 
+dfpatient$visit_mins <- dfpatient$visit_end_time - dfpatient$visit_start_time 
+dfpatient$age <- 2021 - dfpatient$year_of_birth
 
-## ggplot
+## ggplot for making plots
+
 
 
 ```
