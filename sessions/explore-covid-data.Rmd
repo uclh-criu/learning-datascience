@@ -185,6 +185,20 @@ dfpatient$age <- 2021 - dfpatient$year_of_birth
 
 ## ggplot for making plots
 
+# for a bar plot just need to specify x
+ggplot(dfpatient, aes(x=discharge)) + geom_bar()
+
+# exercise: change x=discharge to other column names in the dataframe
+
+# for points need to specify x & y
+ggplot(dfpatient, aes(x=discharge, y=age)) + geom_point()
+
+# exercise: change x & y to other column names in the dataframe
+
+# can add colour
+ggplot(dfpatient, aes(x=discharge, y=age, colour=gender)) + geom_point()
+
+# exercise: change x,y & colour to other columns
 
 
 ```
