@@ -125,10 +125,17 @@ df3 <- filter(df3, discharge %in% c("Home","Inpatient","Patient died"))
 # filter distinct person_id
 df3 <- distinct(df3, person_id, .keep_all = TRUE)
 
+# convert date columns to time 
+df3$visit_start_day <- strptime(df3$visit_start,"%d/%m/%Y")
+df3$visit_end_day <- strptime(df3$visit_end,"%d/%m/%Y")
+# convert to just day, add 7 days for more anonimisation
+df3$visit_start_day <- 7 + as_date(df3$visit_start_day)
+df3$visit_end_day   <- 7 + as_date(df3$visit_end_day)
+
 # select just some of columns
 #df3 <- select(df3, !c(year_of_birth, visit_start, visit_end))
 # exclude columns (note ! = not)
-df3 <- select(df3, !c(person_id, visit_occurrence_id, care_site_name))
+df3 <- select(df3, !c(person_id, visit_occurrence_id, care_site_name, visit_start, visit_end))
 
 # add a random gender column
 df3$gender <- sample(c("male","female","other"), nrow(df3), replace=TRUE)
@@ -139,13 +146,13 @@ df3 <- df3[(6:25),]
 # reorder year_of_birth column to anonimise
 # usually take care doing this because it does mess up the data
 # but in this case that's what we want
-df3$year_of_birth <- sample(df3$year_of_birth)
-
-# convert date columns to time
+# maybe I don't need this as I've added a week to the entry dates ?
+# and also gender is synthetic
+# df3$year_of_birth <- sample(df3$year_of_birth)
 
 
 # write to csv
-
+write_csv( df3, file="..//data//patient-data-tiny.csv")
 
 # in the taster exercise
 
