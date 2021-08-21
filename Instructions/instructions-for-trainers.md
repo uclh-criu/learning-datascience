@@ -4,6 +4,7 @@
 
 Online in MS Teams.
 
+[note view html or the md on Github to see formatted version, preview md in RStudio to update html]
 
 #### [collaborative document](https://nhs-my.sharepoint.com/:w:/g/personal/mei_bai_nhs_net/ERBkMbqA6QVAo6DOtqNxVfQBBBwvGvroM5yO3e_3Vy_Xtg?e=TIhNZt) 
 For sharing & monitoring learner progress. All can edit.
@@ -32,28 +33,32 @@ Both learner & trainer can press leave to exit breakout room & return to main ro
 The chat in Teams can be used for communication.
 
 
-
 ## General tips.
-- Powerpoint slides have some speaker notes switch to 'presenter view' to see.
+Powerpoint slides have some speaker notes switch to 'presenter view' to see.
 
 
 ### Tips on individual sessions.
 
 #### The welcome slides.
 
-The instructor needs to make sure that each candidate has met the prerequisites. Feel free to pause and help candidates out.
-
-A note on the datasets for workshop7. Candidates can either bring their own data, and work with it in R, or they can use the provided UCLH data. 
+Check that learners have managed to login.
 
 
 #### 1: an R taster 
 
+Work first through the ppt, then the .R script giving learners time to type themselves & experiment.
+
 To give a quick taste of R & show what we will do in the course. Learners will be asked to type commands in R and see what happens. We don't expect learners to understand completely at this stage, we will return to concepts later. 
+
 
 #### 2: intro to R
 
+Use the ppt - initially learners won't need to type. Can switch to RStudio to demo later parts - either copy & pasting or typing.
+
 
 #### 3: data cleaning exercise
+
+TODO andy to update this.
 
 This does not include slides. Candidates navigate to the section of the handout, read it and follow the instructions there. 
 
