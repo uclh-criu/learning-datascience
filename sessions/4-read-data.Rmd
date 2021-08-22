@@ -184,7 +184,7 @@ library(tidyverse)
 cchic <- read_csv("data/clean_CCHIC.csv")
 ```
 
-- (use double dot `..` for a file in the directory above the current working directory)
+- (use double dot `..` if you need to go above the current working directory)
 
 Display the contents of the data frame `cchic` in R
 
@@ -193,9 +193,9 @@ cchic
 ```
 
 
-## Tibble
+## data is imported as a `tibble` - a special type of dataframe
 
-![A `tibble` is a specially formatted data frame. Your data has been imported in this format.](../Images/Tibble.png)
+![A `tibble` is a `tidyverse` friendly dataframe - we don't need to worry about that at this stage.](../Images/Tibble.png)
 
 ## Viewing Your Data in R
 ::::::::::::{.columns}
@@ -283,13 +283,13 @@ cchic$weight
 
 ## `table()` `range()` `min()` `mean()` & other tools to review data
 
-- Specific functions from other packages can help you describe the whole data set
+- Specific functions from other packages can help you describe datasets
 - e.g. 
 
 - `table()` gives the number of unique values in a column
 - `range()` `min()` `mean()` work on numeric columns
 - BEWARE if a column contains any NA values these will return NA, unless you specify `na.rm=TRUE`
-- try :
+- try with & without :
 ```{r, eval=FALSE}
 range(cchic2$urea, na.rm=TRUE)
 ```
