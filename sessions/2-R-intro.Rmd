@@ -65,14 +65,18 @@ output:
 ## some R inspiration
 
 [amazing open-source covid graphics by Colin Angus](https://github.com/VictimOfMaths/COVID-19) 
-& one of his [covid apps](https://victimofmaths.shinyapps.io/COVID_LA_Plots/)   
-   
+& one of his [covid apps](https://victimofmaths.shinyapps.io/COVID_LA_Plots/) (all made with R)   
+   \n
    
 [R/medicine conference starting tomorrow !](https://r-medicine.org/)   
-   
+   \n
    
 [NHS R Community & conference](https://nhsrcommunity.com/)   
-
+   \n
+   
+[NHS R community datasets for learning](https://github.com/nhs-r-community/NHSRdatasets)(I only found this yesterday)   
+   
+   
 
 ## data & R in the NHS
 
@@ -379,13 +383,15 @@ Anyone can create & share packages.
 
 1. `install.packages("[package name]")`
 2. `library([package name])`
+   \n
 
 Lightbulb analogy
 
 1. install lightbulb - do once (update ~ yearly)
 2. library - do every time you start R / enter room
-
-We have already installed required packages for you. 
+   \n
+We have already installed required packages for you.   
+   \n
 Limitations to installing packages on some NHS systems.
 
 ## Useful packages
