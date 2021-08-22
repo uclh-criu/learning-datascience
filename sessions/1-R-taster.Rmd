@@ -81,6 +81,17 @@ Explain each window.
 - If you were to close RStudio
 - The file would remain & you could run again.
 
+## A warning about R warnings & errors
+
+DON'T PANIC : they are common & expected
+
+`Warnings` give you info that often you can ignore
+
+`Errors` usually need to be fixed and are usually due to a typo
+
+`Errors` check the first one - if it doesn't make sense to you google it
+
+
 ## Instructor to switch to live demo in RStudio (remaining slides for info)
 
 ## download a project from Github into RStudio
