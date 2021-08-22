@@ -17,9 +17,10 @@ output:
 
 ## What is R?
 
-- Free software for statistical computing, plotting (and almost anything else you can think of )
+- Free software for statistical computing, plotting (and almost anything else you can think of)
 - Works on all platforms
-- Built around handling data. 
+- Built around handling data
+- NOT just for statistics
 
 
 ## Why use R?
@@ -27,7 +28,7 @@ output:
 - Why?
     - You can do *anything*
     - Not limited to the pre-designed command process of an app.
-    - You record everything you do, so you can do it again.
+    - Can record everything you do, so can be repeated with one click
 - Hurdles
     - Need to learn a new language
     - Little 'point and click'
@@ -44,37 +45,48 @@ output:
     - Code makes your analysis explicit
     - Writing code = writing lab-book = good reproducible science
 
+## R versus Python
 
-## Return to looking at RStudio live again
+- almost anything you can do in one you can also do in other
+- what are people around you using ?
+- R is commoner in Research, Python in software engineering
+- R for Research, Python for production
 
-## Using the Source or Text editor windows
+## R versus Python - my imperfect analogy
+![](../Images/01-r-python-bike-analogy.png)
 
-![](../Images/RStudioSource.png)
+## R communities
 
-## Using the Source
+- big improvement over past 10 years
+- now much more beginner friendly
+- efforts to increase under-represented groups e.g. [R-Ladies Global](https://rladies.org/)
+- Twitter e.g. [#rstats hashtag](https://twitter.com/search?q=%23rstats&src=typed_query), [a tweet from yesterday](https://twitter.com/rfunctionaday/status/1429296120568721425)
 
-- Type `2 + 2`, then `Enter`.
-- What happens?
-- To ask R to run code
+## some R inspiration
 
-- Highlight the code and:
-    - MacOS: `Cmd + Enter`
-    - Windows: `Ctrl + Enter`
+[amazing open-source covid graphics by Colin Angus](https://github.com/VictimOfMaths/COVID-19) 
+& one of his [covid apps](https://victimofmaths.shinyapps.io/COVID_LA_Plots/)   
+   
+   
+[R/medicine conference starting tomorrow !](https://r-medicine.org/)   
+   
+   
+[NHS R Community & conference](https://nhsrcommunity.com/)   
 
-- Notice the output in the console.
 
-## Saving your work
+## data & R in the NHS
 
-- Click the `save` icon 
-    - Save the file under a meaningful name. 
-    - Save it somewhere you can find it again.
-    - .R is the file extension for R scripts.
-- Close the Source window
-- Close R Studio
-- Restart R Studio and click the `open` icon
-- Find your file and open
-- Your code still there
-- You can run it again.
+"the NHS is failing to make the most of its data because there are not enough people with the right analytical skills to make sense of the information being collected"
+
+"Communities need to share languages and common tools to work and grow together. R and Python are both free, open source, state of the art ..."
+
+"We need to create a culture of ‘build it once, share the methodology and learn with others’"
+
+[NHSX blog 2021](https://www.nhsx.nhs.uk/blogs/data-saves-lives-building-and-skilling-nhs-analytics-community/)
+
+
+
+## Return to looking at RStudio live (switch between slides & RStudio as needed)
 
 
 ## 3 Main R Building Blocks
@@ -88,7 +100,7 @@ output:
     - collections of objects (data) and functions
     - provide additional functionality
 
-## Names
+## Objects
 
 - You assign names to objects in R.
 - This is the assignment operator `<-`
@@ -272,7 +284,7 @@ str(test2)
 
 
 ## Functions
-- Sometimes taught as a "black box"
+
 - You can think of them as a factory
 - Usually labelled as a verb (they are "doing" something)
 - Many come built into R
@@ -331,66 +343,60 @@ Get them to look up the help page for mean
 
 ## Reading the help page
 
-- It's quite complicated.
-- But the information is usually displayed in a standard format:
+- detailed & contains a lot of info you don't need (I don't understand all of it).
+- Usually a standard format:
     - Brief description
     - An example of use
     - The argument(s) that can be passed to the function - along with any default value it takes if there is no value provided.
-    - Breakdown of these arguments. Gives you more information about what you need to put in.
-    - Tells you how the function works and what to expect to see in the output. 
-    - A reproducible example of use, that you can normally use verbatim.
+    - Argument details
+    - A reproducible example of use, that you can normally copy & paste
 
-::: notes
-reference this back to the factory idea
-argument = names of the inputs
-function = machine/factory
-value = output
-:::
     
 ## Explore functions yourself
 
-- Look up the function `ls`
+- Look up the function `head`
 - What are the arguments you can give the function?
 
-    - How do you specify the argument for 'pattern'? Try it
-    - When might this be useful?
+    - How do you specify the argument for 'n'? Try it
 
-    - How do you specify the argument for 'sorted'? Try it
-    - When might this be useful?
+    - Try copy & pasting some of the examples
 
-::: notes
-Work through this with them.
-:::
 
 ## Packages - collections of functions
 
-- There are bunch of functions that come with R. They are 'base R' functions.
+There are bunch of functions that come with R. They are 'base R' functions.  
 
-- Thousands of open access functions in other packages
-- To access these: install the packages, then load them.
 
-- Let's install and load the 'ggplot2' package
-```{r, eval=FALSE}
-install.packages("ggplot2")
-library(ggplot2)
-```
+Extra functionality in packages.  
 
-- You can now use all of the functions that come with 'ggplot2'.
-- You need to load the package using `library` each time you open R. But you will not need to install it again.
 
-::: notes
-Get them to load ggplot2. Emphasise that this is a process we will keep repeating throughout the course. 
-:::
+- Currently, the CRAN package repository features [18073](https://cran.r-project.org/web/packages/available_packages_by_name.html) available packages.  
 
-## Other useful packages
 
-These are some packages we will be user later in the course.
+Anyone can create & share packages.
+
+## To access a package, 2 step process
+
+1. `install.packages("[package name]")`
+2. `library([package name])`
+
+Lightbulb analogy
+
+1. install lightbulb - do once (update ~ yearly)
+2. library - do every time you start R / enter room
+
+We have already installed required packages for you. 
+Limitations to installing packages on some NHS systems.
+
+## Useful packages
+
+These are some packages we will use in the course.
 
 - `ggplot2` - plots graphs in R
 - `readr` - imports data into R
 - `stringr` - helps you manipulate strings
 - `lubridate` - helps you manipulate dates
 
-::: notes
-Maybe mention tidyverse as a collection of packages including some of the above that can be loaded together.
-:::
+These are all part of the `tidyverse` - you can load all of them with `library(tidyverse)`
+
+`tidyverse` packages are designed to work with **tidy data** that we will talk about later.

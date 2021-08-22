@@ -1,4 +1,6 @@
-# Excel Hell
+# 3-data-good-practice
+
+<!-- - [ ] TODO ANDY decide whether I want to start this exercise as a ppt or get learners to read -->
 
 <!-- create the html version using the pandoc command below -->
 <!-- pandoc -t revealjs -s --slide-level=2 -V theme=solarized 02-lesson-02-excel-hell-slide.md -o 02-lesson-02-excel-hell-slide.html -->

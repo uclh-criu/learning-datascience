@@ -59,6 +59,27 @@ Explain each window.
 - Files - actually a helper window. Gives you files, help, plots.
 :::
 
+## Using the Source/Text editor
+
+- Type `2 + 2` in top left, then `Enter`.
+- What happens?
+- To ask R to run code
+
+- Highlight the code and:
+    - MacOS: `Cmd + Enter`
+    - Windows: `Ctrl + Enter`
+
+- Notice the output in the console.
+
+## Saving your work
+
+- Click the `save` icon 
+    - Save the file under a meaningful name. 
+    - Save it somewhere you can find it again.
+    - .R is the file extension for R scripts.
+
+- If you were to close RStudio
+- The file would remain & you could run again.
 
 ## Instructor to switch to live demo in RStudio (remaining slides for info)
 
@@ -82,6 +103,5 @@ Explain each window.
 ![](../Images/00-05-clone-progress.png)
 
 ## Intructor will step through sessions/1-R-taster-script.R
-
 
 
