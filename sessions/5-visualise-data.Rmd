@@ -1,5 +1,5 @@
 ---
-title: "session6: visualise data in R"
+title: "session5: visualise data in R"
 
 output: 
   powerpoint_presentation:
@@ -11,7 +11,7 @@ output:
 library(tidyverse)
 library(lubridate)
 library(ggplot2)
-cchic <- read_csv("../clean_CCHIC.csv")
+cchic <- read_csv("../data/clean_CCHIC.csv")
 ```
 
 
@@ -31,22 +31,16 @@ cchic <- read_csv("../clean_CCHIC.csv")
 
 
 
-## Visualising data in R
+## Visualising data in R with `ggplot2`
 
-![This book is helpful](../Images/R4DS.png)
-
-::: notes
-We now get to draw graphs!
-:::
-
-## There are many ways to plot graphs in R
-
+- There are many ways to plot graphs in R
 - Base R has visualisation commands
 
-- `ggplot2` package which allows you to 'layer' features of graphs
-    - this is what we will use
-    - load it now
-    - `library(ggplot2)`
+- `ggplot2` package allows you to 'layer' features of graphs
+- works well with tidy data
+    - it is part of the tidyverse, load it now with
+    - `library(ggplot2)` or `library(tidyverse)`
+- (called `ggplot2` because the first version had problems! confusingly the main command is still called just `ggplot` )    
 
 ## Structure of a ggplot command
 
@@ -60,7 +54,7 @@ But in general:
 
 ```{r, eval = FALSE}
 ggplot(data = date_frame_name) +
-  style_of_plot(mapping = aes(x = vector_name1, y = vector_name2))
+  style_of_plot(mapping = aes(x = column_name1, y = column_name2))
 ```
 
 ::: notes 
@@ -73,7 +67,7 @@ You can use the same structure for many types of graphs.
 
 ```{r, eval = FALSE}
 ggplot(data = date_frame_name) +
-  style_of_plot(mapping = aes(x = vector_name1, y = vector_name2)) +
+  style_of_plot(mapping = aes(x = column_name1, y = column_name2)) +
   other_arguments
 ```
 
@@ -91,17 +85,9 @@ A `geom` is a visual aspect of a graph.
 
 Look at the `ggplot2` cheatsheet for more options.
 
-## Create a dot plot
+## Live code dot plot with `geom_point`
 
-Open up the R script called `Workshop5.R`.
-Run through the commands in it.
-Notice how changing small parts of the main command change the appearance of the graph. 
 
-Notice that we use `geom_point` for a dot plot. We will use other geoms later.
-
-::: notes
-There are a lot of commands in the file. Help them load up the file, get the dataset into their environment, and run the commands. Give them a little time to look at the different graphs.
-:::
 
 ## Let's create a line graph together
 
@@ -143,15 +129,12 @@ ggplot(data = cchic) +
 
 ## Drawing a bar graph
 
-- `geom_bar` and `stat_count` are interchangeable
+- `geom_bar` 
 
 ```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
   geom_bar(mapping = aes(x = vital_status))
 
-
-ggplot(data = cchic) +
-  stat_count(mapping = aes(x = vital_status))
 ```
 
 ## Proportion instead of count
@@ -207,9 +190,6 @@ ggplot(data = cchic) +
 
 ![](../Images/Tufte10.png)
 
-## 
-
-![](../Images/Tufte11.png)
 
 ## 
 
@@ -231,26 +211,11 @@ ggplot(data = cchic) +
 
 ![](../Images/Tufte16.png)
 
-## 
-
-![](../Images/Tufte17.png)
-
 
 ## 
 
 ![](../Images/Tufte18.png)
 
-## 
-
-![](../Images/Tufte19.png)
-
-## 
-
-![](../Images/Tufte20.png)
-
-## 
-
-![](../Images/Tufte21.png)
 
 ## 
 
@@ -268,12 +233,5 @@ ggplot(data = cchic) +
 
 ![](../Images/Tufte25.png)
 
-## 
-
-![](../Images/Tufte26.png)
-
-::: notes
-Say that though you can't see this ../Images properly, this image is in the handout.
-:::
 
 
