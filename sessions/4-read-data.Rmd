@@ -9,8 +9,7 @@ output:
 
 ```{r, include=FALSE}
 library(readr)
-library(googlesheets)
-cchic <- read_csv("../clean_CCHIC.csv")
+cchic <- read_csv("../data/clean_CCHIC.csv")
 ```
 
 
@@ -20,12 +19,23 @@ cchic <- read_csv("../clean_CCHIC.csv")
 2.  Initial exploration of your data set  
 \newparagraph
 
-The handout also includes some tips on using Google Sheets
 
 ## Introduction
 - You have now learnt to input data into R manually  
 - But what happens if you are given an Excel spreadsheet and told to analyse it?  
   - How can you look at and work with that data in R?
+  
+## The Data
+
+- We will use a synthetic dataset (5k rows) similar to the Critical Care Health Informatics Collaborative data.
+- Data look real, but aren't. 
+- Multicentre Adult ITU database
+    - 11 adult ICUs
+    - 5 UK teaching hospitals
+    - Privacy ensured through “highest standards of data security”
+    - 18, 074 unique patients
+
+- Thankyou to the ClinicianCoders project who created the data (& many of these slides!)
   
 ## What is a CSV file?
 ::::::::::::{.columns}
@@ -41,19 +51,6 @@ The handout also includes some tips on using Google Sheets
 :::::::::::: 
 
 
-## Time Out
-::::::::::::{.columns}
-:::{.column}
-- Take a moment to downlaod the practise data set
-- Available in `csv` format   
-
-  - `clean_CCHIC` from the slack channel  
-  
-  - Open and `Save As` a `.csv` file
-
-:::
-:::{.column}
-![](../Images/SaveAsCSV.png)
 :::
 :::::::::::: 
 
@@ -71,9 +68,9 @@ The handout also includes some tips on using Google Sheets
   - `Properties` in Windows
   - `Get Info` in Mac  
 - Folders within directories are specified with:
-  - `/` in Mac  
+  - `/` in Mac & Unix 
   - `\\` in Windows
-- However, the correct notation in R for both is `/`
+
 :::
 :::{.column}
 ![](../Images/FileProperties.png)
@@ -95,15 +92,15 @@ getwd()
 ```{r, eval=FALSE}
 setwd()
 ```
+
+- However using RStudio projects reduces the need to use `setwd()`
+
 :::
 :::{.column}
 ![Remember. You need quotation marks (`""`) around your file path name](../Images/Setwd.png)
 :::
 ::::::::::::
 
-::: notes
-Candidates don't necessarily need to do this at the moment.
-:::
 
 ## Getting your work into R  
 There are 3 main methods
@@ -120,8 +117,7 @@ There are 3 main methods
       
       - Someone else would just have to replace the source code to run the code on their own computer  
       
-3.  Connecting to an online database or google spreadsheet 
-      - This will only be mentioned in the handout
+3.  Connecting to an online database or google spreadsheet (not covered here)
 
 ## Method 1: Point and click
 ::::::::::::{.columns}
@@ -171,31 +167,31 @@ Click `Import Dataset` tab in the `Environment` pane
 ## Method 2: Commands
 - `readr` is a package containing functions to help R *read* your external files  
 - It is automatically installed with `tidyverse`  
-- Install and load the package as follows  
+- Remember we have installed already so now load the packages with `library()`  
 
 ```{r, eval=FALSE}
-install.packages("tidyverse")
 library(tidyverse)
 ```
 
 ## Read your file
 
-- You can then tell R to read a CSV file by writing the full file path name. This is an example file path, but what you need to type depends on where you stored the data on your computer. 
+- You can then tell R to read a CSV file by writing the full file path name. 
+
+- Because we are working in an RStudio project we can use a **relative file path**
 
 ```{r, eval=FALSE}
-# You are saving your data in an object called "cchic"
-cchic <- read_csv("C:/Users/mayas/Desktop/Work/DataSciFellowship/clean_CCHIC.csv")
+# You creating an object called "cchic" to contain the data
+cchic <- read_csv("data/clean_CCHIC.csv")
 ```
 
-Display the contents of the data frame `cchic`.
+- (use double dot `..` for a file in the directory above the current working directory)
+
+Display the contents of the data frame `cchic` in R
 
 ```{r, eval = FALSE}
 cchic
 ```
 
-::: notes
-Get them to do this
-:::
 
 ## Tibble
 
@@ -220,15 +216,7 @@ View(cchic)
 :::
 ::::::::::::
 
-## Shortcuts
 
-- There are notations to shorten the code for the file path  
-- Use single dot for a file within current working directory
-```{r, eval=FALSE}
-read_csv("./clean_CCHIC.csv")
-```
-
-- Use double dot ".." for a file in the directory above the current working directory
 
 ## Reviewing your data in R
 
@@ -293,18 +281,19 @@ cchic$weight
 
 - This will list all of the data in the weight column
 
-## Other tools to review data
+## `table()` `range()` `min()` `mean()` & other tools to review data
 
-- Specific functions from special packages help you describe the whole data set
-- The function will look at each variable and will give you basic measures about the data, for example range and mean.
-- The data will also be described in a number of plots.
-  - `Desc()` from `DescTools` package
-  - `describe()` from `Hmisc` package  
-- To use these you have to install the appropriate packages
+- Specific functions from other packages can help you describe the whole data set
+- e.g. 
 
-::: notes
-Let them explore these if you have time.
-:::
+- `table()` gives the number of unique values in a column
+- `range()` `min()` `mean()` work on numeric columns
+- BEWARE if a column contains any NA values these will return NA, unless you specify `na.rm=TRUE`
+- try :
+```{r, eval=FALSE}
+range(cchic2$urea, na.rm=TRUE)
+```
+
 
 ## Exercise
 1. What types of variables do you have in `cchic`?
@@ -347,4 +336,3 @@ ls(cchic, pattern = "temp")
 
 This lists all of the variables containing the word "temp".
 
-# Time for lunch!
