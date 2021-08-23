@@ -42,20 +42,34 @@ cchic <- read_csv("../data/clean_CCHIC.csv")
     - `library(ggplot2)` or `library(tidyverse)`
 - (called `ggplot2` because the first version had problems! confusingly the main command is still called just `ggplot` )    
 
+
+## `ggplot2` resources
+
+- ggplot is hugely popular (hundreds thousands of users)
+- lots of resources
+- but there is a bit of a learning curve
+- "It’s hard to succinctly describe how ggplot2 works because it embodies a deep philosophy of visualisation."
+- most useful reference website[https://ggplot2.tidyverse.org/reference/index.html](https://ggplot2.tidyverse.org/reference/index.html)
+
+
+## 'cheatsheet' in folder of this course project
+
+![](../Images/cheatsheet-data-visualization.png)
+
+
 ## Structure of a ggplot command
 
-It takes a while to get used to the structure.
-
-There are different forms of syntax.
-
-Different syntax possible
+- takes a while to get used to the structure.
+- Different syntax possible
 
 But in general:
 
 ```{r, eval = FALSE}
-ggplot(data = date_frame_name) +
-  style_of_plot(mapping = aes(x = column_name1, y = column_name2))
+ggplot(data = <DATA>) + 
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
 ```
+
+- I usually start by copying & pasting some existing code & modifying it.
 
 ::: notes 
 This will become more clear once we see examples
@@ -123,7 +137,7 @@ ggplot(data = cchic) +
   geom_smooth(mapping = aes(x = wbc, y = crp))
 ```
 
-## Bar Graph
+## raw value plots vs summaries 
 
 ![](../Images/GraphTypes.png)
 
