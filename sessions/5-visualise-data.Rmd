@@ -62,34 +62,27 @@ cchic <- read_csv("../data/clean_CCHIC.csv")
 - takes a while to get used to the structure.
 - Different syntax possible
 
-But in general:
+In general:
 
 ```{r, eval = FALSE}
-ggplot(data = <DATA>) + 
-  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+ggplot(DATA) + 
+  GEOM_FUNCTION(aes(WHICH COLUMNS INFLUENCE AESTHETICS))
 ```
 
-- I usually start by copying & pasting some existing code & modifying it.
+  \n
 
-::: notes 
-This will become more clear once we see examples
-:::
+I usually start by copying & pasting some existing code & modifying it.
 
-## ggplot is very versatile
 
-You can use the same structure for many types of graphs.
+## What is a 'aes' ?
 
-```{r, eval = FALSE}
-ggplot(data = date_frame_name) +
-  style_of_plot(mapping = aes(x = column_name1, y = column_name2)) +
-  other_arguments
-```
+- `aes` sets the columns that influence the aesthetics of the plot
+- it can go either after the GEOM part or after the DATA part
+- ggplot(DATA) + GEOM(aes(x=COLUMN))
+- ggplot(DATA, aes(x=COLUMN)) + GEOM()
+- makes a difference if you add other geoms
 
-::: notes
-Explain a couple of things you can add on using the + sign.
-:::
-
-## What is a 'geom'?
+## What is a 'geom' ?
 
 A `geom` is a visual aspect of a graph.
 
@@ -99,43 +92,10 @@ A `geom` is a visual aspect of a graph.
 
 Look at the `ggplot2` cheatsheet for more options.
 
-## Live code dot plot with `geom_point`
+
+## move to the file : ** 5-visualise-script-ggplot.R **
 
 
-
-## Let's create a line graph together
-
-::: notes
-Get them to type this code in and draw the graph. The graph they should get is on the next slide.
-:::
-
-```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
-  geom_smooth(mapping = aes(x = wbc, y = crp))
-```
-
-## Adding a linetype
-
-```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
-  geom_smooth(mapping = aes(x = wbc, y = crp, linetype = sex))
-```
-
-## Adding colour 
-
-```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
-  geom_smooth(mapping = aes(x = wbc, y = crp, colour = sex))
-```
-
-
-## Combining multiple geoms
-
-```{r, , message=FALSE}
-ggplot(data = cchic) +
-  geom_point(mapping = aes(x = wbc, y = crp, colour = sex)) +
-  geom_smooth(mapping = aes(x = wbc, y = crp))
-```
 
 ## raw value plots vs summaries 
 
@@ -151,13 +111,6 @@ ggplot(data = cchic) +
 
 ```
 
-## Proportion instead of count
-
-```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = vital_status, y = ..prop.., group = 1))
-```
-
 ## Adding a second aesthetic
 
 ```{r, eval = T, message=FALSE}
@@ -165,51 +118,29 @@ ggplot(data = cchic) +
   geom_bar(mapping = aes(x = vital_status, fill = sex))
 ```
 
-## Standardising proportions
+
+## Scaling bars to 1
 
 ```{r, eval = T, message=FALSE}
 ggplot(data = cchic) +
   geom_bar(mapping = aes(x = vital_status, fill = sex), position = "fill")
 ```
 
-## Changing position of bars
-
-```{r, eval = T, message=FALSE}
-ggplot(data = cchic) +
-  geom_bar(mapping = aes(x = vital_status, fill = sex), position = "fill")
-```
-
-# Create your own plots now!
 
 
 ## A few more general datavis guidelines to consider
 
-## 
+## Position on X & Y axis is most effective communicator - use it for your prime variables
 
-![](../Images/Tufte6.png)
-
-## 
-
-![](../Images/Tufte7.png)
+![from Visualization Analysis & Design by Tamar Munzner](../Images/datavis-effectiveness-munzner.png)
 
 ## 
 
 ![](../Images/Tufte8.png)
 
-## 
-
-![](../Images/Tufte9.png)
-
-## 
-
-![](../Images/Tufte10.png)
 
 
-## 
-
-![](../Images/Tufte12.png)
-
-## 
+## Pie charts - unpopular among datavis people
 
 ![](../Images/Tufte13.png)
 
@@ -224,11 +155,6 @@ ggplot(data = cchic) +
 ## 
 
 ![](../Images/Tufte16.png)
-
-
-## 
-
-![](../Images/Tufte18.png)
 
 
 ## 
