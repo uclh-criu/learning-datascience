@@ -2,14 +2,19 @@
 
 # select lines in turn & press Run at top right (or copy & paste into console below)
 
+# you don't need to understand next line - just needed on RStudio server - you won't usually need
+.libPaths(c('/usr/share/anaconda3/envs/r_env/lib/R/library', .libPaths()))
 
+# to load packages needed
+library(tidyverse)
 
 #############################
 ## 1.1 read in csv to a dataframe
 
-dfpatient <- read_csv("..//data//patient-data-tiny.csv")
+dfpatient <- read_csv("data//patient-data-tiny.csv")
 
-# for in the console: dfpatient <- read_csv("data//patient-data-tiny.csv")
+# if the line above doesn't work, try this one : 
+dfpatient <- read_csv("..//data//patient-data-tiny.csv")
 
 
 ########################
