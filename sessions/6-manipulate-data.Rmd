@@ -10,7 +10,7 @@ output:
 # We will need this data later. 
 library(tidyverse)
 library(lubridate)
-cchic <- read_csv("../clean_CCHIC.csv")
+cchic <- read_csv("../data/clean_CCHIC.csv")
 cchic <- cchic %>%
   mutate(los = difftime(ymd_hms(discharge_dttm),
                         ymd_hms(arrival_dttm), units = "days"))
@@ -18,62 +18,52 @@ cchic <- cchic %>%
 
 ## Content
 
-- Using the `dplyr` package.
-- Standard methods for selecting data
-- Recipies to perform common operations
+- Using the `dplyr` package for data manipulation
+- Standard methods for choosing data
+- Recipes to perform common operations
     - Manipulating strings
     - Manipulating dates
     - Changing data structure
 
-## What is data wrangling?
+## [dplyr](https://dplyr.tidyverse.org/) a grammar of data manipulation
 
-- Transforming raw data into a form you can use for analysis
-- Includes
-    - Cleaning data (Workshop 2)
-    - Organising it into a structure that allows you to analyse it.
-    - Creating derived variables from raw data
-    - Validating the data
+dplyr functions:
 
-## Another way to think of it... 
+    `mutate()` adds new columns
+    `select()` picks variables (COLUMNS) based on their names.
+    `filter()` picks cases (ROWS) based on their values.
+    `summarise()` reduces multiple values down to a single summary.
+    `arrange()` changes the ordering of the rows.
 
-- Taking raw data
-- Subjecting it to processes along a data pipeline
-- You can then use your processed data for analysis
-
-![](../Images/PipelineWrangling.png)
-
-## Load dplyr
+    `group_by()` allows you to perform any operation “by group”. 
+    
+## dplyr is part of the tidyverse
 
 ```{r, eval=FALSE}
-# You only need to install the package once.
-install.packages("dplyr")
+# You only need to install once.
+install.packages("tidyverse")
 
-# You need to load the package each time you open R.
-library(dplyr)
+# You need to load packages each time you open R.
+library(tidyverse)
 ```
 
-## Load data
 
-Load data from the file you created earlier. The data frame should be called `cchic`
-
-## The pipe 
+## The pipe `%>%` an optional but useful operator
 
 :::::::::::::: {.columns}
 ::: {.column}
-- Takes whatever you did before, and passes it on to the next function
+- Takes whatever you did before
+- Passes it to the next function (first argument)
 - Whenever you see it, think of the word 'then' 
-- `data_frame_name %>% 
-  [select certain patients/rows] %>% 
-  [function]`
+- `object %>% function1() %>% function2()`
+- "hello" %>% substr(2,4) %>% toupper()
 - Shortcut - `Cmd + Shift + M` (Mac) `Ctrl + Shift + M` (Windows)
 :::
 ::: {.column}
 ![](../Images/Pipe.png)
 :::
 ::::::::::::::
-::: notes
-Tell them that there are a couple of things we need to cover about dplyr before we start working with it. This is the first one.
-:::
+
 
 ## Logical operators
 
@@ -101,7 +91,7 @@ This is the second thing we need to learn. It applies to most parts of R.
 For instance, when you are selecting something
 :::
 
-## Filter
+## Filter ROWS
 
 Choose rows based on the conditions you specify.
 
@@ -112,13 +102,10 @@ cchic %>%
 
 The output is a data frame where all patients are 65 years or older.
 
-::: notes
-Dplyr works using 'verbs'. The first one is `filter`.
-:::
 
-## Select
+## Select COLUMNS
 
-Allows you to choose specific variables from your dataset.
+Allows you to choose specific columns from your dataset.
 
 ```{r, eval = FALSE}
 cchic %>%
@@ -127,9 +114,6 @@ cchic %>%
 
 Output is a data frame with the gender of all patients.
 
-::: notes
-The second verb is select.
-:::
 
 ## Using filter and select together
 
@@ -142,6 +126,9 @@ cchic %>%
 Output is the gender of patients who are 65 years or older.
 
 What happens if you do `select()` and then `filter()`? 
+
+  \n
+
 You have removed the age variable from the dataset, so you can’t filter based on age.
 
 ## Piped data with functions
@@ -158,17 +145,9 @@ cchic %>%
 Gives information on gender for patients older than 65.
 
 
-## Other dplyr wrangling verbs
-
-- `filter()`
-- `select()`
-- `group_by()`
-- `summarise()`
-
-
 ## Example of using group by and summarise
 
-Try this.
+
 ```{r, eval = FALSE}
 cchic %>%
   group_by(sex) %>%
@@ -176,6 +155,9 @@ cchic %>%
 ```
 
 What is the output?
+
+  \n
+
 Hint – check for missing values in `cchic$urea`
 
 ## Make it work
@@ -183,17 +165,14 @@ Hint – check for missing values in `cchic$urea`
 ```{r}
 cchic %>%
   group_by(sex) %>%
-  summarise(mean_urea = mean(urea,
-    na.rm =
-      TRUE
-  ))
+  summarise(mean_urea = mean(urea, na.rm=TRUE))
 ```
 
 An alternative is to filter out the missing values of urea.
 
 ## Take a break. Any questions?
 
-Make sure you are happy running
+Experiment running
 
 - `filter()`
 - `select()`
@@ -207,11 +186,9 @@ Make sure you are happy running
 3. Extract numbers
 4. Extract strings
 5. Parse dates
-6. Convert columns to rows and back again 
-7. Delete columns
+6. Delete columns
 
 ## 1. Rename a variable
-
 
 ```{r, eval = FALSE}
 names(cchic)
@@ -320,52 +297,7 @@ cchic <- cchic %>%
 ```
 
 
-## 6. Columns to rows.
-
-![Convert data spread over several variables into a single one](../Images/WideToLong.png)
-
-::: notes
-Warn them that this concept takes a while to grasp.
-:::
-
-## Why do this?
-
-- You may want to calculate the mean and standard deviation of all temperatures, and don’t care about the source.
-- You may want to plot all temperatures on a graph.
-- Instead of temperature area, you may have temperature on day 1, 2 etc. 
-
-## Converting the data
-
-```{r, eval = FALSE}
-library(tidyr)
-cchic
-
-cchic_long <- cchic %>%
-  gather(
-    "temp_point", "temperature",
-    temp_c:temp_nc
-  )
-
-names(cchic_long)
-```
-
-## This is why we 'gathered' the data
-
-```{r, eval = FALSE}
-library(ggplot2)
-cchic_long %>%
-  ggplot(aes(
-    x = temp_point, y =
-      as.numeric(temperature)
-  )) +
-  geom_boxplot()
-```
-
-::: notes
-Get them to do this. 
-:::
-
-## 7. Deleting columns
+## 6. Deleting columns
 
 What if we wanted to remove the `temp_nc` variable?
 
