@@ -1,5 +1,5 @@
 ## Some resources to explore after the course
-## (other suggestions welcome)
+(other suggestions welcome)
 
 
 ### books
