@@ -1,17 +1,21 @@
-Safe people
+# Safe people
+
 We suggest you measure yourself against the following criteria. 
-When you are ready, then please submit your evidence here.
-•	Your role
+When you are ready, then please [submit your evidence here](https://forms.office.com/Pages/DesignPage.aspx#FormId=_oivH5ipW0yTySEKEdmlwhXzC51z3xxEpmhpTardTsFUQzVIS1lGVldUTzVFOEo3VlBYQTNZWUxYMy4u)
+
+## Your role
 A user should either
-o	Hold an Honorary or Substantive contract with UCLH
-o	An NHS research passport or a letter of access 
-•	Your technical skills
+*	Hold an Honorary or Substantive contract with UCLH
+*	[An NHS research passport or a letter of access](https://www.ucl.ac.uk/joint-research-office/sites/joint-research-office/files/jro_sop_7_-_jro_administration_of_research_passports_v4_13.11.2019_clean.pdf) 
+
+## Your technical skills
 A user should either 
-o	hold a clinical qualification (in medicine, nursing, or the allied health professions) and have demonstrable experience in the management and analysis of health care data
-o	or hold a relevant undergraduate degree (or higher) in a field of study using quantitative data
-o	or be able to demonstrate at least three years quantitative research, audit or business intelligence experience
-o	or have a named supervisor who meets the above criteria and confirms sufficient time to support the user
-•	Your training
+*	hold a clinical qualification (in medicine, nursing, or the allied health professions) and have demonstrable experience in the management and analysis of health care data
+*	or hold a relevant undergraduate degree (or higher) in a field of study using quantitative data
+*	or be able to demonstrate at least three years quantitative research, audit or business intelligence experience
+*	or have a named supervisor who meets the above criteria and confirms sufficient time to support the user
+
+## Your training
 A user should demonstrate all of the following
 o	Current information governance training
 	UCLH mandatory IG training certificate
