@@ -49,6 +49,8 @@ df1 %>%
 # whether each diagnosis is lymph
 #   mutate(lymph = Diagnosis_Name=='lymph') %>%
 
+# To calculate which patients have a lymphoma diagnosis & which don't
+
 # Example2
 df1 <- data_frame( PatientDurableKey = c(1,2,2,3,3,3),
                    Encounter_Key = c(11:16),
@@ -58,7 +60,28 @@ diagnoses_wanted <- c('lymph','hodgkins')
 
 #this works by first finding if each diagnosis is lymph
 #then summing the T/F for each patient
-df1 %>% 
+df2 <- df1 %>% 
   mutate(lymph = Diagnosis_Name %in% diagnoses_wanted) %>%
   group_by(PatientDurableKey) %>% 
   summarize(n_lymph_diagnoses = sum(lymph))
+
+# To calculate proportion of patients that have a lymphoma diagnosis & which don't
+
+# Example3 
+df1 <- data_frame( PatientDurableKey = c(1,2,2,3,3,3,4,4),
+                   Encounter_Key = c(11:18),
+                   Diagnosis_Name = c('hodgkins','B','C','D','hodgkins','lymph','E','F'))
+
+diagnoses_wanted <- c('lymph','hodgkins') 
+
+#this works by first finding if each diagnosis is lymph
+#then summing the T/F for each patient to give n_diagnoses per patient
+df2 <- df1 %>% 
+  mutate(lymph = Diagnosis_Name %in% diagnoses_wanted) %>%
+  group_by(PatientDurableKey) %>% 
+  summarize(n_lymph_diagnoses = sum(lymph))
+
+#proportion of patients with a lymphoma diagnosis
+df3 <- df2 %>% 
+  count(n_lymph_diagnoses) %>% 
+  mutate(propn=prop.table(n))
