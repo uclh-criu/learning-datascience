@@ -28,8 +28,12 @@ filenames <- here(dir(pattern='.docx$', recursive=TRUE))
 #rmarkdown::pandoc_convert(filename, to = "markdown", output=paste0(filename,".md"))
 
 # works for 1 file
-rmarkdown::pandoc_convert(filenames[1], to = "markdown", output=paste0(filenames[1],".md"))
+#rmarkdown::pandoc_convert(filenames[1], to = "markdown", output=paste0(filenames[1],".md"))
 
 #this does for all files & removes the .docx from output filename
+#& remove the folder name, the | indicates OR 'old-word-docs/|.docx'
+#important that str_remove_all otherwise jut removes first occurrence of either
 library(stringr)
-lapply(filenames, function(x) rmarkdown::pandoc_convert(x, to="markdown", output=paste0(stringr::str_remove(x,".docx"),".md")))
+lapply(filenames, function(x) rmarkdown::pandoc_convert(x, to="markdown", 
+                                                        output=paste0(stringr::str_remove_all(x,"old-word-docs/|.docx"),".md")))
+
