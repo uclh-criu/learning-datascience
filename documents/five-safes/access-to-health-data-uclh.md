@@ -11,7 +11,7 @@ Contents
 [Safe settings](#safe-settings)    
 [Safe outputs](#safe-outputs)   
 [Safe data](#safe-data)   
-[Safe data](#data-access-checklist)
+[Data access checklist](#data-access-checklist)
 
 ## Five Safes at UCLH overview
 
@@ -115,16 +115,18 @@ Microdata is information at the level of individual. All data derived from an el
 
 ## Safe projects
 
-We have adopted and adapted the ONS Data Ethics Advisory Committee's
-[application
-form](https://www.statisticsauthority.gov.uk/wp-content/uploads/2019/10/DEA_Research_Project_Application_v1.2.docx).
+We have adopted and adapted the ONS Data Ethics Advisory Committee's application form.
+
+<!-- note link to appliaction form from earlier version is no longer working -->
+<!-- [application
+form](https://www.statisticsauthority.gov.uk/wp-content/uploads/2019/10/DEA_Research_Project_Application_v1.2.docx)  -->
+
 Where you have an existing IRAS form, we have indicated the sections
 that can be directly copy-and-pasted into this application.
 
-You can download our version with the link below.
 
-![](media/image1.tmp){width="2.6041666666666665in"
-height="2.6041666666666665in"}
+The UCLH version [can be downloaded here](https://github.com/uclh-criu/learning-datascience/blob/master/documents/five-safes/CRIU Research Project Application.docx).
+
 
 The project application headings are summarised below
 
