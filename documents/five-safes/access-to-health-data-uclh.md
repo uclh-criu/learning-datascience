@@ -8,6 +8,7 @@ Contents
 [Safe people](#safe-people)  
 [Safe projects](#safe-projects)    
    - [UCL UCLH Joint Research Office checklist](#ucl-uclh-joint-research-office-checklist)    
+   
 [Safe settings](#safe-settings)    
 [Safe outputs](#safe-outputs)   
 [Safe data](#safe-data)   
@@ -261,7 +262,7 @@ The project application headings are summarised below
 ### UCL UCLH Joint Research Office checklist
 
 [Starting a new
-study](https://www.ucl.ac.uk/joint-research-office/starting-new-study)\
+study](https://www.ucl.ac.uk/joint-research-office/starting-new-study)
 There are typically three stages of approval that must be considered
 before conducting clinical research:
 
@@ -285,7 +286,7 @@ before conducting clinical research:
 
         -   Participant Information Sheet
 
-        -   Consent forms
+        -   Consent forms
 
         -   GP letters
 
@@ -298,7 +299,7 @@ before conducting clinical research:
     -   Draft [Organisation Information
         Document](https://myresearchproject.org.uk/help/help%20documents/Organisation_Information_Document__Data-Processing_v1-1.docx)
         and [Schedule
-        Of Events](https://www.nihr.ac.uk/researchers/collaborations-services-and-support-for-your-research/run-your-study/excess-treatment-costs.htm)
+        Of Events](https://www.nihr.ac.uk/researchers/collaborations-services-and-support-for-your-research/run-your-study/excess-treatment-costs.htm)
 
     -   Evidence of funding (where applicable)
 
@@ -322,17 +323,17 @@ before conducting clinical research:
 
     -   HRA
 
-        -   Complete a research application form on the [Integrated
+        -   Complete a research application form on the [Integrated
             Research Application System
             (IRAS)](http://www.myresearchproject.org.uk/)
 
         -   [Prepare your study
             documents](https://www.hra.nhs.uk/planning-and-improving-research/research-planning/prepare-study-documentation/)
 
-        -   Book your application in through the [Online Booking
+        -   Book your application in through the[Online Booking
             Service](https://www.hra.nhs.uk/about-us/committees-and-services/online-booking-service/)
 
-        -   E-submit your [applications in
+        -   E-submit your[applications in
             IRAS.](https://www.myresearchproject.org.uk/)
 
 -   UCLH feasibility (aka [NHS Site Assess, Arrange and
@@ -340,26 +341,24 @@ before conducting clinical research:
 
     -   Checks
 
-        -   [General feasibility
-            assessment](http://www.hra.nhs.uk/resources/hra-approval-nhs-organisation-guidance/#NHS) as
-            required by the HRA 
+        -   [General feasibility assessment](http://www.hra.nhs.uk/resources/hra-approval-nhs-organisation-guidance/#NHS) as required by the HRA
 
-        -   Clinical director authorisation 
+        -   Clinical director authorisation
 
         -   Finance review to ensure costs are identified and covered
 
         -   Where required, a Contract review and negotiation
 
         -   [Honorary research contracts or Letters of
-            Access](https://www.ucl.ac.uk/joint-research-office/sites/joint-research-office/files/jro_sop_7_-_jro_administration_of_research_passports_v4_13.11.2019_clean.pdf) where
+            Access](https://www.ucl.ac.uk/joint-research-office/sites/joint-research-office/files/jro_sop_7_-_jro_administration_of_research_passports_v4_13.11.2019_clean.pdf) where
             required for non-UCLH researchers to carry out research
-            activity on site.\
-            Please contact the JRO on <uclh.jro-communications@nhs.net>
+            activity on site.
+            Please contact the JRO on <uclh.jro-communications@nhs.net>
 
     -   Core documents
 
         -   Copy of IRAS Form (combined REC and R&D form) as submitted
-            for HRA Approval Protocol
+            for HRA Approval Protocol
 
         -   Any substantial or non-substantial amendments
 
