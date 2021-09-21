@@ -1,12 +1,15 @@
 # Access to health data at UCLH
 
+<!-- for comments that won't appear online -->
 
 Contents
 
 [Five Safes at UCLH overview](#five-safes-at-uclh-overview)   
-[Safe people](#safe-people)    
+[Safe people](#safe-people)  
+[Safe projects](#safe-projects)  
 [Safe settings](#safe-settings)    
 [Safe outputs](#safe-outputs) 
+[Safe data](#safe-data)  
 
 
 ## Five Safes at UCLH overview
@@ -17,24 +20,20 @@ safes](https://www.ukdataservice.ac.uk/manage-data/legal-ethical/access-control/
 framework.\
 Our local implementation is summarised below.
 
-#### Safe people
+**Safe people**
 
 -   all individuals have substantive contracts or educational
     relationships with higher education or NHS institutions
-
-<!-- -->
 
 -   those working need to have evidence of experience of working with
     such data (e.g. previous training, previous work with ONS, data safe
     havens etc.) or they need a supervisor who can has similar
     experience
 
-<!-- -->
-
 -   those working need to undergo training in information governance and
     issues with statistical disclosure control (SDC)
 
-#### Safe projects
+**Safe projects**
 
 -   projects must \'serve the public good\' 
 
@@ -47,7 +46,7 @@ Our local implementation is summarised below.
 
 -   service delivery work mandated as per usual trust processes
 
-#### Safe settings
+**Safe settings**
 
 -   working at UCLH in the NHS on approved infrastructure
 
@@ -57,9 +56,9 @@ Our local implementation is summarised below.
 
     -   EMAP
 
-#### Safe outputs
+**Safe outputs**
 
--   outputs (e.g. reports, figures and tables) must be non-disclosing 
+-   outputs (e.g. reports, figures and tables) must be non-disclosing
 
 <!-- -->
 
@@ -68,10 +67,10 @@ Our local implementation is summarised below.
 <!-- -->
 
 -   a copy of all outputs that are released externally (documents)
-    should be stored in one central location so that there is visibility
+    should be stored in one central location so that there is visibility
     for all
 
-#### Safe data
+**Safe data**
 
 -   direct identifiers (hospital numbers, NHS numbers, names etc) should
     be masked unless there is an explicit justification for their use
@@ -85,7 +84,8 @@ Our local implementation is summarised below.
 
 -   further work to obscure or mask the data is not necessary given the
     other safe guards (as per the recommendation by the UK data service)
-    
+   
+We will now give more details for each of the 5 safes.   
     
 ## Safe people
 
@@ -308,3 +308,29 @@ Outputs include
 
 -   data (electronic or otherwise)
 
+
+## Safe data
+
+You are expected to explain in your [Safe
+projects](file:///C:\wiki\spaces\CRIU\pages\756645889\Safe+projects)
+application :
+
+-   any requirement for access to
+
+    -   direct or indirect identifiers otherwise a **pseudonymised
+        identifier** will be provided
+
+    -   sensitive information (e.g. HIV status, drug and alcohol
+        history, mental health history etc.)
+
+-   how your data request is proportionate. We suggest you provide clear
+    limits by
+
+    -   calendar period
+
+    -   patient cohort
+
+    -   data content
+
+Further work to obscure or mask the data should not be necessary given
+the other safeguards.
