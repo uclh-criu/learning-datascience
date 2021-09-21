@@ -72,6 +72,7 @@ df1 <- data_frame( PatientDurableKey = c(1,2,2,3,3,3,4,4),
                    Encounter_Key = c(11:18),
                    Diagnosis_Name = c('hodgkins','B','C','D','hodgkins','lymph','E','F'))
 
+# you could read this vector from a file
 diagnoses_wanted <- c('lymph','hodgkins') 
 
 #this works by first finding if each diagnosis is lymph
