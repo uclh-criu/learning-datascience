@@ -6,8 +6,8 @@ Contents
 
 [Five Safes at UCLH overview](#five-safes-at-uclh-overview)   
 [Safe people](#safe-people)  
-[Safe projects](#safe-projects)  
-     [UCL UCLH Joint Research Office checklist](#ucl-uclh-joint-research-office-checklist)
+[Safe projects](#safe-projects)    
+   - [UCL UCLH Joint Research Office checklist](#ucl-uclh-joint-research-office-checklist)
 [Safe settings](#safe-settings)    
 [Safe outputs](#safe-outputs)   
 [Safe data](#safe-data)   
