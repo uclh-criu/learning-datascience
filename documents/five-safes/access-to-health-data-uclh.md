@@ -126,7 +126,7 @@ Where you have an existing IRAS form, we have indicated the sections
 that can be directly copy-and-pasted into this application.
 
 
-The UCLH version [can be downloaded here](https://github.com/uclh-criu/learning-datascience/blob/master/documents/five-safes/CRIU Research Project Application.docx).
+The UCLH version [can be downloaded here](https://github.com/uclh-criu/learning-datascience/blob/master/documents/five-safes/criu-research-project-application.docx).
 
 
 The project application headings are summarised below
