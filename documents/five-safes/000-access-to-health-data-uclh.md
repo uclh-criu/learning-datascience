@@ -3,9 +3,9 @@
 
 Contents
 
-[Five Safes at UCLH overview](#five-safes-at-uclh-overview)
-[Safe people](#safe-people)
-[Safe settings](#safe-settings)
+[Five Safes at UCLH overview](#five-safes-at-uclh-overview)   
+[Safe people](#safe-people)    
+[Safe settings](#safe-settings)    
 
 
 ## Five Safes at UCLH overview
@@ -16,8 +16,7 @@ safes](https://www.ukdataservice.ac.uk/manage-data/legal-ethical/access-control/
 framework.\
 Our local implementation is summarised below.
 
-Safe people 
-------------
+#### Safe people
 
 -   all individuals have substantive contracts or educational
     relationships with higher education or NHS institutions
@@ -34,8 +33,7 @@ Safe people 
 -   those working need to undergo training in information governance and
     issues with statistical disclosure control (SDC)
 
-Safe projects
--------------
+#### Safe projects
 
 -   projects must \'serve the public good\' 
 
@@ -48,8 +46,7 @@ Safe projects
 
 -   service delivery work mandated as per usual trust processes
 
-Safe settings
--------------
+#### Safe settings
 
 -   working at UCLH in the NHS on approved infrastructure
 
@@ -59,8 +56,7 @@ Safe settings
 
     -   EMAP
 
-Safe outputs
-------------
+#### Safe outputs
 
 -   outputs (e.g. reports, figures and tables) must be non-disclosing 
 
@@ -74,8 +70,7 @@ Safe outputs
     should be stored in one central location so that there is visibility
     for all
 
-Safe data
----------
+#### Safe data
 
 -   direct identifiers (hospital numbers, NHS numbers, names etc) should
     be masked unless there is an explicit justification for their use
@@ -92,6 +87,7 @@ Safe data
     
     
 ## Safe people
+-----
 
 We suggest you measure yourself against the following criteria. 
 When you are ready, then please [submit your evidence here](https://forms.office.com/Pages/DesignPage.aspx#FormId=_oivH5ipW0yTySEKEdmlwhXzC51z3xxEpmhpTardTsFUQzVIS1lGVldUTzVFOEo3VlBYQTNZWUxYMy4u)
@@ -131,7 +127,7 @@ A user should demonstrate one of the following
 Microdata is information at the level of individual. All data derived from an electronic health record is by definition microdata unless later aggregated. 
 
 ## Safe projects
-=============
+-----
 
 We have adopted and adapted the ONS Data Ethics Advisory Committee\'s
 [application
@@ -275,7 +271,7 @@ The project application headings are summarised below
     
     
 ## Safe settings
-=============
+
 
 You should confirm that you are working at UCLH on approved
 infrastructure. For example,
