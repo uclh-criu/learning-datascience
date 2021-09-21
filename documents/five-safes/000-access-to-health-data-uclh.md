@@ -6,6 +6,7 @@ Contents
 [Five Safes at UCLH overview](#five-safes-at-uclh-overview)   
 [Safe people](#safe-people)    
 [Safe settings](#safe-settings)    
+[Safe outputs](#safe-outputs) 
 
 
 ## Five Safes at UCLH overview
@@ -87,7 +88,6 @@ Our local implementation is summarised below.
     
     
 ## Safe people
------
 
 We suggest you measure yourself against the following criteria. 
 When you are ready, then please [submit your evidence here](https://forms.office.com/Pages/DesignPage.aspx#FormId=_oivH5ipW0yTySEKEdmlwhXzC51z3xxEpmhpTardTsFUQzVIS1lGVldUTzVFOEo3VlBYQTNZWUxYMy4u)
@@ -127,7 +127,6 @@ A user should demonstrate one of the following
 Microdata is information at the level of individual. All data derived from an electronic health record is by definition microdata unless later aggregated. 
 
 ## Safe projects
------
 
 We have adopted and adapted the ONS Data Ethics Advisory Committee\'s
 [application
@@ -282,4 +281,30 @@ infrastructure. For example,
 
 -   **or** a Generic Application Environment provisioned through EMAP    
 
+
+## Safe outputs
+
+You should confirm that
+
+-   outputs must be non-disclosing
+
+<!-- -->
+
+-   outputs must remain on UCLH systems until suitable publication
+    clearance can be demonstrated
+
+-   outputs will be archived as per any internal processes mandated by
+    any of UCLH Information Services, Clinical Research Informatics Unit
+    or the UCL/UCLH Joint Research Office
+
+Outputs include
+
+-   manuscripts or reports containing prose, tables and figures
+
+-   software applications
+
+-   statistical models (e.g. machine learning, artificial intelligence
+    or similar)
+
+-   data (electronic or otherwise)
 
