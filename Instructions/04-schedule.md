@@ -29,7 +29,7 @@ Start | Duration | Topic
 09:30 | 60       |   5: data visualisation with ggplot2
 10:30 | 30       |   break
 11:00 | 40       |   Fellows to introduce their projects [2 mins each, max 2 slides, 1min questions]
-11:40 | 10       |   ? Steve Harris to talk
+11:40 | 10       |   Steve Harris to talk
 11:50 | 10       |   Mei to talk about UCLH databases (can have more time if needed)
 12:00 | 60       |   6: data manipulation with dplyr
 13:00 | 40       |   lunch

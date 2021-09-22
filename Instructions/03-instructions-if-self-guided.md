@@ -1,62 +1,24 @@
 ## Instructions if self-guided
 
+Here are instructions if you want to use these materials yourself without an instructor.
 
+#### 0: intro
+Read the [readme](https://github.com/uclh-criu/learning-datascience/blob/master/README.md) if you haven't already.
 
-#### The welcome slides.
+Follow the [pre-course instructions](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/01-pre-course-instructions.md)
 
-
+Have a look at the [pre-course suggested reading](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/02-pre-course-reading.md)
 
 #### 1: an R taster 
 
-To give a quick taste of R & show what we will do in the course. Learners will be asked to type commands in R and see what happens. We don't expect learners to understand completely at this stage, we will return to concepts later. 
+To give a quick taste of R & show what we will do in the course. Type commands in R and see what happens. We don't expect you to understand completely at this stage, we will return to concepts later. 
 
-Check that learners have managed to login.
+Run through this [powerpoint & follow instructions](https://github.com/uclh-criu/learning-datascience/blob/master/sessions/1-R-taster.pptx)
 
-- Instructor start on ppt
-- switch to live demo in RStudio to clone Github project 
-- demo opening .R script & work through
-- give learners time to type themselves & experiment.
-[todo] decide whether to get learners, now or later to save a source file in another folder, maybe in next intro R session
+#### 1.1: the R taster script
 
+From within RStudio open `sessions/1-R-taster-script.R` and run each line in turn.
 
-#### 2: intro to R
-
-Use the ppt - initially learners won't need to type. 
-
-Can switch to RStudio to demo later parts - either copy & pasting or typing.
-
-
-#### 3: data cleaning exercise
-
-TODO andy to update this.
-
-This does not include slides. Candidates navigate to the section of the handout, read it and follow the instructions there. 
-
-The workshop aims to demonstrate the principles of tidy data. 
-
-A 'dirty' version of the dataset is provided, as well as a clean one. 
-
-
-#### 4: getting data into R
-
-This includes both the slides and an additional R script. The instructor presents the slides, and the candidates can follow along using the R script. Demonstrates getting in some of the course datasets. 
-
-
-#### 5: data visualisation with ggplot2
-
-The workshop includes both the slides and the R script. At one point in the slides, candidates will be asked to open up the R script, and work through those examples. The R script should help them get a better idea of how small changes in the code can build on the same base graph. 
-
-#### 6: data manipulation with dplyr
-
-
-
-#### 7: practical challenge using UCLH or participant provided data
-
-Opportunity for learners to take time to apply what they've been introduced to. They can either work with provided UCLH data or data they have brought themselves. Instructors will provide assistance as required.
-
-Includes an R script which contains suggestions & questions for getting started. 
-
-Learners will be challenged to share one novel plot they have made at the end of the session and talk about it fo a minute.
-
+[instructions for later sections to follow]
 
 Thank you, and good luck!

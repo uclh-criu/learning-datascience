@@ -28,6 +28,7 @@ In the longer term the aim is to help clinicians develop modern, reproducible da
 
 # Self or guided instruction
 
+If working through these resources on your own work through the [instructions & links here](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/03-instructions-if-self-guided.md).
 
 
 # Licensing

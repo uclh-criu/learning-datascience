@@ -1,41 +1,23 @@
 ## Instructions for Trainers
 
-### For August 2021 course
 
-Online in MS Teams.
+#### setup a collaborative document 
 
-[note view html or the md on Github to see formatted version, preview md in RStudio to update html]
-
-#### [collaborative document](https://nhs-my.sharepoint.com/:w:/g/personal/mei_bai_nhs_net/ERBkMbqA6QVAo6DOtqNxVfQBBBwvGvroM5yO3e_3Vy_Xtg?e=TIhNZt) 
-For sharing & monitoring learner progress. All can edit.
-Open to NHS users. (In sharepoint because a googledoc was less easy for contribution from NHS email addresses).
+For sharing & monitoring learner progress, that all can edit.
+Open to NHS users. (we used a word doc in sharepoint because a googledoc was less easy for contribution from NHS email addresses).
 
 
 #### Trainer Roles
 
-Content delivery [Andy South] deliver content to the main room.
-Learner support [Mei Bai] monitor learner responses, manage breakout rooms, chip in.
-Learner support [Steve Harris] support individual learners in breakout rooms as required, feedback & chip in.
+Content delivery 
+Manage breakout rooms
+Learner support & monitor learner responses.
 
-
-#### MS Teams details
+#### Online delivery
 
 Main room for content delivery - 2 breakout rooms for troubleshooting.
 
-Meeting organiser [Andy] can upgrade others initially to an 'attendee' and then to 'presenter'. Presenters can also upgrade others. **We should probably upgrade all to presenters.**
-
-Meeting organiser [Andy] can create the breakout rooms & allocate people to them. If a learner has a problem, we can allocate them to a breakout room & one of the other trainers to go in too. Rooms are initially closed and those allocated are not moved until the room is opened by the organiser. Those moved will be given a 10s warning.
-
-In a breakout room learners can share their screen, a trainer can ask to 'Take control' and can potentially e.g. type into R console on the learners machine.
-
-Both learner & trainer can press leave to exit breakout room & return to main room - may need to press 'Resume'.
-
-The chat in Teams can be used for communication.
-
-
-## General tips.
-Powerpoint slides have some speaker notes switch to 'presenter view' to see.
-
+In Teams, meeting organiser can create the breakout rooms & allocate people to them. If a learner has a problem, we can allocate them to a breakout room & one of the other trainers to go in too. Rooms are initially closed and those allocated are not moved until the room is opened by the organiser. Those moved will be given a 10s warning. In a breakout room learners can share their screen, a trainer can ask to 'Take control' and can potentially e.g. type into R console on the learners machine. Both learner & trainer can press leave to exit breakout room & return to main room - may need to press 'Resume'.
 
 ### Tips on individual sessions.
 
