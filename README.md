@@ -1,14 +1,12 @@
-# UCLH Data Science Fellows training August 2021
+# UCLH Data Science Fellows Training 2021
 
-**in development**
 
-This repository contains the training materials for a two day course introducing R for the manipulation and visualisation of patient data. It assumes no knowledge of R, but is structured so that those know some R can also gain insights.
+This repository contains the training materials for a two day course introducing R for the manipulation and visualisation of patient data. It assumes no knowledge of R, but is structured so that those who know some R can also gain insights.
 
+
+Materials were designed primarily to be delivered in an online session by Andy South. Guidelines for self instruction are also provided, see below.   
 
 The main aim of the course is to develop the capacity of clinicians to use R and other modern data tools to manipulate hospital generated data. 
-
-
-The course uses patient data from UCLH related to the covid pandemic.
 
 
 In the longer term the aim is to help clinicians develop modern, reproducible data workflows – ‘good enough’ scientific computing - to make their work more efficient. We will be working to improve the interfaces between these practices and the hospital data systems.
@@ -28,7 +26,9 @@ In the longer term the aim is to help clinicians develop modern, reproducible da
 1. Get a feeling for the potential of R and motivation to learn more
 
 
-See the Instructions folder for more information.
+# Self or guided instruction
+
+
 
 # Licensing
 This course is licensed under a Creative Commons share-alike licence. 
