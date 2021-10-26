@@ -5,15 +5,36 @@ Here are instructions if you want to use these materials yourself without an ins
 #### 0: intro
 Read the [readme](https://github.com/uclh-criu/learning-datascience/blob/master/README.md) if you haven't already.
 
-Follow the [pre-course instructions](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/01-pre-course-instructions.md)
+Follow the [pre-course instructions](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/01-pre-course-instructions.md). At the end of this you should be ready to use RStudio & R.
 
 Have a look at the [pre-course suggested reading](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/02-pre-course-reading.md)
 
-#### 1: an R taster 
+#### 1: download the course materials from Github into an RStudio project
+
+![](../Images/00-01-new-project.png)
+
+##
+
+![](../Images/00-02-from-version-control.png)
+
+## 
+
+![](../Images/00-03-from-git.png)
+
+## Copy into first box **https://github.com/ucl-criu/learning-datascience**
+![](../Images/00-04-git-url.png)
+
+## may take a while to copy files.
+
+![](../Images/00-05-clone-progress.png)
+
+
+You should now have an RStudio project called learning-datascience that contains all the learning materials.
+
+#### 2: an R taster 
 
 To give a quick taste of R & show what we will do in the course. Type commands in R and see what happens. We don't expect you to understand completely at this stage, we will return to concepts later. 
 
-Run through this [powerpoint & follow instructions](https://github.com/uclh-criu/learning-datascience/blob/master/sessions/1-R-taster.pptx)
 
 #### 1.1: the R taster script
 
