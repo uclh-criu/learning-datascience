@@ -45,7 +45,7 @@ output:
 
 ### Course schedule
 
-- 2 days of intensive learning [link to schedule](https://github.com/ucl-criu/learning-datascience/blob/master/Instructions/schedule.md)
+- 2 days of intensive learning [link to schedule](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/schedule.md)
 
 - we will be flexible & adapt as needed
 

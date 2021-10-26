@@ -21,7 +21,7 @@ Have a look at the [pre-course suggested reading](https://github.com/uclh-criu/l
 
 ![](../Images/00-03-from-git.png)
 
-## Copy into first box **https://github.com/ucl-criu/learning-datascience**
+## Copy into first box **https://github.com/uclh-criu/learning-datascience**
 ![](../Images/00-04-git-url.png)
 
 ## may take a while to copy files.

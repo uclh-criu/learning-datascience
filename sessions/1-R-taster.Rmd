@@ -80,7 +80,7 @@ DON'T PANIC : they are common & expected
 
 `Errors` usually need to be fixed and are usually due to a typo
 
-`Errors` check the first one - if it doesn't make sense to you google it
+`Errors` check the first one - if it doesn't make sense to you, google it
 
 
 ## If you are an Instructor switch to live demo in RStudio 
@@ -99,7 +99,7 @@ If you are learning independently follow the steps in these slides.
 
 ![](../Images/00-03-from-git.png)
 
-## Copy into first box **https://github.com/ucl-criu/learning-datascience**
+## Copy into first box **https://github.com/uclh-criu/learning-datascience**
 ![](../Images/00-04-git-url.png)
 
 ## may take a while to copy files.
