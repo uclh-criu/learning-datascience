@@ -8,8 +8,9 @@ Materials were designed primarily to be delivered in an online session by Andy S
 
 The main aim of the course is to develop the capacity of clinicians to use R and other modern data tools to manipulate hospital generated data. 
 
-
 In the longer term the aim is to help clinicians develop modern, reproducible data workflows – ‘good enough’ scientific computing - to make their work more efficient. We will be working to improve the interfaces between these practices and the hospital data systems.
+
+Here is a [10 minute talk from the 2021 NHSR-community conference](https://youtu.be/R7uDB9iqlZY?t=19480) outlining the fellowship program.
 
 # Learning objectives for the course
 
