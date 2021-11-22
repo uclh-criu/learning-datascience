@@ -32,6 +32,7 @@ max(df2$visit_end_datetime)
 # in dbForge use File, Open File to open a .sql file & then use execute button on left
 
 
+##########################
 # other query files to try
 
 qfromfile <- readr::read_file("database-use/sql-omop-scripts/measures-one-patient.sql")
@@ -44,8 +45,18 @@ ggplot(df3, aes(x=measurement_datetime, y=`oxygen saturation`)) +
   geom_point()
 
 
+###################################
+# another query returning more data
+
+qfromfile <- readr::read_file("database-use/sql-omop-scripts/measures-all-patients-daterange.sql")
+
+df4 <- DBI::dbGetQuery(ctn, qfromfile)
+
+ggplot(df4, aes(x=measurement_datetime, y=`oxygen saturation`)) +
+  geom_point()
+
 
 
 # this one doesn't work from R yet
 # qfromfile <- readr::read_file("database-use/sql-omop-scripts/join-visit-time-to-oxygen-measure.sql")
-# df4 <- DBI::dbGetQuery(ctn, qfromfile)
+# dfx <- DBI::dbGetQuery(ctn, qfromfile)
