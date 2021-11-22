@@ -1,3 +1,4 @@
+# 01-connect-to-database-decovid-omop.R
 # to connect to the decovid omop database
 # andy south 2021-10-27
   
@@ -18,7 +19,9 @@ ctn <- dbConnect(
   password = rstudioapi::askForPassword("Database password"),
   dbname = "datamart")
 
-# list tables in the database
+# you can then use this connection called 'ctn' here to get at the data
+
+# e.g. list tables in the database
 dbListTables(ctn)
 
 # [1] "concept_icd"                            "cohort"                                
