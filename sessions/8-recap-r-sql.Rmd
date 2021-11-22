@@ -1,0 +1,43 @@
+---
+title: "Recap R & SQL for data science fellows"
+
+output: github_document
+
+---
+
+# Working session 2021-11-23
+
+## Objectives
+
+*Overall : revisit how best to work with R & SQL on UCLH systems*
+
+1. using RStudio direct from data science desktop
+
+2. get most recent ‘learning-datascience’ project from Github into RStudio
+
+3. run same SQL scripts from both R & dbforge
+
+4. brief revision of dplyr (data manipulation) & ggplot2 (plotting)
+
+5. create new RStudio project for own work
+
+
+### 1. using RStudio direct from data science desktop
+
+...
+
+### 2. get most recent ‘learning-datascience’ project from Github into RStudio
+
+...
+
+
+
+
+
+```{r, read-dataset1}
+
+library(readr)
+
+
+```
+
