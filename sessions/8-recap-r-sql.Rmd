@@ -60,8 +60,27 @@ It may take a while to copy the files. Now you should have a local copy of an RS
 
 ### 3 run same SQL scripts from both R & dbforge
 
+In this section we will see one way to run SQL queries from within R. We demonstrate an R method to read a query from an SQL file and then run it to get the data into R.  
+This method has the advantage that the same SQL script can be run both in dbForge and R. This gives us the potential to develop and test a query in dbForge and then run it from R.
+
+We will use the same decovid-omop database and similar queries that we experimented with in the SQL course.
+
+In the `learning-datascience` RStudio project, navigate to the folder `database-use` in the files explorer in the lower right panel of RStudio.
 
 
+#### connecting to a database
+
+You should see a file named `01-connect-to-database-decovid-omop.R`
+
+Click on it and it should open in the top right panel of RStudio.
+
+This contains the code to connect to the database. It includes parts that prompt the user (you) to enter your username and password for the database.
+
+You can run the whole script by clicking the `Source` button at the top right of the left hand panel.
+
+You should see that this creates an object called `ctn` that appears in the Environment tab of the top right hand panel. This object can be used in later code to access the database as we will see next.
+
+#### running SQL queries from R
 
 
 
