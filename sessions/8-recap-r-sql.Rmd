@@ -91,6 +91,7 @@ Then it runs that query on the database using the `ctn` object we created above,
 
 ### 4 brief revision of dplyr (data manipulation) & ggplot2 (plotting)
 
+See the file `03-manipulate-plot-query-results.R`
 
 
 ### 5 create new RStudio project for own work

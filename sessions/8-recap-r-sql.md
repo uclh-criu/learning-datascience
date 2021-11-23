@@ -98,6 +98,22 @@ in later code to access the database as we will see next.
 
 #### running SQL queries from R
 
-``` r
-library(readr)
-```
+Open the file `02-run-file-sql-queries.R`.
+
+This contains code to read a query into R from an sql file.
+
+Then it runs that query on the database using the `ctn` object we
+created above, and saves the resulting data in an R dataframe.
+
+### 4 brief revision of dplyr (data manipulation) & ggplot2 (plotting)
+
+See the file `03-manipulate-plot-query-results.R`
+
+### 5 create new RStudio project for own work
+
+A good way of organising your own R work is by using RStudio projects.
+An Rstudio project is a folder than can contain both code and data files
+and has a `.Rproj` file that saves your settings.
+
+To create a new RStudio project, click : File, New project, New
+directory, New project, & type in a name, e.g. my-first-project.
