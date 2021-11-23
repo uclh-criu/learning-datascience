@@ -13,8 +13,8 @@ library(readr)
 
 qfromfile <- readr::read_file("database-use/sql-omop-scripts/visit-times.sql")
 
-# query works when has single quotes
-# this fails when the query has double quotes
+# query works when has single quotes, can fail with double quotes
+
 df2 <- DBI::dbGetQuery(ctn, qfromfile)
 
 View(df2)
@@ -42,17 +42,6 @@ View(df3)
 
 #these quotes `` needed because of space in column name created in the sql query
 ggplot(df3, aes(x=measurement_datetime, y=`oxygen saturation`)) +
-  geom_point()
-
-
-###################################
-# another query returning more data
-
-qfromfile <- readr::read_file("database-use/sql-omop-scripts/measures-all-patients-daterange.sql")
-
-df4 <- DBI::dbGetQuery(ctn, qfromfile)
-
-ggplot(df4, aes(x=measurement_datetime, y=`oxygen saturation`)) +
   geom_point()
 
 
