@@ -78,19 +78,5 @@ ggplot(dfpatient, aes(x=measurement_datetime, y=`oxygen saturation`)) +
 # can you try some other patients by replacing the person_id used to create dfpatient ?
 
 
-#[TODO try this out on DSD]
-
-# another option is to select a number of patients
-# and use ggplot to plot the results
-dfpatients <- df4 %>% 
-  count(person_id, sort=TRUE) %>% 
-  # to slice the top x values of n
-  slice_max(n, n=6)
-
-# now plot the oxygen measures for all patients
-# facetting by person_id to put each patient in their own subplot
-ggplot(dfpatients, aes(x=measurement_datetime, y=`oxygen saturation`)) +
-  geom_point() +
-  facet_grid(person_id)
 
 
