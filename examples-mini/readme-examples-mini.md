@@ -27,6 +27,11 @@
  count number of unique diagnoses per patient
 
 
+## join-data-by-patient-id.r
+
+ join two tables of data for the same patients
+
+
 ## patient-count.r
 
  count patients when more than one row per patient 

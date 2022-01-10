@@ -1,6 +1,6 @@
 # diagnosis-name-search-exact
 
-### search diagnoses to find those that exactly match one of a number of strings 
+# search diagnoses to find those that exactly match one of a number of strings 
 
 library(tidyverse) #for packages dplyr
 

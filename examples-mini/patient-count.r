@@ -1,6 +1,6 @@
 # patient-count
 
-### count patients when more than one row per patient 
+# count patients when more than one row per patient 
 
 library(tidyverse) #for packages dplyr
 

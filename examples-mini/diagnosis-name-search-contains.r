@@ -1,6 +1,6 @@
 # diagnosis-name-search-contains
 
-### search diagnoses to find those that contain one of a number of text fragments
+# search diagnoses to find those that contain one of a number of text fragments
 
 library(tidyverse) # for packages stringr & dplyr
 
