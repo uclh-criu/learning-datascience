@@ -1,10 +1,10 @@
 # diagnosis-per-patient-count
 
-### count number of unique diagnoses per patient
+# count number of unique diagnoses per patient
 
 library(tidyverse) #for packages dplyr
 
-# create a small example dataframe with just one column
+# create a small example dataframe
 df1 <- data_frame( patient = c(1,1,1,2,2,2,3,3,3),
                    diagnosis = c('a','b','c','d','d','e','f','f','f'))
 
