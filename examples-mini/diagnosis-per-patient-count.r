@@ -1,7 +1,6 @@
-# diagnosis-per-patient-count.r
-# andy south 2021-12-23
+# diagnosis-per-patient-count
 
-# count number of unique diagnoses per patient
+### count number of unique diagnoses per patient
 
 library(tidyverse) #for packages dplyr
 

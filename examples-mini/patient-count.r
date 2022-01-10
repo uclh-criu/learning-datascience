@@ -1,7 +1,6 @@
-# patient-count.r
-# andy south 2021-12-23
+# patient-count
 
-# count patients when more than one row per patient 
+### count patients when more than one row per patient 
 
 library(tidyverse) #for packages dplyr
 

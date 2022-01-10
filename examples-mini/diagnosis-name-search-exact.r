@@ -1,7 +1,6 @@
-# diagnosis-name-search-exact.r
-# andy south 2021-12-23
+# diagnosis-name-search-exact
 
-# search diagnoses to find those that exactly match one of a number of strings 
+### search diagnoses to find those that exactly match one of a number of strings 
 
 library(tidyverse) #for packages dplyr
 

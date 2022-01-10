@@ -1,7 +1,6 @@
-# diagnosis-count.r
-# andy south 2021-12-23
+# diagnosis-count
 
-# count number of unique diagnoses
+### count number of unique diagnoses
 
 library(tidyverse) #for packages dplyr
 

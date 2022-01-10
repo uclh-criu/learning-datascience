@@ -1,7 +1,6 @@
-# diagnosis-name-search
-# andy south 2021-12-23
+# diagnosis-name-search-contains
 
-# search diagnoses to find those that contain one of a number of strings 
+### search diagnoses to find those that contain one of a number of text fragments
 
 library(tidyverse) # for packages stringr & dplyr
 
@@ -30,7 +29,7 @@ df2
 # 6 other     FALSE
 
 #to convert multiple conditions (e.g. read from a dataframe) into a search
-#use paste to create search string & collapse that inserts between each element
+#use `paste` to create search string & `collapse` that inserts between each element
 #diagnoses <- c('odgkins','ymph')
 #diagnoses_wanted <- paste(diagnoses, collapse = '|')
 

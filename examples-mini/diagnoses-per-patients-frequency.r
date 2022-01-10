@@ -1,7 +1,6 @@
-# diagnoses-per-patients-frequency.r
-# andy south 2021-12-23
+# diagnoses-per-patients-frequency
 
-# summarise the frequency of unique diagnoses across patients
+### summarise the frequency of unique diagnoses across patients
 
 library(tidyverse) #for packages dplyr
 
