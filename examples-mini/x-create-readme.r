@@ -54,4 +54,4 @@ for (i in filenames) {
 }
 
 # write all lines to a markdown file (over-writes by default)
-write_lines(text_for_readme, 'examples-mini/readme-examples-mini.md')
+write_lines(text_for_readme, 'examples-mini/_readme-examples-mini.md')
