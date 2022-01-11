@@ -18,8 +18,12 @@
 filenames <- list.files("examples-mini","*.r")
 
 # first few lines for the reame
-text_for_readme <- paste0("# Mini self-contained examples demonstrating coding solutions for patient data\n",
-                          "(do not edit: run x-create-readme.r to update)")
+text_for_readme <- paste0("# Mini-examples demonstrating coding solutions for patient data\n\n",
+                          "A series of independent, self-contained examples in R scripts in this folder\n\n",
+                          "To use, either :\n",
+                          "1. create a new RStudio project from the repository to view & run the scripts locally \n",
+                          "2. just copy & paste the code from Github into RStudio\n\n",
+                          "(note to authors : this file is created by x-create-readme.r)\n")
 
 # go through each file & create an entry in the readme from the filename
 # and the 2nd line of the file

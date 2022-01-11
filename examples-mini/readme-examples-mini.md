@@ -1,5 +1,13 @@
-# Mini self-contained examples demonstrating coding solutions for patient data
-(do not edit: run x-create-readme.r to update)
+# Mini-examples demonstrating coding solutions for patient data
+
+A series of independent, self-contained examples in R scripts in this folder
+
+To use, either :
+1. create a new RStudio project from the repository to view & run the scripts locally 
+2. just copy & paste the code from Github into RStudio
+
+(note to authors : this file is created by x-create-readme.r)
+
 
 
 ## date-time-formatting.r
