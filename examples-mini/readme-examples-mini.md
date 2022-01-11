@@ -2,9 +2,13 @@
 
 A series of independent, self-contained examples in R scripts in this folder
 
+updated 2022-01-11
+
 To use, either :
 1. create a new RStudio project from the repository to view & run the scripts locally 
 2. just copy & paste the code from Github into RStudio
+
+These examples are in early development and are likely to change, please suggest or submit improvements.
 
 (note to authors : this file is created by x-create-readme.r)
 
