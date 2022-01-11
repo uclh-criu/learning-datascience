@@ -37,9 +37,11 @@ for (i in filenames) {
   # first_lines <- read_lines(paste0('examples-mini/',i), skip_empty_rows=TRUE, n_max=2)
   # text_for_readme <- c(text_for_readme,'\n',first_lines)
   
-  
   #use the filename and add ## to make it a markdown heading
-  line1 <- paste0("## ",i,"\n")
+  #line1 <- paste0("## ",i,"\n")
+  
+  #try creating link to Github location
+  line1 <- paste0("## [",i,"](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/",i,")\n")
   
   #extract the 2nd line description from the file  
   line2 <- read_lines(paste0('examples-mini/',i), skip_empty_rows=TRUE, n_max=1, skip=1)
