@@ -297,7 +297,7 @@ range(cchic2$urea, na.rm=TRUE)
 
 ## Exercise
 1. What types of variables do you have in `cchic`?
-2. Display the `discharge` vector from in `cchic`.
+2. Display the `discharge_dttm` vector from `cchic`.
 3. How many men and women are in the database?
 4. How many survived and how many died?
 5. a) What does the function `ls()` do? 
@@ -313,7 +313,7 @@ str(cchic)
 ## Answer 2
 Display the `discharge` vector in `cchic`.
 ```{r, eval = FALSE}
-cchic$discharge
+cchic$discharge_dttm
 ```
 
 ## Answer 3
