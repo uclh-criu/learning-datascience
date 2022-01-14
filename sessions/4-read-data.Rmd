@@ -311,7 +311,7 @@ str(cchic)
 ```
 
 ## Answer 2
-Display the `discharge` vector in `cchic`.
+Display the `discharge_dttm` vector in `cchic`.
 ```{r, eval = FALSE}
 cchic$discharge_dttm
 ```
