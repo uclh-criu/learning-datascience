@@ -2,7 +2,7 @@
 
 A series of independent, self-contained examples in R scripts in this folder
 
-updated 2022-01-11
+updated 2022-01-14
 
 To use, either :
 1. create a new RStudio project from the repository to view & run the scripts locally 
@@ -42,6 +42,11 @@ These examples are in early development and are likely to change, please suggest
 ## [diagnosis-per-patient-count.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/diagnosis-per-patient-count.r)
 
  count number of unique diagnoses per patient
+
+
+## [event-duration-per-patient.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/event-duration-per-patient.r)
+
+ calculate start, end and duration per patient from a table with columns for patient id and date/time of events
 
 
 ## [event-latest-per-patient.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/event-latest-per-patient.r)
