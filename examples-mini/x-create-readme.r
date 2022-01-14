@@ -15,7 +15,7 @@
 # I might be able to tweak this to add a links to the files, but would only work from github
 
 # list the r files in the folder
-filenames <- list.files("examples-mini","*.r")
+filenames <- list.files("examples-mini","\\.r$",ignore.case=TRUE)
 
 # first few lines for the reame
 text_for_readme <- paste0("# Mini-examples demonstrating coding solutions for patient data\n\n",
