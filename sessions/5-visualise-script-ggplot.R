@@ -3,9 +3,6 @@
 # makes a line a comment & not actioned by R
 "hello" # can also make a comment after something that is executed
 
-# you don't need to understand next line - just needed on RStudio server - you won't usually need
-.libPaths(c('/usr/share/anaconda3/envs/r_env/lib/R/library', .libPaths()))
-
 # load needed packages
 library(tidyverse)
 

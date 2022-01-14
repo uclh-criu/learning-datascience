@@ -9,6 +9,42 @@ Follow the [pre-course instructions](https://github.com/uclh-criu/learning-datas
 
 Have a look at the [pre-course suggested reading](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/02-pre-course-reading.md)
 
+#### If using RStudio for the first time from UCLH PC 
+
+##### To enable RStudio to find internet
+ 
+Create a small text file, paste some commands into it, save it as a file called .Renviron and then restart RStudio.
+
+We can use a function called `edit_r_environ()` within a helper package called `usethis`.
+
+Copy & paste the 3 lines below into the R console at the lower left:
+
+```
+install.packages("usethis")
+library(usethis)
+usethis::edit_r_environ()
+```
+
+This should open a tab called **.Renviron** in the editor at the top left.
+
+##### Copy & paste these lines into a space below the **.Renviron** tab at top left
+
+```
+# Set-up proxies to allow RStudio & R to talk to internet
+# allows git cloning of RStudio projects & remotes::install_github
+# CRAN package installation works without proxies being set
+# file called .Renviron needs to be saved in your home folder
+http_proxy=http://www-cache-n.xuclh.nhs.uk:3128/
+https_proxy=http://www-cache-n.xuclh.nhs.uk:3128/
+HTTP_PROXY=http://www-cache-n.xuclh.nhs.uk:3128/
+HTTPS_PROXY=http://www-cache-n.xuclh.nhs.uk:3128/
+```
+
+Then save that file by selecting File, Save (or Ctrl S).   
+Close the .Renviron tab.   
+Restart RStudio.
+
+
 #### 1: download the course materials from Github into an RStudio project
 
 RStudio, File, New Project

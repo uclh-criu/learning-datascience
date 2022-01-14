@@ -33,14 +33,22 @@ output:
 - a few sentences each, start with instructors
 
 
+### 
+
+![](../Images/uclh-desktops.png)
+
+
 ## Pre-requisites
 
+- UCLH Data Science desktop. You should have received this link, let us know if you don't have access.    
+[https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/01-pre-course-instructions.md](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/01-pre-course-instructions.md)  
 
 - Access [Collaborative document](https://nhs-my.sharepoint.com/:w:/g/personal/mei_bai_nhs_net/ERBkMbqA6QVAo6DOtqNxVfQBBBwvGvroM5yO3e_3Vy_Xtg?e=TIhNZt) for tracking progress, entering questions etc.   
 
-- access R online: [http://uclvldddtaeas01.xuclh.nhs.uk:4433](http://uclvldddtaeas01.xuclh.nhs.uk:4433) you should have been sent password, let us know if not.   
 
 - Backup plan : if need to run locally download [R](https://cran.r-project.org/) & [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
+
+
 
 
 ### Course schedule
