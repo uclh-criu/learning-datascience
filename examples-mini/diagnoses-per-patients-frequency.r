@@ -4,7 +4,7 @@
 
 library(tidyverse) #for packages dplyr
 
-# create a small example dataframe with just one column
+# create a small example dataframe
 df1 <- data_frame( patient = c(1,1,1,2,2,2,3,3,3,4,5,5),
                    diagnosis = c('a','b','c','d','d','e','f','f','f','g','h','i'))
 
