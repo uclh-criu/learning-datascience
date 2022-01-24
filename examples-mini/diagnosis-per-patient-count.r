@@ -11,8 +11,8 @@ df1 <- data_frame( patient = c(1,1,1,2,2,2,3,3,3),
 # count diagnoses per patient using dplyr
 # key part is 'group_by()'
 df2 <- df1 %>% 
-  group_by(patient) %>% 
-  summarize(n_diagnoses = length(unique(diagnosis)))
+  group_by(patient) %>%
+  summarize(n_diagnoses = n_distinct(diagnosis))  
 
 df2
 #         patient n_diagnoses
