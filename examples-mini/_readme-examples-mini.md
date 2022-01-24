@@ -59,6 +59,21 @@ These examples are in early development and are likely to change, please suggest
  join two tables of data for the same patients
 
 
+## [missing-data-formatting.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/missing-data-formatting.r)
+
+ format missing data values correctly (NA)
+
+
+## [missing-data-per-patient-count.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/missing-data-per-patient-count.r)
+
+ count number of missing values (NA) per patient
+
+
+## [missing-data-per-patient-remove.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/missing-data-per-patient-remove.r)
+
+ remove missing values OR patients that have at least one missing value (NA)
+
+
 ## [number-formatting.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/number-formatting.r)
 
  convert data to number format when it has been read in as character (using as.numeric())
