@@ -13,8 +13,8 @@ df1 <- data_frame( patient = c(1,1,2,2,3,3),
 
 df2 <- df1 %>%
   group_by(patient) %>%
-  summarise( start_date = min(event_date, na.rm=FALSE),
-             end_date = max(event_date, na.rm=FALSE),
+  summarise( start_date = min(event_date, na.rm=TRUE),
+             end_date = max(event_date, na.rm=TRUE),
              n_events = n()) %>% 
   mutate( duration_days = end_date - start_date)
   
