@@ -10,7 +10,7 @@ library(tidyverse) # for packages dplyr
 df1 <- data_frame( patient = c(1,1,2,2,2,3,3),
                    measure = c(10,20,10,11,30,40,NA))
 
-# group_by patient an calculate some summaries
+# group_by patient and calculate some summaries
 df2 <- df1 %>%
   group_by(patient) %>%
   summarise( measure_min = min(measure, na.rm=TRUE),
@@ -19,7 +19,9 @@ df2 <- df1 %>%
              measure_med = median(measure, na.rm=TRUE),             
              n_events = n(),
              n_measures = sum(!is.na(measure))) 
-  
+
+# sum(!is.na()) counts values that are not missing (! signifies not)
+ 
 df2
 
 #   patient measure_min measure_max measure_mean measure_med n_events n_measures
