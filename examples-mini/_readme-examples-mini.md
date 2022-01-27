@@ -2,7 +2,7 @@
 
 A series of independent, self-contained examples in R scripts in this folder
 
-updated 2022-01-24
+updated 2022-01-27
 
 To use, either :
 1. create a new RStudio project from the repository to view & run the scripts locally 
@@ -57,6 +57,11 @@ These examples are in early development and are likely to change, please suggest
 ## [join-data-by-patient-id.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/join-data-by-patient-id.r)
 
  join two tables of data for the same patients
+
+
+## [measures-summary-per-patient.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/measures-summary-per-patient.r)
+
+ calculate min,max,mean etc. per patient from a table with columns for patient id and measures, and rows per event
 
 
 ## [missing-data-formatting.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/missing-data-formatting.r)
