@@ -1,6 +1,6 @@
 # patient-count-by-date-from-admission-discharge
 
-# count by date of the number of patients from admission and discharge dates
+# count the number of patients per date from a table of admission and discharge dates per patient
 
 # query from Conor Foley 2022-02-01
 # a two step process you can start at either 

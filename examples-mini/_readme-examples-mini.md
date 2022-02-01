@@ -86,7 +86,7 @@ These examples are in early development and are likely to change, please suggest
 
 ## [patient-count-by-date-from-admission-discharge.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/patient-count-by-date-from-admission-discharge.r)
 
- count by date of the number of patients from admission and discharge dates
+ count the number of patients per date from a table of admission and discharge dates per patient
 
 
 ## [patient-count.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/patient-count.r)
