@@ -17,6 +17,9 @@ patients <- unique(df1$patient)
 length(patients)
 # 3
 
+# or tidyverse solution
+dplyr::n_distinct(df1$patient)
+
 # beware that length gives the length of a vector
 # length also gives the number of columns in a datframe
 # to get the number of rows in a dataframe use nrow()
