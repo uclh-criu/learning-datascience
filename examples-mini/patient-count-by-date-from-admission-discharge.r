@@ -73,6 +73,32 @@ dfdates
 # searching for : dplyr count days from start & end date
 # https://stackoverflow.com/a/57255894
 
+## An alternative solution from Conor
+
+# start 
+dfdates <- data_frame(date=seq(min(df2$start_date),max(df2$end_date),by = "1 day"))
+
+# this uses merge to join each date of interest to all start & end dates
+# & then for each row checks whether the date of interest is within the range
+# the code is simpler to understand & gives same result as above
+# the first step could create a large table given that it 
+# will have numrows=patients*dates
+# but R should cope well with e.g. 1000 patients for a year (<400k rows)
+df4 <- merge(dfdates, df2, all=TRUE) %>% 
+  filter(date >= start_date, date <= end_date) %>%
+  group_by(date) %>% 
+  summarise(npatients = n())
+
+# can also use dplyr full_join a tidyverse equivalent of base merge
+# dftst1 <- merge(dfdates, df2, all=TRUE)
+# dftst2 <- full_join(dfdates, df2, by=character()) 
+
+df5 <- full_join(dfdates, df2, by=character()) %>% 
+  filter(date >= start_date, date <= end_date) %>%
+  group_by(date) %>% 
+  summarise(no_in_unit = n())
+
+
 # another potential solution that doesn't quite work
 # create a new dataframe containing all dates from min start to max end
 # & then count for how many patients is current_date > start_date AND < end_date
