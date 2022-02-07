@@ -8,12 +8,12 @@ A collection of tips for working with data on UCLH systems.
 Contents 
 
 
-[UCLH Data Science Desktop](#uclh-data-science-desktop) 
-[Where to save data ?](#where-to-save-data) 
-[RStudio projects](#rstudio-projects) 
-[Naming of files, columns, variables etc.](#naming-of-files-columns-variables-etc)
-[Folder structure within RStudio projects](#folder-structure-within-rstudio-projects) 
-[Secure transfer of data](#secure-transfer-of-data)  
+[UCLH Data Science Desktop](#uclh-data-science-desktop)    
+[Where to save data](#where-to-save-data)     
+[RStudio projects](#rstudio-projects)     
+[Naming of files, columns, variables etc.](#naming-of-files-columns-variables-etc)    
+[Folder structure within RStudio projects](#folder-structure-within-rstudio-projects)     
+[Secure transfer of data](#secure-transfer-of-data)      
 
 
 These tips aim to support you to develop good data practice and make your work more efficient and safer.
@@ -27,11 +27,11 @@ Most of this assumes that you are using R. If you are using Python that is good 
 Using the UCLH Data Science Desktop allows you to access hospital data securely. R, dbforge for SQL and Python are pre-installed. See the
 [pre-course instructions](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/01-pre-course-instructions.md) for details of access.
 
-## Where to save data ?
+## Where to save data
 
 Do not save data on the desktop of Data Science Desktop. It will be lost when your session ends.
 
-Save data within your Documents folder on Data Science Desktop. This can be reached by typing File Explorer into the Windows search. RStudio is etup on Data Science Desktop so that your Documents folder is set as the 'Home' directory that can be reached by clicking Home in The Files tab at the lower right.
+Save data within your Documents folder on Data Science Desktop ()within a subfolder as suggested below). This can be reached by typing File Explorer into the Windows search. RStudio is setup on Data Science Desktop so that your Documents folder is the 'Home' directory that can be reached by clicking Home at the top left of he Files tab at the lower right.
 
 ![](../Images/rstudio-files-home.png)
 
@@ -60,14 +60,14 @@ Many recommend to **avoid spaces, accents, capital letters and special character
 
 This is a simple system we recommend :
 
-File and folder names like this using **-** to separate words :
-**my-usefully-named-file.txt**
-**2022-02-patient-data-myeloma.csv**
-**my-usefully-named-r-script.r**
+File and folder names like this using **-** to separate words :    
+**my-usefully-named-file.txt**    
+**2022-02-patient-data-myeloma.csv**    
+**my-usefully-named-r-script.r**    
 
-Column names, object and function names in R using **_** to separate words
-**weight_kg**
-**n_patients**
+Column names, object and function names in R using **_** to separate words :    
+**weight_kg**    
+**n_patients**    
 
 
 ## Folder structure within RStudio projects
@@ -78,23 +78,24 @@ For a small starting project. It can be simplest just to separate code and data.
 
 For this we suggest the following internal folders :
 
-**data-raw/**
-**data/**
+**data-raw/**    
+**data/**    
 
 data-raw/ is for data that you have obtained (e.g. csv or xls) and you should keep it unmodified.    
 data/ is for data that you are using yourself and may have modified. It could bs .csv or saved from R as .rds
 
-You could add an **sql/** folder to store any sql code.    
+If you have sql code add this :        
+**sql/**    
 
 You can then store R scripts or RMarkdown files in the home directory of the project.
 
 This is similar to the [structure recommended by rfortherestofus](https://rfortherestofus.com/2021/08/rstudio-project-structure/), except that he also suggests having an **R/** folder to contain R scripts that can be used from within different RMarkdown documents.
 
-Within this structure you can have files named something like this in the home directory of the project in the sequence that they need to be run. These could also be .Rmd files.
-0-get-data.R
-1-clean-data.R
-2-plot-data.R
-3-model-data.R
+Within this structure you can have files named something like this in the home directory of the project in the sequence that they need to be run. These could also be .Rmd files.    
+0-get-data.R    
+1-clean-data.R    
+2-plot-data.R    
+3-model-data.R    
 
 For larger projects you may want to have folders named similarly to the files above.
 
@@ -103,7 +104,7 @@ You may also want to create folders for outputs of the project like **plots/** o
 
 ## Secure transfer of data
 
-You can receive/send data files (e.g. csv) via your NHS email account. To get files into Data Science Desktop open your email in a web browser in Data Science Desktop and save to your Home or Documents folders as suggested above.
+You can receive/send data files (e.g. csv) via your NHS email account. To get files into Data Science Desktop open your email in a web browser in Data Science Desktop and save to a subfolder of your Documents folder as suggested above.
 
 
 
