@@ -1,0 +1,238 @@
+---
+title: "UCLH Fellows progress December 2021"
+author: "Andy South"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+Plotting selected results from fellows survey.
+
+
+```{r setup, include=FALSE}
+
+library(knitr) #for kable
+library(tidyverse)    #for data manipulation
+#library(readxl)
+library(readr)
+
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+
+# folderin <- 'uclh-specific\\2022-02-fellows-progress\\'
+# setwd(folderin)
+
+```
+
+```{r read-data, eval=TRUE}
+
+# filename <- '2021-12-fellows-progress.xlsx'
+# df1 <- read_xlsx(filename)
+
+filename <- '2021-12-fellows-progress.csv'
+df1 <- read_csv(filename)
+
+```
+
+
+```{r plot-data, eval=TRUE, results='asis', fig.height=4}
+
+# names(df1)
+#  [1] "Name"                                                                                         
+#  [2] "Did you have a 1:1 meeting with Wai Keong/Steve/Andy/Mei to talk about your research project?"
+#  [3] "At which stage is your project (multiple answers)"                                            
+#  [4] "Do you have data to work with now ?"                                                          
+#  [5] "What are your data sources?"                                                                  
+#  [6] "Have you had any difficulties with collecting data?"                                          
+#  [7] "From which team/person are you obtaining data from?"                                          
+#  [8] "Have you managed to read data into R ?"                                                       
+#  [9] "Have you written any code to manipulate/clean your data in R yet ?"                           
+# [10] "Have you written any code to plot your data in R yet ?"                                       
+# [11] "Have you written any code to summarise/analyse your data in R yet ?"                          
+# [12] "What type(s) of analyses are you planning to conduct? (multiple answers)"                     
+# [13] "At which stage do you expect to be by the end of January? (multiple answers)"                 
+# [14] "Do you need further help now with ... ? (multiple answers)"                                   
+# [15] "Do you have any other suggestions for us to provide the best support for you?"  
+
+# create new short named columns to make easier
+# for multiple answer questions
+
+# start with just the name column
+df2 <- select(df1,"Name")
+
+# remove final 2 chars from multiple answers columns because contains ;/
+df2$project_stage <- str_sub(df1[[3]],end=-2)
+df2$stage_end_jan <- str_sub(df1[[13]],end=-2)
+df2$need_help_now <- str_sub(df1[[14]],end=-2)
+
+# trying to get multiple answers into separate rows
+# to make data 'tidy'
+# try on all columns, fails with Incompatible lengths: 2,3
+# may be due to NAs
+# dftst <- df2 %>% tidyr::separate_rows(contains("_"), sep=';')
+
+# do one column at a time
+dfstage <- df2 %>% 
+  select(c("Name","project_stage")) %>% 
+  tidyr::separate_rows(project_stage, sep=';')
+  
+dfjan <- df2 %>% 
+  select(c("Name","stage_end_jan")) %>% 
+  tidyr::separate_rows(stage_end_jan, sep=';')
+
+dfhelp <- df2 %>% 
+  select(c("Name","need_help_now")) %>% 
+  tidyr::separate_rows(need_help_now, sep=';')
+
+
+
+# check values
+#unique(dfstage$project_stage)
+# [1] "Designing research"                       "Gathering requirements from stakeholders"
+# [3] "Data collection"                          "Data analysis"                        
+# [5] "Piloting an intervention" 
+#unique(dfjan$stage_end_jan)
+# [1] "Data analysis"          "Data collection"        "Gathering requirements"
+# [4] "Designing research"     "Summarising results"  
+#unique(dfhelp$need_help_now)
+# [1] NA                             "obtaining data"               "data manipulation / cleaning"
+# [4] "data plotting"                "data analysis"       
+
+
+
+
+# replace a long string
+dfstage <- mutate(dfstage, project_stage=str_replace_all(project_stage,"Gathering requirements from stakeholders","Gathering requirements"))
+dfjan <- mutate(dfjan, stage_end_jan=str_replace_all(stage_end_jan,"Gathering requirements from stakeholders","Gathering requirements"))
+
+
+# convert to factors in a set order to make plot more meaningful
+
+# define order of levels
+stagelevels <- c("Designing research", "Gathering requirements", "Data collection", "Data analysis", "Piloting an intervention")
+janlevels <- c("Designing research", "Gathering requirements", "Data collection", "Data analysis", "Summarising results")
+#I don't think help needs re-ordering
+#helplevels <- 
+
+
+# make factor from values
+dfstage <- dfstage %>% mutate( project_stage_factor = factor(project_stage, levels=stagelevels))
+dfjan <- dfjan %>% mutate( stage_end_jan_factor = factor(stage_end_jan, levels=janlevels))
+#dfhelp <- dfhelp %>% mutate( need_help_now_factor = factor(need_help_now, levels=prog_levels))
+
+#check that factors remain in correct order Rosie data analysis, sobia data collection
+
+# GOOD PLOTS
+ggplot(dfstage, aes(x=Name, y=project_stage_factor)) +
+  geom_point() +
+  theme_minimal() +
+  ggtitle("Project stage December") +
+  xlab("") +
+  ylab("") +
+  theme( axis.text.x = element_text(size=12, angle=45, hjust=1, vjust=1)) 
+
+ggplot(dfjan, aes(x=Name, y=stage_end_jan_factor)) +
+  geom_point() +
+  theme_minimal() +
+  ggtitle("Expected project stage end January") +
+  xlab("") +
+  ylab("") +
+  theme( axis.text.x = element_text(size=12, angle=45, hjust=1, vjust=1)) 
+
+ggplot(dfhelp, aes(x=Name, y=need_help_now)) +
+  geom_point() +
+  theme_minimal() +
+  ggtitle("Do you need further help now with ... ?") +
+  xlab("") +
+  ylab("") +  
+  theme( axis.text.x = element_text(size=12, angle=45, hjust=1, vjust=1)) 
+
+```
+
+
+
+```{r single-answer-questions, eval=TRUE, results='asis', fig.height=4}
+
+# Single answer questions
+
+# [8] "Have you managed to read data into R ?"                                         
+# [9] "Have you written any code to manipulate/clean your data in R yet ?"             
+# [10] "Have you written any code to plot your data in R yet ?"                         
+# [11] "Have you written any code to summarise/analyse your data in R yet ?"   
+
+for(qnum in 8:11)
+{
+  #cat(qnum)
+
+  #add ` to cope with spaces
+  fieldname <- paste0("`", names(df1)[qnum],"`")
+  
+  gg <- ggplot(df1, aes_string(x="Name", y=fieldname, col=fieldname)) +
+    geom_point(show.legend = FALSE) +
+    ggtitle(fieldname) +
+    theme_minimal() +
+    xlab("") + 
+    ylab("") +
+    theme( axis.text.x = element_text(size=12, angle=45, hjust=1, vjust=1)) 
+  
+  plot(gg)
+    
+}
+
+# ggplot(df1, aes_string(x="Name", y="`Have you managed to read data into R ?`", col="`Have you managed to read data into R ?`")) +
+#   geom_point(show.legend = FALSE) +
+#   theme_minimal() +
+#   theme( axis.text.x = element_text(size=12, angle=45, hjust=1, vjust=1)) 
+
+```
+
+
+
+
+
+```{r data-exploration, eval=FALSE}
+
+# summaries
+# try plot of which stage is your project
+ggplot(df1, aes(x=`Have you managed to read data into R ?`)) + geom_bar()
+
+# bar & colour
+ggplot(df1, aes(x=`Have you managed to read data into R ?`,
+                fill=`Have you managed to read data into R ?`)) + geom_bar()
+
+ggplot(df1, aes(x=`Have you written any code to manipulate/clean your data in R yet ?`,
+                fill=`Have you written any code to manipulate/clean your data in R yet ?`)) + geom_bar()
+
+# remove legend because text too long
+ggplot(df1, aes(x=`Have you written any code to manipulate/clean your data in R yet ?`,
+                fill=`Have you written any code to manipulate/clean your data in R yet ?`)) +
+   geom_bar(show.legend = FALSE)
+
+# I want to get data to
+# bob designing
+# bob cleaning
+# pat collecting
+
+# this minimum repro example works
+dfa <- data.frame(name = c("bob","bob","pat"),
+                  project_stage=c("designing","cleaning","collecting"))
+
+dfa$project_stage <- as.factor(dfa$project_stage)
+levels(dfa$project_stage) <- c("designing","cleaning","collecting")
+
+ggplot(dfa, aes(x=name, y=project_stage)) +
+  geom_point()
+
+# So how do I create the project_stage column with multiple rows per fellow
+# aha need tidyr::separate_rows()
+
+
+# todo add loop & go through the vis for each fellow
+for( fellowname in df1$Name)
+{
+
+ cat(fellowname,'\n')
+
+}
+
+
+
+```
