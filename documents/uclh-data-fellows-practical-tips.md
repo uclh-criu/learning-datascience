@@ -8,8 +8,11 @@ A collection of tips for working with data on UCLH systems.
 Contents 
 
 
-[UCLH Data Science Desktop](#uclh-data-science-desktop)  
-TODO fill other links
+[UCLH Data Science Desktop](#uclh-data-science-desktop) 
+[Where to save data ?](#where-to-save-data) 
+[RStudio projects](#rstudio-projects) 
+[Naming of files, columns, variables etc.](#naming-of-files-columns-variables-etc)
+[Folder structure within RStudio projects](#folder-structure-within-rstudio-projects) 
 [Secure transfer of data](#secure-transfer-of-data)  
 
 
@@ -39,18 +42,70 @@ A good way of organising your own R work is by using RStudio projects. An Rstudi
 
 One advantage of RStudio projects is that they help to keep related code and data together in one place.
 
-We suggest you create a folder called rstudioprojects in your Home directory on Data Science Desktop and keep all your projects in there. 
+We suggest you create a folder called **rstudioprojects** in your Home directory on Data Science Desktop and keep all your projects in there. 
 
 ![](../Images/rstudio-home-projects-folder.png)
 
 To create a new RStudio project, click : 
-File, New project, New directory, New project, & type in a name, e.g. my-first-project.
+File, New project, New directory, New project, & type in a name, e.g. my-first-project
+
+More [reasons for using RStudio projects](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) are outlined here by Jenny Bryan where she threatens to set on fire the computer of people who start their R scripts with something like setwd("C:/Users/jenny/")
+
+
+## Naming of files, columns, variables etc.
+
+It is good to have a system for naming things. Various systems are available.
+
+Many recommend to **avoid spaces, accents, capital letters and special characters in names**.
+
+This is a simple system we recommend :
+
+File and folder names like this using **-** to separate words :
+**my-usefully-named-file.txt**
+**2022-02-patient-data-myeloma.csv**
+**my-usefully-named-r-script.r**
+
+Column names, object and function names in R using **_** to separate words
+**weight_kg**
+**n_patients**
+
 
 ## Folder structure within RStudio projects
 
-TODO add to
-data etc. raw
+When you create a blank RStudio project it has no internal folders. Carefully considering the folder structure can make your life much easier later.
+
+For a small starting project. It can be simplest just to separate code and data.
+
+For this we suggest the following internal folders :
+
+**data-raw/**
+**data/**
+
+data-raw/ is for data that you have obtained (e.g. csv or xls) and you should keep it unmodified.    
+data/ is for data that you are using yourself and may have modified. It could bs .csv or saved from R as .rds
+
+You could add an **sql/** folder to store any sql code.    
+
+You can then store R scripts or RMarkdown files in the home directory of the project.
+
+This is similar to the [structure recommended by rfortherestofus](https://rfortherestofus.com/2021/08/rstudio-project-structure/), except that he also suggests having an **R/** folder to contain R scripts that can be used from within different RMarkdown documents.
+
+Within this structure you can have files named something like this in the home directory of the project in the sequence that they need to be run. These could also be .Rmd files.
+0-get-data.R
+1-clean-data.R
+2-plot-data.R
+3-model-data.R
+
+For larger projects you may want to have folders named similarly to the files above.
+
+You may also want to create folders for outputs of the project like **plots/** or **tables/**.
+
 
 ## Secure transfer of data
 
 You can receive/send data files (e.g. csv) via your NHS email account. To get files into Data Science Desktop open your email in a web browser in Data Science Desktop and save to your Home or Documents folders as suggested above.
+
+
+
+
+
