@@ -1,10 +1,13 @@
 # UCLH Data Science Fellows Training 2021
 
 
-This repository contains the training materials for a two day course introducing R for the manipulation and visualisation of patient data. It assumes no knowledge of R, but is structured so that those who know some R can also gain insights.
+This repository contains training materials introducing R for the manipulation and visualisation of patient data. It assumes no knowledge of R, but is structured so that those who know some R can also gain insights. It starts with a two day course and provides materials to take further.
 
+The initial two day course was delivered online by Andy South. 
 
-Materials were designed primarily to be delivered in an online session by Andy South. Guidelines for self instruction are also provided, see below.   
+# Self or guided instruction
+
+If working through these resources on your own work through the [instructions & links here](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/03-instructions-if-self-guided.md).
 
 The main aim of the course is to develop the capacity of clinicians to use R and other modern data tools to manipulate hospital generated data. 
 
@@ -27,9 +30,9 @@ Here is a [10 minute talk from the 2021 NHSR-community conference](https://youtu
 1. Get a feeling for the potential of R and motivation to learn more
 
 
-# Self or guided instruction
+# Mini reproducible examples
 
-If working through these resources on your own work through the [instructions & links here](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/03-instructions-if-self-guided.md).
+A series of [modular mini-examples](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/_readme-examples-mini.md) demonstrating coding solutions to common issues for learners starting to deal with patient data.
 
 
 # Licensing
