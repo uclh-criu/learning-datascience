@@ -1,42 +1,17 @@
-# PROJECT TITLE - “Playing with CCHIC data”
+# exploring CCHIC data
 
-# Description ====
-# This is a template for doing data analysis in R
-# Author:
-# Start Date:
-# Version: 0.5
-
-# To Do List ====
-# [x] Finish this file
-# [x] Get feedback from course attendees on file
-# [ ] Do an exploratory analysis using plots to visualise the data
-
-
-# Before using this script, I will set up a folder structure that looks like this:
-# |- my_project
-#     |- data (folder containing any raw data for the project)
-#         |- clean_data.csv
-#     |- scripts (folder containing any scripts)
-#         |- primary.r (note, this is THIS script)
-#     |- plots (folder to output all my plots)
-#     |- resources (a common resources folder)
-#     |- manuscripts (a folder to output my formatted manuscripts)
-#     readme.r (lives in my main directory and contains a dictionary of weird stuff that I might forget)
+# 2021 - this script came from an earlier version of the course
+# it may not add much to what we've done already
 
 # Load necessary libaries ====
-# install.packages() i'll need this function if I haven't downloaded the package yet
-library(readr) # to allow you to ‘read’ csv files and load into R
-library(tidyverse) # loads in everything I tend to use on a daily basis
+# install.packages() needed if packages haven't been installed before
+library(tidyverse) # loads collection of useful packages
 library(Hmisc) # Useful functions for describing data
 library(DescTools) # Useful functions for describing data
 library(lubridate) # for working with dates
-library(dplyr) # to wrangle data
-library(ggplot2) # data visualisation
-library(stringr) # working with string
 
-# Make sure my working directory is set ===
+# check working directory is set ===
 getwd()
-# can use setwd() to change if needed
 
 # Import data ==== cchic can be changed to the name of other data you will work on
 cchic <- read_csv(file.choose())
