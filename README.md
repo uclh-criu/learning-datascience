@@ -40,7 +40,7 @@ A series of [modular mini-examples](https://github.com/uclh-criu/learning-datasc
 
 Outlining the local implementation of the [five safes framework](https://github.com/uclh-criu/learning-datascience/blob/master/documents/access-to-health-data-uclh.md) for data security at UCLH. 
 
-## [NEWS](https://github.com/uclh-criu/learning-datascience/blob/master/LICENSE.md) 
+## [NEWS](https://github.com/uclh-criu/learning-datascience/blob/master/NEWS.md) 
 
 ## Licensing
 This course is licensed under a Creative Commons share-alike licence. 
