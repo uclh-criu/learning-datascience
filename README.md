@@ -34,7 +34,7 @@ A series of [modular mini-examples](https://github.com/uclh-criu/learning-datasc
 
 ## [Practical tips for dealing with patient data at UCLH](https://github.com/uclh-criu/learning-datascience/blob/master/documents/uclh-data-fellows-practical-tips.md)
 
-## [Guidelines on data security and five-safes framework](https://github.com/uclh-criu/learning-datascience/blob/master/documents/five-safes/access-to-health-data-uclh.md)
+## [Guidelines on data security and five-safes framework](https://github.com/uclh-criu/learning-datascience/blob/master/documents/access-to-health-data-uclh.md)
 
 # [NEWS](https://github.com/uclh-criu/learning-datascience/blob/master/LICENSE.md) 
 
