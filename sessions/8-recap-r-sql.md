@@ -20,9 +20,8 @@ Recap R & SQL for data science fellows
 
 ### 1 using RStudio direct from UCLH Data Science Desktop
 
-In the first R session we used RStudio through a browser. Now you should
-all have access to the UCLH Data Science Desktop and should be able to
-use RStudio directly from there.
+You should all have access to the UCLH Data Science Desktop and should
+be able to use RStudio directly from there.
 
 The Data Science Desktop is an alternative to your normal UCLH Windows
 10 desktop.
@@ -91,7 +90,7 @@ Science Desktop.
 
 Copy into first box
 **<https://github.com/uclh-criu/learning-datascience>**
-![](../Images/00-04-git-url.png)
+![](../images/00-04-git-url.png)
 
 You may need to press ‘Browse’ to help it find where to save the
 project.
