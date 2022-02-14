@@ -11,13 +11,13 @@ Please submit suggestions.
 An online, user-friendly OMOP concept lookup tool provided by OHDSI.
 
 #### Caboodle
-One of the Epic data 'warehouses' (along with Clarity) allowing extraction of data.
+One of the Epic data 'warehouses' (along with Clarity) allowing extraction of data. Easier to use than Clarity, difficult to get access except for data professionals.
 
 #### [CDM](https://ohdsi.github.io/CommonDataModel/)
 Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) is an open community data standard, designed to standardize the structure and content of observational data.
 
 #### Clarity
-One of the Epic data 'warehouses' (along with Caboodle) allowing extraction of data.
+One of the Epic data 'warehouses' (along with Caboodle) allowing extraction of data. More complicated to use than Caboodle only likely to be used by data professionals.
 
 #### [CRIU](https://www.uclh.nhs.uk/research/clinical-and-research-informatics-unit)
 Clinical and Research Informatics Unit in UCLH, a team of clinicians, researchers, software developers, business intelligence analysts and data scientists working together to develop a robust environment and infrastructure for the analysis of clinical data.
