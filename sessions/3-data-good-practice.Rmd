@@ -3,7 +3,7 @@ title: "session3: data good practice, 'tidy data' & spreadsheets"
 
 output: 
   powerpoint_presentation:
-    reference_doc: ../Images/template.pptx
+    reference_doc: ../images/template.pptx
 
 ---
 
@@ -19,23 +19,23 @@ output:
 
 # Tidy data
 
-![](../Images/tidydata_1.jpg)
+![](../images/tidydata_1.jpg)
 
 # "Tidy datasets are all alike ... every messy dataset is messy in its own way"
 
-![](../Images/tidydata_2.jpg)
+![](../images/tidydata_2.jpg)
 
 # Tidy data example from [here](https://www.r-bloggers.com/2018/03/thoughts-on-teaching-r-and-yet-another-tidyverse-intro/)
 
-![](../Images/tidy-data-patient-example.png)
+![](../images/tidy-data-patient-example.png)
 
 # Tidy data allows approaches to be re-used
 
-![](../Images/tidydata_3.jpg)
+![](../images/tidydata_3.jpg)
 
 # Tidy data allows for easier sharing, both with others & your future self
 
-![](../Images/tidydata_4.jpg)
+![](../images/tidydata_4.jpg)
 # Credit for stats cartoons
 
 - Artwork by @allison_horst
@@ -54,7 +54,7 @@ output:
 
 # Data types
 
-![](../Images/data-types.jpg)
+![](../images/data-types.jpg)
 
 
 # Data types
@@ -169,11 +169,11 @@ then use `str()` to see the data 'structure'
 
 # The computer doesn't care about formatting
 
-![](../Images/data2csv-3.png)
+![](../images/data2csv-3.png)
 
 # We do ... all Excel does is present it to us in an easy to use format
 
-![](../Images/data2csv-1.png)
+![](../images/data2csv-1.png)
 
 # But ...
 
@@ -191,7 +191,7 @@ then use `str()` to see the data 'structure'
 
 # Original (dirty)
 
-![](../Images/excel1.png)
+![](../images/excel1.png)
 
 # Your mission ...
 

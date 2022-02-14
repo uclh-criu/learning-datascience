@@ -3,7 +3,7 @@ title: "session1: an R taster"
 
 output: 
   powerpoint_presentation:
-    reference_doc: ../Images/template.pptx
+    reference_doc: ../images/template.pptx
 
 ---
 
@@ -27,14 +27,14 @@ output:
 
 ## UCLH Data Science Desktop If you don't see something like this, let us know and we'll help
 
-![](../Images/uclh-data-science-desktop.png)
+![](../images/uclh-data-science-desktop.png)
 
 
 ## RStudio fom Data Science Desktop
 
 To start RStudio type 'rst' in the search box at the lower left, an then double click on the RStudio desktop app.
 
-![](../Images/uclh-data-science-desktop-rstudio.png)
+![](../images/uclh-data-science-desktop-rstudio.png)
 
 
 ## Working with RStudio 
@@ -51,12 +51,12 @@ To start RStudio type 'rst' in the search box at the lower left, an then double 
 
 ## This is what R on it's own looks like
 
-![](../Images/RConsole.png)
+![](../images/RConsole.png)
 
 
 ## RStudio is much easier to work with & what we recommend
 
-![](../Images/RStudioHighlightWindows.png)
+![](../images/RStudioHighlightWindows.png)
 
 ::: notes
 Explain each window.
@@ -134,22 +134,22 @@ If you are learning independently follow the steps in these slides.
 
 ## download a project from Github into RStudio
 
-![](../Images/00-01-new-project.png)
+![](../images/00-01-new-project.png)
 
 ##
 
-![](../Images/00-02-from-version-control.png)
+![](../images/00-02-from-version-control.png)
 
 ## 
 
-![](../Images/00-03-from-git.png)
+![](../images/00-03-from-git.png)
 
 ## Copy into first box **https://github.com/uclh-criu/learning-datascience**
-![](../Images/00-04-git-url.png)
+![](../images/00-04-git-url.png)
 
 ## may take a while to copy files.
 
-![](../Images/00-05-clone-progress.png)
+![](../images/00-05-clone-progress.png)
 
 ## Intructor will step through sessions/1-R-taster-script.R
 

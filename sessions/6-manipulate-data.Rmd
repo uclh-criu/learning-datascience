@@ -3,7 +3,7 @@ title: "session5: manipulate data in R"
 
 output: 
   powerpoint_presentation:
-    reference_doc: ../Images/template.pptx
+    reference_doc: ../images/template.pptx
 ---
 
 ```{r, include = FALSE}
@@ -60,7 +60,7 @@ library(tidyverse)
 - Shortcut - `Cmd + Shift + M` (Mac) `Ctrl + Shift + M` (Windows)
 :::
 ::: {.column}
-![](../Images/Pipe.png)
+![](../images/Pipe.png)
 :::
 ::::::::::::::
 

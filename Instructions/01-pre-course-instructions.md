@@ -12,13 +12,13 @@ The Data Science Desktop is an alternative to your normal UCLH Windows 10 deskto
 Login to a UCLH PC on site or remotely and you should see the option for the Data Science Desktop under the desktops tab as shown in the screenshots below. From a UCLH PC on site you can user the Citrix Workspace app to connect to the Citrix Storefront and access the DSD Desktop. If you don't see the Data Science Desktop then let us and/or Richard Clarke know and we will get you added (may take a day or two). 
 
 
-![](../Images/uclh-desktops.png)
+![](../images/uclh-desktops.png)
 
-![](../Images/uclh-data-science-desktop.png)
+![](../images/uclh-data-science-desktop.png)
 
 To start RStudio type 'rst' in the search box at the lower left, an then double click on the RStudio desktop app.
 
-![](../Images/uclh-data-science-desktop-rstudio.png)
+![](../images/uclh-data-science-desktop-rstudio.png)
 
 
 

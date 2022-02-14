@@ -3,7 +3,7 @@ title: "session2: Intro to R"
 
 output: 
   powerpoint_presentation:
-    reference_doc: ../Images/template.pptx
+    reference_doc: ../images/template.pptx
 
 ---
 
@@ -53,7 +53,7 @@ output:
 - R for Research, Python for production
 
 ## R versus Python - my imperfect analogy
-![](../Images/01-r-python-bike-analogy.png)
+![](../images/01-r-python-bike-analogy.png)
 
 ## R communities
 
@@ -278,13 +278,13 @@ str(test2)
 - The vector is now a string vector.
 
 ## Functions as factories
-![](../Images/Function1.png)
+![](../images/Function1.png)
 
 ## Functions as factories
-![](../Images/Function2.png)
+![](../images/Function2.png)
 
 ## Functions as factories
-![](../Images/Function3.png)
+![](../images/Function3.png)
 
 
 ## Functions
@@ -299,7 +299,7 @@ str(test2)
 - View each function as a separate separate factory in a production line
 
 ## Functions in a line
-![](../Images/Function4.png)
+![](../images/Function4.png)
 
 ## Functions
 - You have been using functions already!
@@ -343,7 +343,7 @@ Get them to look up the help page for mean
 :::
 
 ## This is what a help page looks like.
-![](../Images/HelpPage.png)
+![](../images/HelpPage.png)
 
 ## Reading the help page
 

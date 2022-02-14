@@ -3,12 +3,12 @@ title: "Welcome to the UCLH learning data science course"
 
 output: 
   powerpoint_presentation:
-    reference_doc: ../Images/template.pptx
+    reference_doc: ../images/template.pptx
 
 ---
 
 
-![](../Images/UCLH-logo-colour-scaled.jpg)
+![](../images/UCLH-logo-colour-scaled.jpg)
 
 
 ## Hello!
@@ -35,13 +35,14 @@ output:
 
 ### 
 
-![](../Images/uclh-desktops.png)
+![](../images/uclh-desktops.png)
 
 
 ## Pre-requisites
 
-- UCLH Data Science desktop. You should have received this link, let us know if you don't have access.    
-[https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/01-pre-course-instructions.md](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/01-pre-course-instructions.md)  
+- UCLH Data Science desktop. You should have received this link, let us know if you don't have access. 
+
+[https://github.com/uclh-criu/learning-datascience/blob/master/instructions/01-pre-course-instructions.md](https://github.com/uclh-criu/learning-datascience/blob/master/instructions/01-pre-course-instructions.md)  
 
 - Access [Collaborative document](https://nhs-my.sharepoint.com/:w:/g/personal/mei_bai_nhs_net/ERBkMbqA6QVAo6DOtqNxVfQBBBwvGvroM5yO3e_3Vy_Xtg?e=TIhNZt) for tracking progress, entering questions etc.   
 
@@ -53,7 +54,7 @@ output:
 
 ### Course schedule
 
-- 2 days of intensive learning [link to schedule](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/schedule.md)
+- 2 days of intensive learning [link to schedule](https://github.com/uclh-criu/learning-datascience/blob/master/instructions/schedule.md)
 
 - we will be flexible & adapt as needed
 

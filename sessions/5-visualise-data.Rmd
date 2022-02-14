@@ -3,7 +3,7 @@ title: "session5: visualise data in R"
 
 output: 
   powerpoint_presentation:
-    reference_doc: ../Images/template.pptx
+    reference_doc: ../images/template.pptx
 ---
 
 ```{r, include = FALSE}
@@ -54,7 +54,7 @@ cchic <- read_csv("../data/clean_CCHIC.csv")
 
 ## 'cheatsheet' in folder of this course project
 
-![](../Images/cheatsheet-data-visualization.png)
+![](../images/cheatsheet-data-visualization.png)
 
 
 ## Structure of a ggplot command
@@ -99,7 +99,7 @@ Look at the `ggplot2` cheatsheet for more options.
 
 ## raw value plots vs summaries 
 
-![](../Images/GraphTypes.png)
+![](../images/GraphTypes.png)
 
 ## Drawing a bar graph
 
@@ -132,46 +132,27 @@ ggplot(data = cchic) +
 
 ## Position on X & Y axis is most effective communicator - use it for your prime variables
 
-![from Visualization Analysis & Design by Tamar Munzner](../Images/datavis-effectiveness-munzner.png)
-
-## 
-
-![](../Images/Tufte8.png)
+![from Visualization Analysis & Design by Tamar Munzner](../images/datavis-effectiveness-munzner.png)
 
 
 
-## Pie charts - unpopular among datavis people
-
-![](../Images/Tufte13.png)
-
-## 
-
-![](../Images/Tufte14.png)
-
-## 
-
-![](../Images/Tufte15.png)
-
-## 
-
-![](../Images/Tufte16.png)
 
 
 ## 
 
-![](../Images/Tufte22.png)
+![](../images/Tufte22.png)
 
 ## 
 
-![](../Images/Tufte23.png)
+![](../images/Tufte23.png)
 
 ## 
 
-![](../Images/Tufte24.png)
+![](../images/Tufte24.png)
 
 ## 
 
-![](../Images/Tufte25.png)
+![](../images/Tufte25.png)
 
 
 

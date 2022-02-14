@@ -10,7 +10,7 @@ The initial two day course was delivered online by Andy South.
 
 ### Self instruction
 
-If working through these resources on your own work through the [instructions & links here](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/03-instructions-if-self-guided.md).
+If working through these resources on your own work through the [instructions & links here](https://github.com/uclh-criu/learning-datascience/blob/master/instructions/03-instructions-if-self-guided.md).
 
 ### Learning objectives for the course
 

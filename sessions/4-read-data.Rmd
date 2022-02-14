@@ -3,7 +3,7 @@ title: "session4: read data into R"
 
 output: 
   powerpoint_presentation:
-    reference_doc: ../Images/template.pptx
+    reference_doc: ../images/template.pptx
 
 ---
 
@@ -46,7 +46,7 @@ cchic <- read_csv("../data/clean_CCHIC.csv")
 - Excel spreadsheets are easily converted into this format
 :::
 :::{.column}
-![](../Images/UnformattedCSV.png)
+![](../images/UnformattedCSV.png)
 :::
 :::::::::::: 
 
@@ -73,7 +73,7 @@ cchic <- read_csv("../data/clean_CCHIC.csv")
 
 :::
 :::{.column}
-![](../Images/FileProperties.png)
+![](../images/FileProperties.png)
 :::
 ::::::::::::
 
@@ -97,7 +97,7 @@ setwd()
 
 :::
 :::{.column}
-![Remember. You need quotation marks (`""`) around your file path name](../Images/Setwd.png)
+![Remember. You need quotation marks (`""`) around your file path name](../images/Setwd.png)
 :::
 ::::::::::::
 
@@ -126,7 +126,7 @@ Click `Import Dataset` tab in the `Environment` pane
 
 :::
 :::{.column}
-![](../Images/Point and click.png)
+![](../images/Point and click.png)
 :::
 ::::::::::::
 
@@ -136,7 +136,7 @@ Click `Import Dataset` tab in the `Environment` pane
 - Choose `From text (readr)`
 :::
 :::{.column}
-![](../Images/ImportDataset1.png)
+![](../images/ImportDataset1.png)
 :::
 ::::::::::::
 
@@ -149,7 +149,7 @@ Click `Import Dataset` tab in the `Environment` pane
 - IF you try this you will notice there is no text in the source pane. This method is not reproducible.  
 :::
 :::{.column}
-![](../Images/ImportDataset2.png)
+![](../images/ImportDataset2.png)
 :::
 ::::::::::::
 
@@ -160,7 +160,7 @@ Click `Import Dataset` tab in the `Environment` pane
 - You can copy and paste this code into your source pane to make this step reproducible 
 :::
 :::{.column}
-![](../Images/ImportingDataset3.png)
+![](../images/ImportingDataset3.png)
 :::
 ::::::::::::
 
@@ -195,7 +195,7 @@ cchic
 
 ## data is imported as a `tibble` - a special type of dataframe
 
-![A `tibble` is a `tidyverse` friendly dataframe - we don't need to worry about that at this stage.](../Images/Tibble.png)
+![A `tibble` is a `tidyverse` friendly dataframe - we don't need to worry about that at this stage.](../images/Tibble.png)
 
 ## Viewing Your Data in R
 ::::::::::::{.columns}
@@ -212,7 +212,7 @@ View(cchic)
   - You can also view the data via the environment pane
 :::
 :::{.column}
-![](../Images/View(cchic).png)
+![](../images/View(cchic).png)
 :::
 ::::::::::::
 

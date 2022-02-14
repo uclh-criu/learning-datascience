@@ -33,14 +33,14 @@ screenshots below. From a UCLH PC on site you can user the Citrix
 Workspace app to connect to the Citrix Storefront and access the DSD
 Desktop.
 
-![](../Images/uclh-desktops.png)
+![](../images/uclh-desktops.png)
 
-![](../Images/uclh-data-science-desktop.png)
+![](../images/uclh-data-science-desktop.png)
 
 To start RStudio type ‘rst’ in the search box at the lower left, an then
 double click on the RStudio desktop app.
 
-![](../Images/uclh-data-science-desktop-rstudio.png)
+![](../images/uclh-data-science-desktop-rstudio.png)
 
 ### 2 First time from UCLH PC, set proxies to enable communication with internet
 
@@ -83,11 +83,11 @@ This is a repeat of the process we went through at the start of the R
 course, but this time we are doing it directly from RStudio in the Data
 Science Desktop.
 
-![](../Images/00-01-new-project.png)
+![](../images/00-01-new-project.png)
 
-![](../Images/00-02-from-version-control.png)
+![](../images/00-02-from-version-control.png)
 
-![](../Images/00-03-from-git.png)
+![](../images/00-03-from-git.png)
 
 Copy into first box
 **<https://github.com/uclh-criu/learning-datascience>**

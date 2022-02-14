@@ -25,7 +25,7 @@ Most of this assumes that you are using R. If you are using Python that is good 
 ## UCLH Data Science Desktop
 
 Using the UCLH Data Science Desktop allows you to access hospital data securely. R, dbforge for SQL and Python are pre-installed. See the
-[pre-course instructions](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/01-pre-course-instructions.md) for details of access.
+[pre-course instructions](https://github.com/uclh-criu/learning-datascience/blob/master/instructions/01-pre-course-instructions.md) for details of access.
 
 ## Where to save data
 
@@ -33,7 +33,7 @@ Do not save data on the desktop of Data Science Desktop. It will be lost when yo
 
 Save data within your Documents folder on Data Science Desktop ()within a subfolder as suggested below). This can be reached by typing File Explorer into the Windows search. RStudio is setup on Data Science Desktop so that your Documents folder is the 'Home' directory that can be reached by clicking Home at the top left of he Files tab at the lower right.
 
-![](../Images/rstudio-files-home.png)
+![](../images/rstudio-files-home.png)
 
 
 ## RStudio projects
@@ -44,7 +44,7 @@ One advantage of RStudio projects is that they help to keep related code and dat
 
 We suggest you create a folder called **rstudioprojects** in your Home directory on Data Science Desktop and keep all your projects in there. 
 
-![](../Images/rstudio-home-projects-folder.png)
+![](../images/rstudio-home-projects-folder.png)
 
 To create a new RStudio project, click : 
 File, New project, New directory, New project, & type in a name, e.g. my-first-project
