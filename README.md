@@ -1,21 +1,18 @@
-# UCLH Data Science Fellows Training 2021
+# UCLH Data Science Fellows Training 2021-2022
 
+This repository contains training materials introducing R for the manipulation and visualisation of patient data. It assumes no knowledge of R, but is structured so that those who know some R can also benefit. It starts with a two day course and provides materials to take things further. 
 
-This repository contains training materials introducing R for the manipulation and visualisation of patient data. It assumes no knowledge of R, but is structured so that those who know some R can also gain insights. It starts with a two day course and provides materials to take further.
+These resources are part of a UCLH fellowship program developing the capacity of clinicians to use R and other modern data tools to manipulate hospital generated data. In the longer term the aim is to help clinicians develop modern, reproducible data workflows – ‘good enough’ scientific computing - to make their work more efficient. We will be working to improve the interfaces between these practices and the hospital data systems. Here is a [10 minute talk from the 2021 NHSR-community conference](https://youtu.be/R7uDB9iqlZY?t=19480) outlining the fellowship program.
+
+# 2 day entry level course
 
 The initial two day course was delivered online by Andy South. 
 
-# Self or guided instruction
+## Self instruction
 
 If working through these resources on your own work through the [instructions & links here](https://github.com/uclh-criu/learning-datascience/blob/master/Instructions/03-instructions-if-self-guided.md).
 
-The main aim of the course is to develop the capacity of clinicians to use R and other modern data tools to manipulate hospital generated data. 
-
-In the longer term the aim is to help clinicians develop modern, reproducible data workflows – ‘good enough’ scientific computing - to make their work more efficient. We will be working to improve the interfaces between these practices and the hospital data systems.
-
-Here is a [10 minute talk from the 2021 NHSR-community conference](https://youtu.be/R7uDB9iqlZY?t=19480) outlining the fellowship program.
-
-# Learning objectives for the course
+## Learning objectives for the course
 
 1. Become familiar with R and RStudio
 1. Troubleshoot inevitable issues and find solutions with Google 
@@ -29,11 +26,17 @@ Here is a [10 minute talk from the 2021 NHSR-community conference](https://youtu
 1. Brief exposure to rmarkdown for reproducible reports and shiny for web applications 
 1. Get a feeling for the potential of R and motivation to learn more
 
+# Additional resources in this repository
 
-# Mini reproducible examples
+## Mini reproducible examples
 
 A series of [modular mini-examples](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/_readme-examples-mini.md) demonstrating coding solutions to common issues for learners starting to deal with patient data.
 
+## [Practical tips for dealing with patient data at UCLH](https://github.com/uclh-criu/learning-datascience/blob/master/documents/uclh-data-fellows-practical-tips.md)
+
+## [Guidelines on data security and five-safes framework](https://github.com/uclh-criu/learning-datascience/blob/master/documents/five-safes/access-to-health-data-uclh.md)
+
+# [NEWS](https://github.com/uclh-criu/learning-datascience/blob/master/LICENSE.md) 
 
 # Licensing
 This course is licensed under a Creative Commons share-alike licence. 
