@@ -34,11 +34,11 @@ A series of [modular mini-examples](https://github.com/uclh-criu/learning-datasc
 
 ### Practical tips for dealing with patient data at UCLH
 
-[Practical tips](https://github.com/uclh-criu/learning-datascience/blob/master/documents/uclh-data-fellows-practical-tips.md) including where best to access RStudio store your data etc.
+[Practical tips](https://github.com/uclh-criu/learning-datascience/blob/master/guides/uclh-data-fellows-practical-tips.md) including where best to access RStudio store your data etc.
 
 ### Framework for data security at UCLH : five-safes
 
-Outlining the local implementation of the [five safes framework](https://github.com/uclh-criu/learning-datascience/blob/master/documents/access-to-health-data-uclh.md) for data security at UCLH. 
+Outlining the local implementation of the [five safes framework](https://github.com/uclh-criu/learning-datascience/blob/master/guides/access-to-health-data-uclh.md) for data security at UCLH. 
 
 ### Terminology Dictionary
 

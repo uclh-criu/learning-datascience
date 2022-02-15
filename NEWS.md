@@ -2,11 +2,11 @@
 
 # 2022-02-14
 
-* added [acronym dictionary](https://github.com/uclh-criu/learning-datascience/blob/master/documents/acronym-dictionary-health-data-uclh.md)
+* added [acronym dictionary](https://github.com/uclh-criu/learning-datascience/blob/master/guides/acronym-dictionary-health-data-uclh.md)
 
 # 2022-01-31
 
-* start [practical tips for fellows](https://github.com/uclh-criu/learning-datascience/blob/master/documents/uclh-data-fellows-practical-tips.md)
+* start [practical tips for fellows](https://github.com/uclh-criu/learning-datascience/blob/master/guides/uclh-data-fellows-practical-tips.md)
 
 # 2021-12-23
 
