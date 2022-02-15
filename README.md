@@ -40,6 +40,10 @@ A series of [modular mini-examples](https://github.com/uclh-criu/learning-datasc
 
 Outlining the local implementation of the [five safes framework](https://github.com/uclh-criu/learning-datascience/blob/master/documents/access-to-health-data-uclh.md) for data security at UCLH. 
 
+### Terminology Dictionary
+
+A [dictionary](https://github.com/uclh-criu/learning-datascience/blob/master/guides/terminology-dictionary-health-data-uclh.md) giving brief explanation & links for data science terms & acronyms in UCLH and beyond.
+
 ## [NEWS](https://github.com/uclh-criu/learning-datascience/blob/master/NEWS.md) 
 
 ## Licensing
