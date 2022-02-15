@@ -53,5 +53,11 @@ Pronounced Odyssey. Observational Health Data Sciences and Informatics program i
 #### [OMOP](https://ohdsi.github.io/CommonDataModel/)
 Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) is an open community data standard, designed to standardize the structure and content of observational data and to enable efficient analyses. UCLH moving to using OMOP in 2022.
 
+#### [R Markdown](https://rmarkdown.rstudio.com/)
+A document format that allows you to combine text and R code and outputs to create reproducible documents, presentations, web pages etc. Powerful and relatively easy to get started.
+
+#### [shiny](https://shiny.rstudio.com/)
+An R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. 
+
 #### [SNOMED CT](https://digital.nhs.uk/services/terminology-and-classifications/snomed-ct)
 SNOMED CT gives clinical IT systems a single shared language, which makes exchanging information between systems easier, safer and more accurate. It contains all the clinical terms needed for the whole NHS, from procedures and symptoms through to clinical measurements, diagnoses and medications. All NHS healthcare providers in England must now use SNOMED CT for capturing clinical terms within electronic patient record systems.
