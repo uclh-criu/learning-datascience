@@ -1,8 +1,8 @@
-# acronym & terminology dictionary for UCLH data fellows
+# terminology & acronym dictionary for UCLH data fellows
 
 Links & brief explanation for those working with data on UCLH systems & generally.
 
-Please submit suggestions.
+Suggestions welcome.
 
 <!-- for comments that won't appear online -->
 
