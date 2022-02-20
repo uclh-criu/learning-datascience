@@ -42,6 +42,12 @@ Fast Healthcare Interoperability Resources, the global industry standard for pas
 #### [HL7](https://en.wikipedia.org/wiki/Health_Level_7)
 The global authority on standards for interoperability of health technology responsible for FHIR and other standards.
 
+#### [ICD-11](https://www.who.int/standards/classifications/classification-of-diseases)
+International Classification of Diseases and Related Health Problems. Maintained by WHO. v11 in effect from January 2022. 
+
+#### [ICD03](https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology)
+International Classification of Diseases for Oncology, maintained by WHO, used principally in tumour or cancer registries for coding the site (topography) and the histology (morphology) of neoplasms.
+
 #### [LOINC](https://loinc.org/)
 Logical Observation Identifiers Names and Codes, a database and universal standard for identifying medical laboratory observations.
 
