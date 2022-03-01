@@ -1,0 +1,59 @@
+---
+title: "Chemocare timelines, 2nd attempt, 2022-03"
+author: "Andy South"
+output: pdf_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+
+library(tidyverse)
+library(ggrepel)
+
+```
+
+```{r read-data, include=FALSE}
+
+dftreats <- read_csv("chemocare-anon-2022-03.csv")
+
+
+```
+
+```{r plot-100-timelines, fig.height=8}
+
+npatients <- 100
+
+dftreats_sample <- dftreats %>% filter(patient_index <= npatients)
+
+for(patient in 1:npatients)
+{
+  dfpatient <- dftreats_sample %>% filter(patient_index==patient)
+  
+  #exclude where just a single row
+  #otherwise it generates a warning
+  if (nrow(dfpatient) == 1)
+  {
+    cat("single treatment\n")
+  } else
+  {
+  
+    #remember need to plot a ggplot when in a loop
+    plot(ggplot(dfpatient, aes(y=treat_days, x=diagnosis)) + 
+    geom_line() + 
+    geom_point() + 
+    theme_minimal() +
+    scale_x_discrete(position="top") + #to put diagnosis at top
+    scale_y_continuous() +
+    ylab("days from treatment start") +
+    #when I had dates in
+    #scale_y_date(date_labels =  "%b %Y") +
+    geom_text_repel(aes(label=treatment), hjust="outward", nudge_x=0.05, size=3 ) +
+    geom_text_repel(aes(label=cycle), hjust="inward", nudge_x=-0.05, size=3 ))
+      #this messed with x positions
+      #geom_text_repel(aes(label=treatment), hjust="outward", nudge_x=0.05, size=3, direction="y" )
+
+  }
+}
+
+```
