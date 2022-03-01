@@ -32,9 +32,7 @@ Experimental Medical Applications Platform, developed in UCLH. A a non-operation
 The software used to collect & store health data in UCLH, introduced April 2019.
 
 #### [ETL](https://ohdsi.github.io/TheBookOfOhdsi/ExtractTransformLoad.html)
-Extract Transform Load. The process of getting data into a Common Data Model. OHDSI provide tools for doing this White Rabbit, Rabbit in a Hat & Usagi.
-
-#### FBC Full Blood Count
+Extract Transform Load. The process of getting data into a Common Data Model. OHDSI provide tools for doing this.
 
 #### [FHIR](https://digital.nhs.uk/services/fhir-apis)
 Fast Healthcare Interoperability Resources, the global industry standard for passing healthcare data between systems. It is free, open, and designed to be quick to learn and implement. It is developed by HL7, the global authority on standards for interoperability of health technology with members in over 55 countries.
@@ -50,8 +48,6 @@ International Classification of Diseases for Oncology, maintained by WHO, used p
 
 #### [LOINC](https://loinc.org/)
 Logical Observation Identifiers Names and Codes, a database and universal standard for identifying medical laboratory observations.
-
-#### MRN Medical Records Number
 
 #### [OHDSI](https://www.ohdsi.org/)
 Pronounced Odyssey. Observational Health Data Sciences and Informatics program is a multi-stakeholder, interdisciplinary collaborative to bring out the value of health data through large-scale analytics. All our solutions are open-source. Maintains the OMOP Common Data Model.
