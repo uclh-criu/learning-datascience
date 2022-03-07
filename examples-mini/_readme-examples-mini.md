@@ -1,6 +1,6 @@
 # Mini-examples demonstrating coding solutions for patient data
 
-A series of independent, self-contained examples in R scripts in this folder
+A series of independent, self-contained examples in R scripts in this folder. Most come from questions asked by clinicians. Each is like a stackoverflow Q&A. They are targetted at clinicians or analysts who are relatively new to R. Designed to be modular so that you can use together or in isolation. Encourage you to use [Minimal Reproducible Examples (reprex)](https://stackoverflow.com/help/minimal-reproducible-example) both to help solve issues yourself and when asking questions of collaeagues or on [stackoverflow](https://stackoverflow.com).
 
 updated 2022-03-07
 
