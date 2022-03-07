@@ -24,7 +24,7 @@ text_for_readme <- paste0("# Mini-examples demonstrating coding solutions for pa
                           "Each is like a stackoverflow Q&A. ",
                           "They are targetted at clinicians or analysts who are relatively new to R. ", 
                           "Designed to be modular so that you can use together or in isolation. ",
-                          "Encourage you to use [Minimal Reproducible Examples (reprex)](https://stackoverflow.com/help/minimal-reproducible-example) both to help solve issues yourself and when asking questions of collaeagues or on [stackoverflow](https://stackoverflow.com).\n\n",
+                          "Encourage you to use [Minimal Reproducible Examples (reprex)](https://stackoverflow.com/help/minimal-reproducible-example) both to help solve issues yourself and when asking questions of colleagues or on stackoverflow.\n\n",
                           "updated ", Sys.Date(), "\n\n",
                           "To use, either :\n",
                           "1. create a new RStudio project from the repository to view & run the scripts locally \n",
