@@ -2,10 +2,10 @@
 
 A series of independent, self-contained examples in R scripts in this folder. Most come from questions asked by clinicians. Each is like a stackoverflow Q&A. They are targetted at clinicians or analysts who are relatively new to R. Designed to be modular so that you can use together or in isolation. Encourage you to use [Minimal Reproducible Examples (reprex)](https://stackoverflow.com/help/minimal-reproducible-example) both to help solve issues yourself and when asking questions of colleagues or on stackoverflow.
 
-updated 2022-03-07
+updated 2022-03-08
 
 To use, either :
-1. create a new RStudio project from the repository to view & run the scripts locally 
+1. create a new [RStudio project from the repository](https://github.com/uclh-criu/learning-datascience/blob/master/instructions/03-instructions-if-self-guided.md#1-download-the-course-materials-from-github-into-an-rstudio-project) to view & run the scripts locally 
 2. just copy & paste the code from Github into RStudio
 
 These examples are in early development and are likely to change, please suggest or submit improvements.
