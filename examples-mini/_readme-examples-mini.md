@@ -2,7 +2,7 @@
 
 A series of independent, self-contained examples in R scripts in this folder. Most come from questions asked by clinicians. Each is like a stackoverflow Q&A. They are targetted at clinicians or analysts who are relatively new to R. Designed to be modular so that you can use together or in isolation. Encourage you to use [Minimal Reproducible Examples (reprex)](https://stackoverflow.com/help/minimal-reproducible-example) both to help solve issues yourself and when asking questions of colleagues or on stackoverflow.
 
-updated 2022-03-08
+updated 2022-03-21
 
 To use, either :
 1. create a new [RStudio project from the repository](https://github.com/uclh-criu/learning-datascience/blob/master/instructions/03-instructions-if-self-guided.md#1-download-the-course-materials-from-github-into-an-rstudio-project) to view & run the scripts locally 
@@ -41,7 +41,7 @@ These examples are in early development and are likely to change, please suggest
 
 ## [diagnosis-per-patient-count.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/diagnosis-per-patient-count.r)
 
- count number of unique diagnoses per patient
+ count number of unique diagnoses per patient - optionally add column to original table
 
 
 ## [event-count-per-month-year-patient.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/event-count-per-month-year-patient.r)
