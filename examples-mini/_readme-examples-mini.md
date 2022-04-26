@@ -104,6 +104,11 @@ These examples are in early development and are likely to change, please suggest
  count patients when more than one row per patient 
 
 
+## [replace-patient-id.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/replace-patient-id.r)
+
+ to replace a patient identifier column (e.g. MRN) with an index
+
+
 ## [x-create-readme.r](https://github.com/uclh-criu/learning-datascience/blob/master/examples-mini/x-create-readme.r)
 
  script to create the readme file for the mini examples
