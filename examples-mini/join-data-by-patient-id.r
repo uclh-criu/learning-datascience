@@ -49,3 +49,16 @@ dfinnerjoined
 # 3           2 b         mz  
 
 # further information on joins : https://r4ds.had.co.nz/relational-data.html#understanding-joins
+
+# In some cases you may not want to join, but instead just get those ids from one table that appear in another
+# in that case you can just use filter
+# e.g. if we wanted to filter from df1 just those patients that appeared in table2
+
+df1in2 <- df1 %>% 
+  filter( patient_id1 %in% df2$patient_id2)
+
+#   patient_id1 diagnosis
+# 1           1 a        
+# 2           2 b  
+
+
